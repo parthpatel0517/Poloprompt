@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M1QMX20RF6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-M1QMX20RF6");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Zapier / Make Workflow Planner | PoloPrompt</title>
+<meta name="description" content="Build a numbered trigger-to-action workflow plan for Zapier or Make.com. Add steps, reorder your automation logic, and export a clean plain-text plan. Free, no sign-up.">
+<link rel="canonical" href="https://poloprompt.com/tools/workflow-step-planner">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719849376462270" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="logo">Polo<span>Prompt</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="/">Home</a></li>
+      <li><a class="nav-link" href="/library">Prompt Library</a></li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Prompt Generators ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder<small>Meta, Google, YouTube, Reels</small></a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">E-commerce Product Description Maker<small>Amazon, Shopify, Etsy, Meesho</small></a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO &amp; Content Outline Generator<small>Blog &amp; article structure prompts</small></a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption &amp; Hook Generator<small>Reels, Shorts, TikTok, LinkedIn</small></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Workflow Tools ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder<small>By industry &amp; goal</small></a></li>
+          <li><a href="/tools/workflow-step-planner">Zapier / Make Workflow Planner<small>Trigger → action step builder</small></a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="/blog">Blog</a></li>
+      <li><a class="nav-link" href="/templates">Free Templates Hub</a></li>
+      <li><a class="nav-link" href="/about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="container" style="padding-top:24px">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="#">Workflow Tools</a> / Zapier / Make Workflow Planner</p>
+  </div>
+
+  <div class="container">
+    <div class="tool-layout no-rail">
+      <div class="tool-main">
+        <h1>Zapier / Make Workflow Planner</h1>
+        <p class="muted">Add each app in your automation as a step, mark it as a trigger, filter, or action, and generate a clean numbered plan you can hand to Zapier, Make.com, or a developer.</p>
+
+        <div class="tool-panel">
+          <form id="add-step-form">
+            <div class="field">
+              <label for="step-app-name">App/Tool name</label>
+              <input type="text" id="step-app-name" placeholder="e.g. Slack">
+            </div>
+
+            <div class="field">
+              <label for="step-type">Step Type</label>
+              <select id="step-type">
+                <option value="trigger">Trigger</option>
+                <option value="filter">Filter/Condition</option>
+                <option value="action">Action</option>
+              </select>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">+ Add Step</button>
+            </div>
+          </form>
+
+          <div class="field" id="workflow-steps-list"></div>
+
+          <div class="form-actions">
+            <button type="button" id="generate-plan-btn" class="btn btn-primary">Generate Workflow Plan</button>
+          </div>
+
+          <div class="output-wrap" id="workflow-output-wrap" hidden>
+            <div class="output-head">
+              <h3>Your Workflow Plan</h3>
+              <button class="btn btn-copy" data-copy-target="#workflow-output">Copy to Clipboard</button>
+            </div>
+            <pre class="output-block" id="workflow-output"></pre>
+          </div>
+        </div>
+
+        <section class="faq">
+          <h2>FAQ: Planning Zapier &amp; Make Workflows</h2>
+          <details>
+            <summary>What's the difference between a Trigger, a Filter/Condition, and an Action?</summary>
+            <p>A Trigger is the event that starts the automation (a new form submission, a new row, an incoming message). A Filter/Condition checks whether the workflow should continue past a certain point (for example, only continue if the deal value is above $500). An Action is anything the workflow does as a result (send an email, create a record, post a Slack message). Every real Zapier "Zap" or Make "Scenario" is built from exactly this pattern, so planning your steps this way makes the automation straightforward to build once you open the actual tool.</p>
+          </details>
+          <details>
+            <summary>Why should I plan a workflow before building it in Zapier or Make?</summary>
+            <p>Automation platforms charge per task/operation and can get expensive or confusing to debug if you build them ad hoc inside the tool. Planning the full trigger-to-action sequence on paper (or here) first lets you catch missing steps, unnecessary complexity, or logic errors before you spend time wiring up the real integration — and it gives you a clean reference document if you ever hand the build off to a freelancer or teammate.</p>
+          </details>
+          <details>
+            <summary>Can I use this plan directly in Zapier or Make.com?</summary>
+            <p>The generated plan isn't a one-click import file, but it maps directly onto how both platforms are structured: each numbered step here becomes one step in your Zap or Scenario, in the same order, using the same trigger/filter/action type. Most users paste this plan into the platform's step-by-step builder as a checklist while configuring each connection.</p>
+          </details>
+          <details>
+            <summary>How many steps should a single workflow have?</summary>
+            <p>There's no hard limit, but simpler is usually more reliable — workflows with 3-6 steps are easier to debug and less likely to break when one connected app changes its data format. If your plan is growing past 8-10 steps, consider splitting it into two linked workflows instead of one long chain.</p>
+          </details>
+          <details>
+            <summary>Is this tool free, and are my workflow steps saved anywhere?</summary>
+            <p>Yes, it's completely free with no account required. Your steps are held only in your browser's memory for this session using JavaScript — nothing is sent to a server or saved once you close or refresh the page, so copy your plan out before navigating away if you want to keep it.</p>
+          </details>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-text">
+        <h4>Get New Prompts &amp; Automation Ideas</h4>
+        <p>Join the list for new prompts, tools, and automation ideas as they're added &mdash; no spam, unsubscribe anytime.</p>
+      </div>
+      <div class="footer-newsletter-form-wrap">
+        <form class="newsletter-form" novalidate>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" placeholder="you@example.com" required>
+          <input type="text" class="newsletter-hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="newsletter-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>PoloPrompt</h4>
+        <p>Free, client-side AI prompt generators and workflow builders for marketers, creators, and business owners.</p>
+      </div>
+      <div>
+        <h4>Prompt Generators</h4>
+        <ul>
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder</a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">Product Description Maker</a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO Content Outline Generator</a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption Generator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Workflow Tools</h4>
+        <ul>
+          <li><a href="/library">Prompt Library</a></li>
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder</a></li>
+          <li><a href="/tools/workflow-step-planner">Workflow Step Planner</a></li>
+          <li><a href="/templates">Free Templates Hub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> PoloPrompt. All rights reserved.</span>
+      <span>Built for marketers, creators &amp; business owners.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/newsletter.js"></script>
+<script src="../assets/js/tools/workflow-step-planner.js"></script>
+</body>
+</html>

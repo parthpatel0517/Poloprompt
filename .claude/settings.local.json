@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"d:/Ai project/tools\" \"d:/Ai project/assets/css\" \"d:/Ai project/assets/js/tools\" \"d:/Ai project/assets/img\")",
+      "PowerShell(Get-ChildItem -Recurse -File | Select-Object @{n='KB';e={[math]::Round\\($_.Length/1KB,1\\)}}, @{n='Path';e={$_.FullName.Replace\\(\"$PWD\\\\\",\"\"\\)}} | Sort-Object Path | Format-Table -AutoSize; \"---- prompt count ----\"; \\(Select-String -Path assets\\\\js\\\\prompt-library-data.js -Pattern '^\\\\s+id: \"' \\).Count; \"---- categories ----\"; \\(Select-String -Path assets\\\\js\\\\prompt-library-data.js -Pattern 'category: \"\\(.+\\)\"' -AllMatches\\).Matches.Value | Sort-Object -Unique)",
+      "PowerShell(Select-String -Path privacy.html -Pattern 'advertis|cookie|analytic|AdSense|third-party' | ForEach-Object { \"L$\\($_.LineNumber\\): $\\($_.Line.Trim\\(\\)\\)\" })",
+      "PowerShell(\\(Select-String -Path assets\\\\js\\\\prompt-library-data.js -Pattern '^\\\\s+id: \"'\\).Count)",
+      "PowerShell(python --version 2>$null)",
+      "PowerShell(py --version 2>$null)",
+      "PowerShell(try { $v = python --version 2>&1; \"python: $v\" } catch { \"python: not found\" })",
+      "PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Admin-Downloads-Ai-project\\\\377d312d-4839-439a-9247-d025d9a16f21\\\\scratchpad\\\\serve.ps1\")",
+      "PowerShell(Start-Sleep -Milliseconds 800; try { $r = Invoke-WebRequest -Uri http://localhost:8080/index.html -UseBasicParsing -TimeoutSec 5; \"status: $\\($r.StatusCode\\), bytes: $\\($r.RawContentLength\\)\" } catch { \"request failed: $_\" })"
+    ],
+    "additionalDirectories": [
+      "d:\\Ai project"
+    ]
+  }
+}

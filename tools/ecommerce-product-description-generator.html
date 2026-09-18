@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M1QMX20RF6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-M1QMX20RF6");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free E-commerce Product Description Generator | PoloPrompt</title>
+<meta name="description" content="Generate a marketplace-ready AI product listing prompt for Amazon, Shopify, Etsy, or Meesho. Pick your key benefits and get title, bullet point, and description formatting built in — free, no sign-up.">
+<link rel="canonical" href="https://poloprompt.com/tools/ecommerce-product-description-generator">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719849376462270" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="logo">Polo<span>Prompt</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="/">Home</a></li>
+      <li><a class="nav-link" href="/library">Prompt Library</a></li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Prompt Generators ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder<small>Meta, Google, YouTube, Reels</small></a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">E-commerce Product Description Maker<small>Amazon, Shopify, Etsy, Meesho</small></a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO &amp; Content Outline Generator<small>Blog &amp; article structure prompts</small></a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption &amp; Hook Generator<small>Reels, Shorts, TikTok, LinkedIn</small></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Workflow Tools ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder<small>By industry &amp; goal</small></a></li>
+          <li><a href="/tools/workflow-step-planner">Zapier / Make Workflow Planner<small>Trigger → action step builder</small></a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="/blog">Blog</a></li>
+      <li><a class="nav-link" href="/templates">Free Templates Hub</a></li>
+      <li><a class="nav-link" href="/about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="container" style="padding-top:24px">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="#">Prompt Generators</a> / E-commerce Product Description Generator</p>
+  </div>
+
+  <div class="container">
+    <div class="tool-layout no-rail">
+      <div class="tool-main">
+        <h1>E-commerce Product Description Generator</h1>
+        <p class="muted">Enter your product, pick the benefits to highlight, and choose a marketplace — get a listing prompt formatted the way that platform expects.</p>
+
+        <div class="tool-panel">
+          <form id="product-form">
+            <div class="field">
+              <label for="product-name">Product Name &amp; Core Material/Feature</label>
+              <input type="text" id="product-name" placeholder="e.g. Aurora Bamboo Cutting Board Set — 3-piece, organic bamboo">
+            </div>
+
+            <div class="field">
+              <label>Key benefits to highlight <span class="hint">— select any that apply</span></label>
+              <div class="checkbox-grid" id="benefits-grid">
+                <label class="checkbox-item"><input type="checkbox" value="Eco-friendly"> Eco-friendly</label>
+                <label class="checkbox-item"><input type="checkbox" value="Durable"> Durable</label>
+                <label class="checkbox-item"><input type="checkbox" value="Lightweight"> Lightweight</label>
+                <label class="checkbox-item"><input type="checkbox" value="Premium"> Premium</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="marketplace">Target Marketplace</label>
+              <select id="marketplace">
+                <option>Amazon</option>
+                <option>Shopify</option>
+                <option>Etsy</option>
+                <option>Meesho</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="variant-count">Number of Title/Bullet Options <span class="hint">— compare angles without re-prompting</span></label>
+              <select id="variant-count">
+                <option value="1">1 (single best version)</option>
+                <option value="2">2 options</option>
+                <option value="3" selected>3 options</option>
+              </select>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Generate Product Description Prompt</button>
+            </div>
+          </form>
+
+          <div class="output-wrap" id="product-output-wrap" hidden>
+            <div class="output-head">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn btn-copy" data-copy-target="#product-output">Copy to Clipboard</button>
+            </div>
+            <pre class="output-block" id="product-output"></pre>
+          </div>
+        </div>
+
+        <section class="faq">
+          <h2>FAQ: E-commerce Product Description Prompts</h2>
+          <details>
+            <summary>Why do I need a different prompt for each marketplace?</summary>
+            <p>Amazon, Shopify, Etsy, and Meesho each have different algorithms, character limits, and shopper expectations. Amazon rewards keyword-dense titles and exactly five scannable bullet points because of how its search and mobile app render listings. Shopify stores are self-hosted, so the priority shifts to on-page SEO and a persuasive brand-voice description. Etsy buyers respond to handmade, story-driven language and expect materials/dimensions up front. Meesho's audience is highly price-sensitive and browses mostly on mobile, so short, plain-language bullets convert better than elaborate copy. This tool bakes those differences directly into the generated prompt.</p>
+          </details>
+          <details>
+            <summary>What should I put in the "Product Name &amp; Core Material/Feature" field?</summary>
+            <p>Be as specific as you can — brand name, product type, and the one material or feature that makes it distinct (e.g. "stainless steel," "handwoven cotton," "wireless"). The more concrete detail you give the AI, the less generic the finished title and bullet points will be. You can always edit the output afterward to add sizing, color variants, or a promo detail.</p>
+          </details>
+          <details>
+            <summary>Can I select more than one benefit?</summary>
+            <p>Yes — check as many benefits as genuinely apply to your product. The generated prompt instructs the AI to weave all of them naturally into the bullets and description rather than just listing the words, so selecting two or three well-matched benefits usually produces a stronger, more specific listing than selecting all four.</p>
+          </details>
+          <details>
+            <summary>Will the output be ready to paste straight into my listing?</summary>
+            <p>The AI's response will be close to publish-ready, but you should always double-check factual claims (materials, dimensions, certifications) before publishing, since the AI doesn't know your product beyond what you typed in. For Amazon specifically, also verify the title length and backend search terms comply with the current Amazon Seller Central character limits, which do change occasionally.</p>
+          </details>
+          <details>
+            <summary>How is this better than asking ChatGPT directly for a product description?</summary>
+            <p>A bare "write a product description for X" prompt gives the AI almost no constraints, so it defaults to generic filler like "unlock the perfect addition to your home" — the same phrasing thousands of other sellers get too. This generator instead assembles a marketplace-specific format spec (Amazon's 5-bullet structure, Etsy's story-driven tone, Meesho's price-sensitive plain language), a worked example matched to your chosen marketplace, and a hard ban on overused listing clichés. The result reads like it was written by someone who sells on that platform every day, not a generic AI answer — and you get 2-3 angle options in one pass instead of manually re-rolling.</p>
+          </details>
+          <details>
+            <summary>Is this tool free, and is my product information stored anywhere?</summary>
+            <p>Yes, completely free with no sign-up. Everything runs client-side in your browser using JavaScript — your product name, benefits, and marketplace selection are never sent to a server or saved anywhere. You can generate as many listing prompts as you need.</p>
+          </details>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-text">
+        <h4>Get New Prompts &amp; Automation Ideas</h4>
+        <p>Join the list for new prompts, tools, and automation ideas as they're added &mdash; no spam, unsubscribe anytime.</p>
+      </div>
+      <div class="footer-newsletter-form-wrap">
+        <form class="newsletter-form" novalidate>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" placeholder="you@example.com" required>
+          <input type="text" class="newsletter-hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="newsletter-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>PoloPrompt</h4>
+        <p>Free, client-side AI prompt generators and workflow builders for marketers, creators, and business owners.</p>
+      </div>
+      <div>
+        <h4>Prompt Generators</h4>
+        <ul>
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder</a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">Product Description Maker</a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO Content Outline Generator</a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption Generator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Workflow Tools</h4>
+        <ul>
+          <li><a href="/library">Prompt Library</a></li>
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder</a></li>
+          <li><a href="/tools/workflow-step-planner">Workflow Step Planner</a></li>
+          <li><a href="/templates">Free Templates Hub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> PoloPrompt. All rights reserved.</span>
+      <span>Built for marketers, creators &amp; business owners.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/newsletter.js"></script>
+<script src="../assets/js/tools/ecommerce-product-description-generator.js"></script>
+</body>
+</html>

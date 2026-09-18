@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M1QMX20RF6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-M1QMX20RF6");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Marketing &amp; Ad Copy Prompt Builder | PoloPrompt</title>
+<meta name="description" content="Generate a ready-to-use AI ad copy prompt for Meta Ads, Google Search Ads, YouTube, or Instagram Reels. Choose your tone and copywriting framework — free, no sign-up.">
+<link rel="canonical" href="https://poloprompt.com/tools/marketing-ad-prompt-builder">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719849376462270" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="logo">Polo<span>Prompt</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="/">Home</a></li>
+      <li><a class="nav-link" href="/library">Prompt Library</a></li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Prompt Generators ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder<small>Meta, Google, YouTube, Reels</small></a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">E-commerce Product Description Maker<small>Amazon, Shopify, Etsy, Meesho</small></a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO &amp; Content Outline Generator<small>Blog &amp; article structure prompts</small></a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption &amp; Hook Generator<small>Reels, Shorts, TikTok, LinkedIn</small></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Workflow Tools ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder<small>By industry &amp; goal</small></a></li>
+          <li><a href="/tools/workflow-step-planner">Zapier / Make Workflow Planner<small>Trigger → action step builder</small></a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="/blog">Blog</a></li>
+      <li><a class="nav-link" href="/templates">Free Templates Hub</a></li>
+      <li><a class="nav-link" href="/about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="container" style="padding-top:24px">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="#">Prompt Generators</a> / Marketing &amp; Ad Copy Prompt Builder</p>
+  </div>
+
+  <div class="container">
+    <div class="tool-layout no-rail">
+      <div class="tool-main">
+        <h1>Marketing &amp; Ad Copy Prompt Builder</h1>
+        <p class="muted">Pick your platform, tone, and copywriting framework — get a structured prompt ready to paste into ChatGPT or Claude.</p>
+
+        <div class="tool-panel">
+          <form id="ad-prompt-form">
+            <div class="field">
+              <label for="platform">Platform</label>
+              <select id="platform">
+                <option>Meta Ads</option>
+                <option>Google Search Ads</option>
+                <option>YouTube Script</option>
+                <option>Instagram Reels</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="product-desc">Product / Service Name &amp; Description <span class="hint">— what it is, who it's for, key benefit</span></label>
+              <textarea id="product-desc" placeholder="e.g. GlowFit — a resistance-band home workout kit for busy professionals who want a full-body workout in 20 minutes without gym equipment."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="tone">Tone</label>
+              <select id="tone">
+                <option>Persuasive</option>
+                <option>Urgent</option>
+                <option>Professional</option>
+                <option>Casual</option>
+                <option>Humorous</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="framework">Copywriting Framework</label>
+              <select id="framework">
+                <option value="AIDA">AIDA (Attention–Interest–Desire–Action)</option>
+                <option value="PAS">PAS (Problem–Agitate–Solution)</option>
+                <option value="BAB">Before–After–Bridge</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="variant-count">Number of Ad Variations <span class="hint">— get several angles in one prompt instead of re-asking</span></label>
+              <select id="variant-count">
+                <option value="1">1 (single best version)</option>
+                <option value="2">2 variations</option>
+                <option value="3" selected>3 variations</option>
+              </select>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Generate Optimized Prompt</button>
+            </div>
+          </form>
+
+          <div class="output-wrap" id="ad-prompt-output-wrap" hidden>
+            <div class="output-head">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn btn-copy" data-copy-target="#ad-prompt-output">Copy to Clipboard</button>
+            </div>
+            <pre class="output-block" id="ad-prompt-output"></pre>
+          </div>
+        </div>
+
+        <section class="faq">
+          <h2>How to Use This Ad Copy Prompt Generator</h2>
+          <details>
+            <summary>What do I do with the generated prompt?</summary>
+            <p>Copy the full prompt using the "Copy to Clipboard" button, then paste it directly into ChatGPT, Claude, or any other AI assistant. The prompt already includes your product details, platform formatting rules, tone, and copywriting framework, so the AI has everything it needs to return finished ad copy in one response.</p>
+          </details>
+          <details>
+            <summary>Which framework should I choose — AIDA, PAS, or Before-After-Bridge?</summary>
+            <p>AIDA works well for awareness-stage ads where you're introducing a product to a cold audience. PAS is highly effective for problem-aware audiences who already feel the pain point you're solving — it tends to perform well for service businesses and B2B offers. Before-After-Bridge is a strong choice for transformation-driven products like fitness, courses, or productivity tools, since it leans on vivid contrast between "before" and "after" states. If you're unsure, start with AIDA — it's the most versatile of the three.</p>
+          </details>
+          <details>
+            <summary>Why does the platform choice matter for the prompt?</summary>
+            <p>Each ad platform has different character limits and formatting conventions. Google Search Ads require short, keyword-dense headlines and descriptions; Meta Ads allow longer primary text but reward mobile-friendly short paragraphs; YouTube and Reels scripts need a strong spoken hook in the first few seconds. This tool bakes those platform-specific constraints directly into the prompt so the AI's output is usable without heavy editing.</p>
+          </details>
+          <details>
+            <summary>Can I edit the prompt before pasting it into an AI tool?</summary>
+            <p>Yes — the generated prompt is a strong starting point, not a rigid script. Feel free to add extra product details, a specific promo/discount, brand voice notes, or competitor angles before pasting it in. The more specific context you give the AI, the more usable the first draft will be.</p>
+          </details>
+          <details>
+            <summary>How is this different from just typing a quick prompt into ChatGPT or Gemini myself?</summary>
+            <p>Most people typing directly into ChatGPT write something like "write me a Facebook ad for my product" — which produces generic, cliché-heavy copy because the model has almost nothing to work with. This generator instead assembles a senior-copywriter role, a proven framework (AIDA/PAS/BAB), platform-specific character and format limits, a worked example to lock the output style, and a hard-constraint list that explicitly bans overused AI phrases like "unlock," "game-changer," and "in today's fast-paced world." That extra structure is what separates copy that sounds obviously AI-written from copy that reads like it came from a real copywriter — and it's the exact same prompt whether you paste it into ChatGPT, Gemini, or Claude.</p>
+          </details>
+          <details>
+            <summary>Is this tool really free, and is my data stored anywhere?</summary>
+            <p>Yes. This generator runs entirely in your browser using JavaScript — nothing you type is sent to a server, logged, or stored. You can use it as many times as you like with no sign-up, no account, and no usage limits.</p>
+          </details>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-text">
+        <h4>Get New Prompts &amp; Automation Ideas</h4>
+        <p>Join the list for new prompts, tools, and automation ideas as they're added &mdash; no spam, unsubscribe anytime.</p>
+      </div>
+      <div class="footer-newsletter-form-wrap">
+        <form class="newsletter-form" novalidate>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" placeholder="you@example.com" required>
+          <input type="text" class="newsletter-hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="newsletter-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>PoloPrompt</h4>
+        <p>Free, client-side AI prompt generators and workflow builders for marketers, creators, and business owners.</p>
+      </div>
+      <div>
+        <h4>Prompt Generators</h4>
+        <ul>
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder</a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">Product Description Maker</a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO Content Outline Generator</a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption Generator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Workflow Tools</h4>
+        <ul>
+          <li><a href="/library">Prompt Library</a></li>
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder</a></li>
+          <li><a href="/tools/workflow-step-planner">Workflow Step Planner</a></li>
+          <li><a href="/templates">Free Templates Hub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> PoloPrompt. All rights reserved.</span>
+      <span>Built for marketers, creators &amp; business owners.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/newsletter.js"></script>
+<script src="../assets/js/tools/marketing-ad-prompt-builder.js"></script>
+</body>
+</html>

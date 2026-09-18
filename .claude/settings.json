@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node \"C:\\\\Users\\\\Varshil\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Ai-project\\\\41881d69-6e03-462d-a62b-f540c3f5278f\\\\scratchpad\\\\validate.js\" index.html templates.html about.html privacy.html tools/marketing-ad-prompt-builder.html tools/ecommerce-product-description-generator.html tools/seo-content-outline-generator.html tools/social-caption-generator.html tools/ai-automation-idea-finder.html tools/workflow-step-planner.html)",
+      "Bash(node \"C:\\\\Users\\\\Varshil\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Ai-project\\\\41881d69-6e03-462d-a62b-f540c3f5278f\\\\scratchpad\\\\linkcheck.js\" index.html templates.html about.html privacy.html tools/marketing-ad-prompt-builder.html tools/ecommerce-product-description-generator.html tools/seo-content-outline-generator.html tools/social-caption-generator.html tools/ai-automation-idea-finder.html tools/workflow-step-planner.html)",
+      "Bash(start \"\" \"D:\\\\Ai project\\\\index.html\")",
+      "Bash(python -m http.server 8080)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/index.html)",
+      "Bash(xargs -0 sed -i 's/PromptGenHub/PromptHub/g')",
+      "Bash(xargs sed -i 's/Prompt<span>Gen<\\\\/span>Hub/Prompt<span>Hub<\\\\/span>/g')",
+      "Bash(curl -s http://localhost:8080/index.html)",
+      "WebFetch(domain:www.prompthub.us)",
+      "Bash(xargs -0 sed -i 's/PromptHub/PromptForge/g')",
+      "Bash(xargs sed -i 's/Prompt<span>Hub<\\\\/span>/Prompt<span>Forge<\\\\/span>/g')",
+      "Bash(node --check \"D:/Ai project/assets/js/site.js\")",
+      "Bash(xargs sed -i 's/promptgenhub\\\\.com/yourdomain.com/g')",
+      "PowerShell(winget search xampp --accept-source-agreements 2>&1)",
+      "PowerShell(winget install --id ApacheFriends.Xampp.8.2 --silent --accept-package-agreements --accept-source-agreements)",
+      "Read(//c/xampp/**)",
+      "Read(//c//**)",
+      "PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Admin-Downloads-Ai-project\\\\377d312d-4839-439a-9247-d025d9a16f21\\\\scratchpad\\\\rebrand.ps1\")"
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M1QMX20RF6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-M1QMX20RF6");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Write AI Prompts That Don't Sound Like Everyone Else's | PoloPrompt</title>
+<meta name="description" content="The handful of structural habits that separate a prompt that reads as obviously AI-generated from one that doesn't.">
+<link rel="canonical" href="https://poloprompt.com/blog/how-to-write-ai-prompts">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719849376462270" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="logo">Polo<span>Prompt</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="/">Home</a></li>
+      <li><a class="nav-link" href="/library">Prompt Library</a></li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Prompt Generators ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder<small>Meta, Google, YouTube, Reels</small></a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">E-commerce Product Description Maker<small>Amazon, Shopify, Etsy, Meesho</small></a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO &amp; Content Outline Generator<small>Blog &amp; article structure prompts</small></a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption &amp; Hook Generator<small>Reels, Shorts, TikTok, LinkedIn</small></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Workflow Tools ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder<small>By industry &amp; goal</small></a></li>
+          <li><a href="/tools/workflow-step-planner">Zapier / Make Workflow Planner<small>Trigger → action step builder</small></a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="/blog">Blog</a></li>
+      <li><a class="nav-link" href="/about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container" style="padding-top:24px">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/blog">Blog</a> / How to Write AI Prompts That Don't Sound Like Everyone Else's</p>
+</div>
+
+<main>
+  <section>
+    <div class="container prose">
+      <h1>How to Write AI Prompts That Don't Sound Like Everyone Else's</h1>
+
+      <p>Open ten ChatGPT-written product descriptions, LinkedIn posts, or email intros and you'll notice they all sound related — like distant cousins who went to the same finishing school. Same rhythm, same enthusiasm, same handful of words doing all the heavy lifting. That's not because the model has bad taste. It's because most people give it almost nothing to work with, and a model with no direction defaults to its most statistically average voice.</p>
+
+      <p>The fix isn't a magic phrase or a longer prompt. It's a small set of habits that give the model a specific identity to write from instead of a blank one. Here's what actually moves the needle.</p>
+
+      <h2>Why the default output sounds generic</h2>
+      <p>When you type "write me a product description for a candle," you've given the model a topic but no perspective. It doesn't know who is supposedly writing this, who's reading it, what tone fits the brand, or what a finished example even looks like. Left to fill in those blanks itself, it reaches for the safest, most averaged-out version of "product description" it has seen — which is exactly why it comes out sounding like every other AI-written product description. There's no role anchoring the voice, no constraint ruling out the obvious clichés, and no example locking in a format. Three missing ingredients, one bland result.</p>
+
+      <h2>Technique 1: Give it a role, not just a task</h2>
+      <p>A role does more work than people expect. "You are a copywriter for a minimalist home goods brand who writes short, confident, slightly dry product copy" tells the model what to sound like before it even sees the task. Compare that to just "write a product description" — the role version has a personality to write from; the bare version has to invent one, and it invents the same one every time. The role doesn't need to be elaborate. Even a one-line persona — a skeptical customer, a no-nonsense operations manager, a witty younger sibling — changes word choice, sentence length, and pacing immediately.</p>
+
+      <h2>Technique 2: Ban the words that give it away</h2>
+      <p>Certain words and phrases are so overrepresented in AI output that they've become tells on their own. If you want copy that doesn't scream "generated," explicitly forbid them in the prompt. A starter list worth banning outright:</p>
+      <ul>
+        <li>unlock, elevate, unleash, supercharge</li>
+        <li>game-changer, game-changing, revolutionize</li>
+        <li>in today's fast-paced world / in today's digital age</li>
+        <li>dive into, delve into, explore the world of</li>
+        <li>seamless, seamlessly, effortlessly</li>
+        <li>whether you're a beginner or an expert</li>
+        <li>it's important to note that</li>
+        <li>in conclusion, in summary (for anything short-form)</li>
+      </ul>
+      <p>A single line like "Do not use any of the following words or phrases: unlock, elevate, game-changer, dive into, seamless, in today's fast-paced world" does more to de-robot your output than almost anything else on this list, because it removes the crutch words the model reaches for by default and forces it to find a more specific way to say the same thing.</p>
+
+      <h2>Technique 3: Anchor tone and format with a one-shot example</h2>
+      <p>Telling the model what you want is weaker than showing it. A "one-shot" example — a single sample of the exact tone, length, and structure you're after — locks in formatting decisions that are otherwise left to chance: how long sentences run, whether it uses bullet points or a paragraph, whether it opens with a question or a statement, how many exclamation points is too many. You don't need a perfect example, just a representative one. Paste in one sentence or one paragraph in the voice you want and say "match this tone and structure exactly." The output that follows will track it far more closely than any adjective-based description could achieve alone.</p>
+
+      <h2>Before vs. after</h2>
+      <p><strong>Weak prompt:</strong> "Write me a product description for a candle."</p>
+      <p><strong>Strengthened prompt:</strong> "You are a copywriter for a minimalist home goods brand that sells to design-conscious 30-somethings. Write a 60-word product description for a soy candle called 'Low Tide' with notes of driftwood and sea salt. Do not use the words unlock, elevate, seamless, or any variation of 'in today's fast-paced world.' Match this tone and structure: 'Cast Iron doesn't ask for attention. It sits on the shelf, quiet and heavy, until you need it — then it just works.' Keep sentences short. No exclamation points."</p>
+      <p>The first prompt could produce a description for any candle, written by anyone. The second can only produce one specific thing: a short, dry, brand-consistent line that sounds like it came from a real copywriter who's written fifty of these before, not a model guessing at what a candle description is supposed to sound like.</p>
+
+      <p>None of these three techniques require more skill than typing an extra sentence or two — they just require remembering to include them. If you'd rather not rebuild this structure from scratch every time, the <a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder</a> assembles role, constraints, and format into a ready-to-paste prompt for you, and the <a href="/library">Prompt Library</a> has more role-and-constraint examples you can adapt.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-text">
+        <h4>Get New Prompts &amp; Automation Ideas</h4>
+        <p>Join the list for new prompts, tools, and automation ideas as they're added &mdash; no spam, unsubscribe anytime.</p>
+      </div>
+      <div class="footer-newsletter-form-wrap">
+        <form class="newsletter-form" novalidate>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" placeholder="you@example.com" required>
+          <input type="text" class="newsletter-hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="newsletter-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>PoloPrompt</h4>
+        <p>Free, client-side AI prompt generators and workflow builders for marketers, creators, and business owners.</p>
+      </div>
+      <div>
+        <h4>Prompt Generators</h4>
+        <ul>
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder</a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">Product Description Maker</a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO Content Outline Generator</a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption Generator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Workflow Tools</h4>
+        <ul>
+          <li><a href="/library">Prompt Library</a></li>
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder</a></li>
+          <li><a href="/tools/workflow-step-planner">Workflow Step Planner</a></li>
+          <li><a href="/templates">Free Templates Hub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> PoloPrompt. All rights reserved.</span>
+      <span>Built for marketers, creators &amp; business owners.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/newsletter.js"></script>
+</body>
+</html>

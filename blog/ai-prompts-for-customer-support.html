@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M1QMX20RF6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-M1QMX20RF6");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Write AI Prompts for Customer Support That Don't Sound Like a Bot | PoloPrompt</title>
+<meta name="description" content="Why most AI-drafted support replies sound scripted, and the specific prompt structure that gets you responses customers can't tell were AI-assisted.">
+<link rel="canonical" href="https://poloprompt.com/blog/ai-prompts-for-customer-support">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719849376462270" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="logo">Polo<span>Prompt</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="/">Home</a></li>
+      <li><a class="nav-link" href="/library">Prompt Library</a></li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Prompt Generators ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder<small>Meta, Google, YouTube, Reels</small></a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">E-commerce Product Description Maker<small>Amazon, Shopify, Etsy, Meesho</small></a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO &amp; Content Outline Generator<small>Blog &amp; article structure prompts</small></a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption &amp; Hook Generator<small>Reels, Shorts, TikTok, LinkedIn</small></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Workflow Tools ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder<small>By industry &amp; goal</small></a></li>
+          <li><a href="/tools/workflow-step-planner">Zapier / Make Workflow Planner<small>Trigger → action step builder</small></a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="/blog">Blog</a></li>
+      <li><a class="nav-link" href="/about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container" style="padding-top:24px">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/blog">Blog</a> / How to Write AI Prompts for Customer Support That Don't Sound Like a Bot</p>
+</div>
+
+<main>
+  <section>
+    <div class="container prose">
+      <h1>How to Write AI Prompts for Customer Support That Don't Sound Like a Bot</h1>
+
+      <p>You can usually spot an AI-drafted support reply within the first sentence. It opens with "I understand your frustration," apologizes twice, promises the team "takes this very seriously," and closes with "please don't hesitate to reach out." None of it is wrong exactly — it's just hollow, and customers who are already annoyed can tell the difference between a reply written for them and a reply written for a category of complaint that includes them.</p>
+
+      <p>The good news is the fix is almost entirely about what you tell the model to avoid and what specific detail you force it to use, not about finding a cleverer support persona.</p>
+
+      <h2>Why support replies default to sounding scripted</h2>
+      <p>Ask a model to "write an apology to an unhappy customer" and it reaches for the training-data average of every customer service email it's ever seen — which is mostly corporate boilerplate, because that's what's abundant online. It has no specific detail about this complaint to anchor to, so it fills the gap with the safest, most generic phrases available. The result reads like it was addressed to "Dear Valued Customer," even when you swap in a real name.</p>
+
+      <h2>Fix 1: Feed it the actual complaint, not a category</h2>
+      <p>The single biggest improvement is pasting the customer's actual message into the prompt instead of describing the situation abstractly. "Write a response to an angry customer about a late order" produces generic filler. "Here is exactly what the customer wrote: [PASTE MESSAGE]. Respond to what they specifically said" forces the model to reference real details — the actual product, the actual delay, the specific tone they used — which is what makes a reply feel personally read rather than templated.</p>
+
+      <h2>Fix 2: Ban the phrases that read as scripted</h2>
+      <p>A handful of phrases are so overused in support contexts that customers register them as a tell, not a courtesy:</p>
+      <ul>
+        <li>"I understand your frustration"</li>
+        <li>"we take this very seriously"</li>
+        <li>"your satisfaction is our top priority"</li>
+        <li>"we value your feedback"</li>
+        <li>"please don't hesitate to reach out"</li>
+        <li>"I sincerely apologize for any inconvenience this may have caused"</li>
+      </ul>
+      <p>Explicitly banning these in the prompt — "do not use any of these phrases: [LIST]" — does more to make a reply sound human than any instruction to "be more empathetic," because it removes the crutch lines and forces a more specific, situational response in their place.</p>
+
+      <h2>Fix 3: Require one concrete next step, not a vague reassurance</h2>
+      <p>Generic replies reassure; useful replies commit to something specific. Instead of letting the model close with "we'll look into this," require a concrete action with an owner or timeframe baked into the prompt: a refund processed by a date, an escalation to a named team, a replacement shipped within a stated window. A support reply that tells the customer exactly what happens next reads as competent regardless of how warm the opening line is — and a customer would rather have that than another paragraph of empathy.</p>
+
+      <h2>Fix 4: Match length to the actual issue</h2>
+      <p>A one-line billing question doesn't need five paragraphs of context-setting, and a genuinely serious complaint shouldn't get a two-sentence brush-off. Tell the model explicitly how long the reply should be relative to the complaint's severity, rather than letting it default to a uniform "helpful support agent" length regardless of what's actually being asked.</p>
+
+      <h2>Before vs. after</h2>
+      <p><strong>Weak prompt:</strong> "Write an apology to a customer whose order was late."</p>
+      <p><strong>Strengthened prompt:</strong> "Here is exactly what the customer wrote: 'My order was supposed to arrive last Tuesday for my daughter's birthday and it still hasn't shown up, no one has updated me.' Write a response that names the specific miss (a birthday deadline, not just 'lateness'), does not use the phrases 'I understand your frustration' or 'we take this very seriously,' commits to one concrete next step with a date (a refund or expedited reshipment, your choice, stated clearly), and stays under 90 words."</p>
+      <p>The second version can only produce a reply that actually engages with what this particular customer said — which is the entire difference between a response that de-escalates and one that reads as a form letter with their name pasted in.</p>
+
+      <p>If you want a starting structure instead of building this from scratch each time, the <a href="/library">Prompt Library</a> has ready-made de-escalation, refund, and cancellation-save prompts in the Customer Support category that already bake in these constraints.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-text">
+        <h4>Get New Prompts &amp; Automation Ideas</h4>
+        <p>Join the list for new prompts, tools, and automation ideas as they're added &mdash; no spam, unsubscribe anytime.</p>
+      </div>
+      <div class="footer-newsletter-form-wrap">
+        <form class="newsletter-form" novalidate>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" placeholder="you@example.com" required>
+          <input type="text" class="newsletter-hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="newsletter-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>PoloPrompt</h4>
+        <p>Free, client-side AI prompt generators and workflow builders for marketers, creators, and business owners.</p>
+      </div>
+      <div>
+        <h4>Prompt Generators</h4>
+        <ul>
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder</a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">Product Description Maker</a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO Content Outline Generator</a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption Generator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Workflow Tools</h4>
+        <ul>
+          <li><a href="/library">Prompt Library</a></li>
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder</a></li>
+          <li><a href="/tools/workflow-step-planner">Workflow Step Planner</a></li>
+          <li><a href="/templates">Free Templates Hub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> PoloPrompt. All rights reserved.</span>
+      <span>Built for marketers, creators &amp; business owners.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/newsletter.js"></script>
+</body>
+</html>

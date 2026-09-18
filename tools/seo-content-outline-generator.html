@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M1QMX20RF6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-M1QMX20RF6");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free SEO Content Outline Generator | PoloPrompt</title>
+<meta name="description" content="Generate a full SEO content outline prompt with H1, meta title/description, H2/H3 structure, word count targets, and search-intent alignment. Free, no sign-up.">
+<link rel="canonical" href="https://poloprompt.com/tools/seo-content-outline-generator">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719849376462270" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="logo">Polo<span>Prompt</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="/">Home</a></li>
+      <li><a class="nav-link" href="/library">Prompt Library</a></li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Prompt Generators ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder<small>Meta, Google, YouTube, Reels</small></a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">E-commerce Product Description Maker<small>Amazon, Shopify, Etsy, Meesho</small></a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO &amp; Content Outline Generator<small>Blog &amp; article structure prompts</small></a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption &amp; Hook Generator<small>Reels, Shorts, TikTok, LinkedIn</small></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Workflow Tools ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder<small>By industry &amp; goal</small></a></li>
+          <li><a href="/tools/workflow-step-planner">Zapier / Make Workflow Planner<small>Trigger → action step builder</small></a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="/blog">Blog</a></li>
+      <li><a class="nav-link" href="/templates">Free Templates Hub</a></li>
+      <li><a class="nav-link" href="/about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="container" style="padding-top:24px">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="#">Prompt Generators</a> / SEO &amp; Content Outline Generator</p>
+  </div>
+
+  <div class="container">
+    <div class="tool-layout no-rail">
+      <div class="tool-main">
+        <h1>SEO &amp; Content Outline Generator</h1>
+        <p class="muted">Enter your target keyword, pick a content type and search intent — get a full outline prompt with headings, word count targets, and on-page SEO elements.</p>
+
+        <div class="tool-panel">
+          <form id="seo-form">
+            <div class="field">
+              <label for="keyword">Target Keyword / Topic</label>
+              <input type="text" id="keyword" placeholder="e.g. best project management software for small teams">
+            </div>
+
+            <div class="field">
+              <label for="secondary-keywords">Secondary keywords (comma separated, optional)</label>
+              <input type="text" id="secondary-keywords" placeholder="e.g. task management tool, team collaboration app">
+            </div>
+
+            <div class="field">
+              <label for="content-type">Content Type</label>
+              <select id="content-type">
+                <option>Blog Post</option>
+                <option>Listicle</option>
+                <option>How-To Guide</option>
+                <option>Comparison Article</option>
+                <option>Landing Page</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="word-count">Target Word Count</label>
+              <select id="word-count">
+                <option>800-1200</option>
+                <option>1500-2000</option>
+                <option>2500-3000</option>
+                <option>3000+</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="search-intent">Search Intent</label>
+              <select id="search-intent">
+                <option>Informational</option>
+                <option>Commercial</option>
+                <option>Transactional</option>
+                <option>Navigational</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="title-count">Number of Title Tag Options</label>
+              <select id="title-count">
+                <option value="1">1 (single best version)</option>
+                <option value="3" selected>3 options</option>
+              </select>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Generate Outline Prompt</button>
+            </div>
+          </form>
+
+          <div class="output-wrap" id="seo-output-wrap" hidden>
+            <div class="output-head">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn btn-copy" data-copy-target="#seo-output">Copy to Clipboard</button>
+            </div>
+            <pre class="output-block" id="seo-output"></pre>
+          </div>
+        </div>
+
+        <section class="faq">
+          <h2>FAQ: SEO Content Outline Prompts</h2>
+          <details>
+            <summary>What's the difference between this and just asking an AI to "write a blog post"?</summary>
+            <p>Asking an AI to write directly from a bare topic usually produces generic, unfocused content with weak on-page SEO — and it tends to lean on the same filler phrases every AI writer defaults to ("in today's digital age," "let's dive in"). This tool first builds a structured outline — headings, word count targets, meta title/description options, and search-intent alignment — with a worked example locking in the expected specificity, and an explicit ban on those overused AI phrases baked into the prompt itself. Planning the structure before the prose, with those guardrails in place, consistently produces better-organized, more search-friendly, and less obviously-AI-sounding content than a bare "write a blog post" request.</p>
+          </details>
+          <details>
+            <summary>Why does search intent matter for the outline?</summary>
+            <p>Google ranks pages that match what the searcher actually wants to do. A reader searching an informational query wants clear explanations, while a transactional searcher wants pricing and a clear next step. Building the wrong intent into your outline is one of the most common reasons pages struggle to rank even when the keyword targeting is correct, so this tool bakes your selected intent directly into the structural guidance.</p>
+          </details>
+          <details>
+            <summary>Should I add secondary keywords even if I'm not sure which ones to use?</summary>
+            <p>You don't have to — if you leave the field blank, the generated prompt instructs the AI to suggest 3-5 relevant secondary keywords itself and weave them into the outline. If you already have keyword research from a tool like Ahrefs, Semrush, or Google Keyword Planner, pasting those terms in directly will produce a more precisely targeted outline.</p>
+          </details>
+          <details>
+            <summary>How accurate are the word count targets per section?</summary>
+            <p>They're a helpful planning guide, not a hard rule. The AI distributes your total target word count across the outline's sections proportionally to their importance, which gives you a realistic sense of how much content each H2 needs — useful for briefing a writer or estimating how long the finished piece will take to draft.</p>
+          </details>
+          <details>
+            <summary>Is this tool free, and is my keyword data stored anywhere?</summary>
+            <p>Yes, it's completely free with no account required. The entire outline prompt is assembled in your browser with JavaScript — your keyword, secondary keywords, and selections are never transmitted to a server or saved. Use it as many times as you need for different articles.</p>
+          </details>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-text">
+        <h4>Get New Prompts &amp; Automation Ideas</h4>
+        <p>Join the list for new prompts, tools, and automation ideas as they're added &mdash; no spam, unsubscribe anytime.</p>
+      </div>
+      <div class="footer-newsletter-form-wrap">
+        <form class="newsletter-form" novalidate>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" placeholder="you@example.com" required>
+          <input type="text" class="newsletter-hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="newsletter-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>PoloPrompt</h4>
+        <p>Free, client-side AI prompt generators and workflow builders for marketers, creators, and business owners.</p>
+      </div>
+      <div>
+        <h4>Prompt Generators</h4>
+        <ul>
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder</a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">Product Description Maker</a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO Content Outline Generator</a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption Generator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Workflow Tools</h4>
+        <ul>
+          <li><a href="/library">Prompt Library</a></li>
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder</a></li>
+          <li><a href="/tools/workflow-step-planner">Workflow Step Planner</a></li>
+          <li><a href="/templates">Free Templates Hub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> PoloPrompt. All rights reserved.</span>
+      <span>Built for marketers, creators &amp; business owners.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/newsletter.js"></script>
+<script src="../assets/js/tools/seo-content-outline-generator.js"></script>
+</body>
+</html>
