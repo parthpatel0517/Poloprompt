@@ -29,6 +29,18 @@ CREATE TABLE IF NOT EXISTS automation_ideas (
   INDEX idx_industry_goal (industry, goal)
 );
 
+-- Blog posts (previously static HTML files in blog/)
+CREATE TABLE IF NOT EXISTS blog_posts (
+  slug          VARCHAR(128) PRIMARY KEY,
+  title         VARCHAR(255) NOT NULL,
+  description   TEXT NOT NULL,
+  badge         VARCHAR(64) NOT NULL,
+  read_minutes  INT NOT NULL DEFAULT 5,
+  content_html  LONGTEXT NOT NULL,
+  published_at  DATE NOT NULL,
+  updated_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
 -- Footer newsletter signups (site-wide form, all pages)
 CREATE TABLE IF NOT EXISTS newsletter_subscribers (
   id              INT AUTO_INCREMENT PRIMARY KEY,

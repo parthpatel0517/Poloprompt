@@ -73,10 +73,31 @@ async function seedAutomationIdeas() {
   console.log(`Seeded ${count} automation idea rows (across combos + fallbacks).`);
 }
 
+async function seedBlogPosts() {
+  const { BLOG_POSTS } = loadGlobalsFromScript(
+    path.join(__dirname, "..", "assets", "js", "blog-data.js"),
+    ["BLOG_POSTS"]
+  );
+
+  console.log(`Seeding ${BLOG_POSTS.length} blog posts...`);
+  for (const p of BLOG_POSTS) {
+    await pool.query(
+      `INSERT INTO blog_posts (slug, title, description, badge, read_minutes, content_html, published_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?)
+       ON DUPLICATE KEY UPDATE
+         title = VALUES(title), description = VALUES(description), badge = VALUES(badge),
+         read_minutes = VALUES(read_minutes), content_html = VALUES(content_html),
+         published_at = VALUES(published_at)`,
+      [p.slug, p.title, p.description, p.badge, p.read_minutes, p.content_html, p.published_at]
+    );
+  }
+}
+
 async function main() {
   try {
     await seedPrompts();
     await seedAutomationIdeas();
+    await seedBlogPosts();
     console.log("Seed complete.");
   } catch (err) {
     console.error("Seed failed:", err);

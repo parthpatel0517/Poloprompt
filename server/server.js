@@ -6,6 +6,7 @@ const promptsRouter = require("./routes/prompts");
 const automationRouter = require("./routes/automation");
 const newsletterRouter = require("./routes/newsletter");
 const contactRouter = require("./routes/contact");
+const blogRouter = require("./routes/blog");
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use("/api/prompts", promptsRouter);
 app.use("/api/automation-ideas", automationRouter);
 app.use("/api/newsletter", newsletterRouter);
 app.use("/api/contact", contactRouter);
+app.use("/api/blog-posts", blogRouter);
 
 app.use((req, res) => {
   res.status(404).json({ error: "Not found." });

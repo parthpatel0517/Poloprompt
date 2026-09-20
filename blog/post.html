@@ -11,11 +11,11 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Prompt Engineering &amp; AI Marketing Tips | PoloPrompt</title>
-<meta name="description" content="Free guides on prompt engineering, AI copywriting, and workflow automation for marketers and small business owners.">
-<link rel="canonical" href="https://poloprompt.com/blog">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="stylesheet" href="assets/css/styles.css">
+<title id="post-title-tag">PoloPrompt Blog</title>
+<meta name="description" id="post-meta-description" content="A PoloPrompt blog post.">
+<link rel="canonical" id="post-canonical" href="https://poloprompt.com/blog">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719849376462270" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -44,31 +44,22 @@
         </ul>
       </li>
       <li><a class="nav-link" href="/blog">Blog</a></li>
+      <li><a class="nav-link" href="/templates">Free Templates Hub</a></li>
       <li><a class="nav-link" href="/about">About</a></li>
     </ul>
   </nav>
 </header>
 
+<div class="container" style="padding-top:24px">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/blog">Blog</a> / <span id="post-breadcrumb-title">…</span></p>
+</div>
+
 <main>
-  <section class="hero" style="padding:48px 0 24px">
-    <div class="container">
-      <span class="badge">Free Guides · No Sign-up</span>
-      <h1>The PoloPrompt Blog</h1>
-      <p class="lead">Practical guides on prompt engineering, AI copywriting, and workflow automation — written to help you get better output from ChatGPT, Claude, and Gemini.</p>
+  <section>
+    <div class="container prose" id="post-body">
+      <div class="output-empty" id="post-loading">Loading post…</div>
     </div>
   </section>
-
-  <section style="padding-top:0">
-    <div class="container">
-      <p class="library-meta" id="blog-results-count"></p>
-      <div class="grid grid-3" id="blog-grid"></div>
-      <div class="library-empty" id="blog-empty-state" hidden>
-        <p>Couldn't load posts right now — please refresh in a moment.</p>
-      </div>
-      <div class="pagination" id="blog-pagination"></div>
-    </div>
-  </section>
-
 </main>
 
 <footer class="site-footer">
@@ -129,10 +120,9 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js"></script>
-<script src="assets/js/newsletter.js"></script>
-<script src="assets/js/pagination-ui.js"></script>
-<script src="assets/js/blog-data.js"></script>
-<script src="assets/js/blog.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/newsletter.js"></script>
+<script src="../assets/js/blog-data.js"></script>
+<script src="../assets/js/blog-post.js"></script>
 </body>
 </html>

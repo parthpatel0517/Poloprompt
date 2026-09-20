@@ -34,6 +34,13 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
+# 4) Blog posts are dynamic (fetched from the database by slug, not static
+#    files) — any /blog/<slug> that isn't a real file/directory routes to the
+#    shared post template, which renders the right content client-side.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/[^/]+$ blog/post.html [L]
+
 # Directory browsing off as defense-in-depth (Hostinger already blocks it by
 # default, but this makes it explicit regardless of host).
 Options -Indexes
