@@ -279,6 +279,16 @@ pre.output-block{
 .form-status.is-success{color:var(--success)}
 .form-status.is-error{color:#b91c1c}
 
+/* ---------- Pagination ---------- */
+.pagination{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin-top:32px}
+.pagination button{
+  min-width:40px;padding:8px 14px;font-size:.85rem;font-weight:600;font-family:inherit;
+  border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;
+}
+.pagination button:hover:not(:disabled){border-color:var(--brand)}
+.pagination button.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+.pagination button:disabled{opacity:.4;cursor:not-allowed}
+
 /* ---------- Utility ---------- */
 .text-center{text-align:center}
 .mt-0{margin-top:0}

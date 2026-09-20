@@ -7,10 +7,11 @@
   "use strict";
 
   var API_BASE = "https://poloprompt-server.onrender.com";
+  var PAGE_SIZE = 12;
 
-  var state = { query: "", category: "All" };
+  var state = { query: "", category: "All", page: 1 };
   var library = [];
-  var grid, searchInput, categoryBar, resultsCount, emptyState;
+  var grid, searchInput, categoryBar, resultsCount, emptyState, pagination;
 
   function loadLibrary() {
     if (!API_BASE) return Promise.resolve(PROMPT_LIBRARY);
@@ -67,9 +68,31 @@
 
   function render() {
     var filtered = library.filter(matches);
-    grid.innerHTML = filtered.map(cardHtml).join("");
+    var totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    if (state.page > totalPages) state.page = totalPages;
+    if (state.page < 1) state.page = 1;
+
+    var start = (state.page - 1) * PAGE_SIZE;
+    var pageItems = filtered.slice(start, start + PAGE_SIZE);
+
+    grid.innerHTML = pageItems.map(cardHtml).join("");
     resultsCount.textContent = filtered.length + (filtered.length === 1 ? " prompt found" : " prompts found");
     emptyState.hidden = filtered.length !== 0;
+    renderPagination(totalPages);
+  }
+
+  function renderPagination(totalPages) {
+    if (!pagination) return;
+    if (totalPages <= 1) {
+      pagination.innerHTML = "";
+      return;
+    }
+    var html = "<button type=\"button\" data-page=\"prev\"" + (state.page === 1 ? " disabled" : "") + " aria-label=\"Previous page\">Prev</button>";
+    for (var p = 1; p <= totalPages; p++) {
+      html += "<button type=\"button\" data-page=\"" + p + "\" class=\"" + (p === state.page ? "active" : "") + "\" aria-current=\"" + (p === state.page ? "page" : "false") + "\">" + p + "</button>";
+    }
+    html += "<button type=\"button\" data-page=\"next\"" + (state.page === totalPages ? " disabled" : "") + " aria-label=\"Next page\">Next</button>";
+    pagination.innerHTML = html;
   }
 
   function buildCategoryBar() {
@@ -100,6 +123,7 @@
     categoryBar = document.getElementById("category-bar");
     resultsCount = document.getElementById("library-results-count");
     emptyState = document.getElementById("library-empty-state");
+    pagination = document.getElementById("library-pagination");
     if (!grid) return;
 
     readInitialFilters();
@@ -115,6 +139,7 @@
     if (searchInput) {
       searchInput.addEventListener("input", function () {
         state.query = searchInput.value.trim();
+        state.page = 1;
         render();
       });
     }
@@ -123,9 +148,23 @@
       var btn = e.target.closest(".category-pill");
       if (!btn) return;
       state.category = btn.getAttribute("data-category");
+      state.page = 1;
       highlightActiveCategory();
       render();
     });
+
+    if (pagination) {
+      pagination.addEventListener("click", function (e) {
+        var btn = e.target.closest("button[data-page]");
+        if (!btn || btn.disabled) return;
+        var target = btn.getAttribute("data-page");
+        if (target === "prev") state.page -= 1;
+        else if (target === "next") state.page += 1;
+        else state.page = parseInt(target, 10);
+        render();
+        grid.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
 
     grid.addEventListener("click", function (e) {
       var btn = e.target.closest(".toggle-prompt-btn");
