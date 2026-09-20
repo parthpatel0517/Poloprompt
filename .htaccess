@@ -46,18 +46,22 @@ ErrorDocument 404 /404.html
   AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
-# Browser caching
+# Browser caching — only truly static assets get a long cache lifetime.
+# HTML, CSS, and JS change during active development, so they use
+# no-cache below instead: the browser always revalidates with the server
+# (a cheap 304 if nothing changed), which means every deploy is visible
+# immediately with no manual cache-busting and no hard refresh needed.
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType image/svg+xml "access plus 1 month"
-  ExpiresByType text/html "access plus 1 hour"
 </IfModule>
 
-# Security headers
+# Security headers + cache policy for frequently-changing file types
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  <FilesMatch "\.(html|css|js)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
 </IfModule>
