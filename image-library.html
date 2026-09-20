@@ -11,9 +11,9 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | PoloPrompt</title>
-<meta name="description" content="Get in touch with PoloPrompt for tool support, feedback, or business and privacy inquiries.">
-<link rel="canonical" href="https://poloprompt.com/contact">
+<title>Free AI Image Prompt Library — Trending Photo Styles | PoloPrompt</title>
+<meta name="description" content="Browse trending AI image styles — 90's film, Y2K, anime, cyberpunk, and more — and copy the exact prompt to turn your own photo into the same theme. Free, no sign-up required.">
+<link rel="canonical" href="https://poloprompt.com/image-library">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="stylesheet" href="assets/css/styles.css?v=20260920c">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719849376462270" crossorigin="anonymous"></script>
@@ -27,7 +27,7 @@
     <ul class="nav-links">
       <li><a class="nav-link" href="/">Home</a></li>
       <li><a class="nav-link" href="/library">Prompt Library</a></li>
-<li><a class="nav-link" href="/image-library">Image Library</a></li>
+      <li><a class="nav-link" href="/image-library">Image Library</a></li>
       <li class="has-dropdown">
         <a class="nav-link" href="#">Prompt Generators ▾</a>
         <ul class="dropdown-menu">
@@ -52,60 +52,34 @@
 </header>
 
 <main>
-  <div class="container" style="padding-top:24px">
-    <p class="breadcrumb"><a href="/">Home</a> / Contact</p>
-  </div>
-
-  <section>
-    <div class="container prose">
-      <h1>Contact Us</h1>
-      <p>PoloPrompt is a small, independently-run project, and every message that comes in is read by an actual person — not a support queue. If you've hit a snag with a tool, have an idea for a new prompt or generator, or need to reach us about something business-related, use the address below that best fits.</p>
-
-      <h2>General Help &amp; Feedback</h2>
-      <p>Questions about how a tool works, a bug you've spotted, a prompt that didn't turn out right, or a suggestion for something new to add — this is the one to use.</p>
-      <p><a href="mailto:help@poloprompt.com">help@poloprompt.com</a></p>
-
-      <h2>Business &amp; Privacy Inquiries</h2>
-      <p>For anything related to our <a href="/privacy">Privacy Policy</a>, data handling, advertising, partnerships, or other business matters, reach out here instead.</p>
-      <p><a href="mailto:support@poloprompt.com">support@poloprompt.com</a></p>
-
-      <h2>Response Time</h2>
-      <p>We aim to reply within a few business days. Since none of our tools require an account or store your email address, we can only respond to the address you write to us from — so please make sure it's one you check.</p>
-
-      <p>You can also learn more about the project on our <a href="/about">About page</a>, or review how we handle data in our <a href="/privacy">Privacy Policy</a>.</p>
+  <section class="hero" style="padding:48px 0 24px">
+    <div class="container">
+      <span class="badge">100% Free · No Sign-up · Turn Your Own Photo Into Any Style</span>
+      <h1>The Free AI Image Prompt Library</h1>
+      <p class="lead">Browse trending AI photo styles, then copy the exact prompt to recreate that same look on your own photo in ChatGPT, Midjourney, or Gemini.</p>
     </div>
   </section>
 
   <section style="padding-top:0">
-    <div class="container" style="max-width:600px">
-      <div class="tool-panel">
-        <h2 class="mt-0">Or Send a Message Directly</h2>
-        <form id="contact-form" novalidate>
-          <div class="field">
-            <label for="contact-name">Name <span class="hint">— optional</span></label>
-            <input type="text" id="contact-name" autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="contact-email">Email</label>
-            <input type="email" id="contact-email" required autocomplete="email">
-          </div>
-          <div class="field">
-            <label for="contact-reason">What's this about?</label>
-            <select id="contact-reason">
-              <option value="help">General help / feedback</option>
-              <option value="support">Business / privacy inquiry</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="contact-message">Message</label>
-            <textarea id="contact-message" required></textarea>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </div>
-          <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
-        </form>
+    <div class="container">
+      <div class="library-search">
+        <input type="text" id="image-trends-search" placeholder="Search styles… e.g. neon, retro, anime" aria-label="Search image trends">
       </div>
+      <div id="image-trends-tag-bar"></div>
+      <p class="library-meta" id="image-trends-results-count"></p>
+
+      <div class="grid grid-3" id="image-trends-grid"></div>
+      <div class="library-empty" id="image-trends-empty-state" hidden>
+        <p>No styles match your search. Try a different keyword or tag.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container prose">
+      <h2>How to Use These Image Prompts</h2>
+      <p>Each style below includes a ready-made prompt written to recreate that exact look on your own photo — the lighting, color grading, and texture change, while your face, pose, and outfit stay recognizable. Click "View &amp; Copy Prompt" on any card, then paste it into an AI image tool that supports image-to-image editing (such as ChatGPT with an uploaded photo, Gemini, or Midjourney's image references) along with your own photo.</p>
+      <p>Looking for text prompts instead? Browse the <a href="/library">full Prompt Library</a> for marketing, e-commerce, SEO, social, and automation prompts.</p>
     </div>
   </section>
 </main>
@@ -145,6 +119,7 @@
         <h4>Workflow Tools</h4>
         <ul>
           <li><a href="/library">Prompt Library</a></li>
+          <li><a href="/image-library">Image Library</a></li>
           <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder</a></li>
           <li><a href="/tools/workflow-step-planner">Workflow Step Planner</a></li>
           <li><a href="/templates">Free Templates Hub</a></li>
@@ -170,6 +145,7 @@
 
 <script src="assets/js/site.js?v=20260920c"></script>
 <script src="assets/js/newsletter.js?v=20260920c"></script>
-<script src="assets/js/tools/contact-form.js?v=20260920c"></script>
+<script src="assets/js/image-trends-data.js?v=20260920c"></script>
+<script src="assets/js/image-trends.js?v=20260920c"></script>
 </body>
 </html>
