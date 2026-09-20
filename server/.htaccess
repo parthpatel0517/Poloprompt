@@ -1,0 +1,9 @@
+# This backend runs on Render, not Hostinger — nothing under this folder
+# should ever be served publicly here. Block all access outright.
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>
