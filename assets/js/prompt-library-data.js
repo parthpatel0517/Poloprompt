@@ -415,5 +415,149 @@ var PROMPT_LIBRARY = [
     description: "Identify which recurring processes are safe to automate first, including data, ownership, and failure checks.",
     tags: ["automation", "operations", "process audit"],
     prompt: "You are an automation consultant. Assess these recurring business processes: [LIST PROCESSES]. For each process, score its automation readiness from 1 to 5 based on volume, repeatability, data quality, exception rate, and impact if it fails. Recommend the best first automation, define its trigger, actions, owner, human approval point, error alert, and success metric. Explain which processes should stay manual for now and why. Favor a small, testable workflow over a large fragile one."
+  },
+
+  // ---------- Marketing & Ads ----------
+  {
+    id: "mkt-tiktok-ad-script",
+    category: "Marketing & Ads",
+    title: "TikTok Ad Script With a Native, Non-Ad Feel",
+    description: "A TikTok ad script generator prompt that keeps the pacing and tone native to the platform instead of sounding like a commercial.",
+    tags: ["tiktok ads", "ad script", "short-form video"],
+    prompt: "You are a TikTok ads creative strategist. Write a 20-30 second ad script for [PRODUCT/SERVICE] aimed at [TARGET AUDIENCE], styled to feel like organic TikTok content, not a commercial. Structure: a scroll-stopping first line (under 3 seconds when spoken), a quick demonstration or proof beat, one specific detail that builds trust (a number, a before/after, a real use case), and a low-pressure CTA. Write it as spoken dialogue with on-screen text cues in brackets. Do not use words like 'amazing,' 'game-changer,' or a hard sales close."
+  },
+  {
+    id: "mkt-value-proposition-statement",
+    category: "Marketing & Ads",
+    title: "One-Sentence Value Proposition Generator",
+    description: "An AI prompt that distills what you do into a single, specific value proposition sentence for headlines and ad copy.",
+    tags: ["value proposition", "positioning", "headline"],
+    prompt: "You are a positioning consultant. Based on this input — product: [WHAT IT DOES], audience: [WHO IT'S FOR], main outcome: [RESULT THEY GET], and the alternative they'd otherwise use: [CURRENT ALTERNATIVE] — write 5 candidate one-sentence value propositions, each under 20 words. Each must name the specific outcome and audience, not a generic benefit like 'save time' or 'grow your business.' Rank them by clarity and flag any that could apply to a competitor unchanged."
+  },
+
+  // ---------- E-commerce ----------
+  {
+    id: "ecom-category-page-seo-description",
+    category: "E-commerce",
+    title: "SEO Description for a Product Category Page",
+    description: "An AI product description generator prompt built specifically for category/collection pages, not single products.",
+    tags: ["seo", "category page", "product description"],
+    prompt: "You are an e-commerce SEO copywriter. Write an SEO-optimized description for the category page [CATEGORY NAME], selling [PRODUCT TYPES IN THIS CATEGORY], targeting the search term [TARGET KEYWORD]. Include: a 150-200 word intro paragraph placed above the fold that naturally uses the target keyword and 2-3 related terms, a short buyer's-guide subsection answering one common pre-purchase question, and a meta description under 155 characters. Do not keyword-stuff — every sentence must still read naturally to a shopper."
+  },
+  {
+    id: "ecom-influencer-outreach-email",
+    category: "E-commerce",
+    title: "Micro-Influencer Outreach Email for Product Seeding",
+    description: "A template for reaching out to micro-influencers to seed free product in exchange for authentic content.",
+    tags: ["influencer outreach", "product seeding", "email template"],
+    prompt: "You are an influencer marketing manager. Write a short outreach email inviting a micro-influencer in the [NICHE] space to receive a free [PRODUCT] in exchange for honest content (no payment, no script required). Requirements: under 120 words, name one specific reason you chose them (reference their content style or audience, using [PLACEHOLDER FOR SPECIFIC DETAIL]), clearly state there's no obligation to post, and include one easy next step. Avoid generic flattery like 'I love your content' without a specific reason attached."
+  },
+
+  // ---------- SEO & Content ----------
+  {
+    id: "seo-meta-title-description-batch",
+    category: "SEO & Content",
+    title: "Batch Meta Titles & Descriptions for a Page List",
+    description: "An AI meta description generator prompt that produces unique, click-worthy tags for a whole list of pages at once.",
+    tags: ["meta description", "meta title", "on-page seo"],
+    prompt: "You are an on-page SEO specialist. For each page in this list — [PAGE URL/TOPIC, TARGET KEYWORD pairs, one per line] — write a unique meta title (50-60 characters, keyword near the front) and meta description (140-155 characters, includes the keyword plus one specific benefit or detail). No two titles or descriptions may share the same opening words. Flag any page where the target keyword is too similar to another page's, which would cause keyword cannibalization."
+  },
+  {
+    id: "seo-keyword-clustering",
+    category: "SEO & Content",
+    title: "Keyword Clustering Into Content Topics",
+    description: "Group a raw keyword list into topic clusters so you know how many articles to write instead of one per keyword.",
+    tags: ["keyword research", "content strategy", "topic clusters"],
+    prompt: "You are an SEO content strategist. Group this raw keyword list — [PASTE KEYWORD LIST] — into topic clusters based on shared search intent, not just shared words. For each cluster, provide: a cluster name, the keywords belonging to it, the dominant search intent (informational, commercial, transactional, navigational), and a recommended single article title that could realistically target the whole cluster. Flag any keyword that doesn't fit an existing cluster and may need its own page."
+  },
+
+  // ---------- Social Media ----------
+  {
+    id: "social-pinterest-pin-description",
+    category: "Social Media",
+    title: "Pinterest Pin Titles & SEO Descriptions",
+    description: "Pinterest-optimized pin titles and keyword-rich descriptions built around how Pinterest search actually works.",
+    tags: ["pinterest", "pin description", "seo"],
+    prompt: "You are a Pinterest marketing specialist. For a pin promoting [CONTENT/PRODUCT, ONE-LINE DESCRIPTION] targeting the search term [TARGET KEYWORD], write: a pin title (under 100 characters, keyword near the start), a pin description (under 500 characters, naturally including the keyword and 2 related terms, written as if helping someone who searched that term), and 3 relevant board name suggestions. Avoid clickbait phrasing that doesn't match what the pin links to."
+  },
+  {
+    id: "social-content-calendar-month",
+    category: "Social Media",
+    title: "One-Month Social Content Calendar From a Single Theme",
+    description: "An AI social media calendar generator prompt that turns one monthly theme into a full posting plan.",
+    tags: ["content calendar", "social media planning", "monthly theme"],
+    prompt: "You are a social media strategist. Build a 4-week content calendar for [BRAND/PLATFORM] built around the monthly theme [THEME]. For each week, provide 3 post ideas with a one-line hook, the format (reel, carousel, static, thread), and the intended goal (awareness, engagement, or conversion) — no two posts in the month should repeat the same hook angle. End with 2 ideas held in reserve in case a planned post falls through."
+  },
+
+  // ---------- Email Marketing ----------
+  {
+    id: "email-re-permission-campaign",
+    category: "Email Marketing",
+    title: "Re-Permission Email for List Cleanup",
+    description: "An email that asks inactive subscribers to confirm they still want to hear from you, before you clean the list.",
+    tags: ["email list cleanup", "re-permission", "deliverability"],
+    prompt: "You are an email deliverability specialist. Write a re-permission email to subscribers of [BRAND] who haven't opened an email in [TIME PERIOD]. The email must: acknowledge it's been a while without guilt-tripping, offer one genuine reason to stay (not a generic 'we miss you'), give a single clear action to stay subscribed, and state plainly what happens if they don't act (removal from the list). Subject line and preview text included. Keep the body under 100 words."
+  },
+  {
+    id: "email-subject-line-ab-test",
+    category: "Email Marketing",
+    title: "Subject Line A/B Test Variant Generator",
+    description: "An AI email subject line generator prompt that produces genuinely different angles to A/B test, not minor rewordings.",
+    tags: ["subject line", "a/b testing", "email marketing"],
+    prompt: "You are an email marketer running subject line tests. For an email about [EMAIL TOPIC/OFFER] going to [AUDIENCE], write 5 subject lines that each use a distinct angle: (1) curiosity, (2) direct benefit, (3) urgency/scarcity, (4) a question, (5) personalization-style. Each under 50 characters. For every subject line, also provide matching preview text under 90 characters. Flag any that could trigger spam filters (e.g. excessive punctuation, all caps, 'free')."
+  },
+
+  // ---------- Business & Productivity ----------
+  {
+    id: "biz-one-page-business-plan",
+    category: "Business & Productivity",
+    title: "One-Page Business Plan Draft",
+    description: "An AI business plan generator prompt that condenses a business idea into a single actionable page, not a 20-page document.",
+    tags: ["business plan", "startup", "strategy"],
+    prompt: "You are a startup advisor. Using this input — idea: [WHAT THE BUSINESS DOES], target customer: [WHO], problem it solves: [PROBLEM], and how it makes money: [REVENUE MODEL] — write a one-page business plan covering: problem, solution, target customer, revenue model, top 3 risks, and the single next milestone that would validate the idea. Keep every section to 2-3 sentences. Call out any part of the input that's too vague to plan around instead of inventing details."
+  },
+  {
+    id: "biz-pricing-page-strategy",
+    category: "Business & Productivity",
+    title: "Pricing Page Structure & Objection Handling",
+    description: "A pricing page copy generator prompt that structures tiers and pre-answers the objections that stall a purchase decision.",
+    tags: ["pricing page", "objection handling", "conversion"],
+    prompt: "You are a SaaS pricing strategist. For [PRODUCT] with these tiers — [LIST TIERS AND WHAT'S INCLUDED IN EACH] — write pricing page copy including: a one-line value statement per tier (not just a feature list), a recommended-tier callout with the reason it's recommended, a 3-question FAQ addressing the top objections for this kind of purchase (e.g. contract length, refunds, what happens if they outgrow a tier), and a single guarantee statement only if [GUARANTEE DETAILS] are provided — otherwise omit it rather than inventing one."
+  },
+
+  // ---------- Customer Support ----------
+  {
+    id: "support-faq-from-tickets",
+    category: "Customer Support",
+    title: "FAQ Page Generated From Recurring Support Tickets",
+    description: "An AI FAQ generator prompt that turns a batch of real support tickets into a structured FAQ page.",
+    tags: ["faq", "support tickets", "self-service"],
+    prompt: "You are a customer support content specialist. Review these support ticket summaries — [PASTE TICKET SUMMARIES] — and group them into recurring question themes. For each theme, write: the question phrased the way a customer would actually type it, a clear answer under 80 words, and a note on which team/article it should link to for more detail. Merge near-duplicate questions instead of listing them separately, and flag any ticket that reveals a product bug rather than a genuine FAQ."
+  },
+  {
+    id: "support-csat-survey-followup",
+    category: "Customer Support",
+    title: "Follow-Up Message After a Low CSAT Score",
+    description: "A customer satisfaction follow-up email template for reaching out after a customer leaves a low support rating.",
+    tags: ["csat", "follow-up", "customer satisfaction"],
+    prompt: "You are a customer experience manager. Write a follow-up message to a customer who gave a low satisfaction score ([SCORE]/5) after a support interaction about [ISSUE TYPE]. The message must: acknowledge the low score directly without being defensive, ask one specific open question about what went wrong (not a generic 'how can we improve'), offer a concrete next step, and avoid corporate-sounding apology language ('we sincerely apologize for any inconvenience'). Keep it under 90 words."
+  },
+
+  // ---------- Automation & Workflow ----------
+  {
+    id: "auto-slack-notification-rules",
+    category: "Automation & Workflow",
+    title: "Slack Notification Rules Blueprint to Cut Noise",
+    description: "An automation blueprint for routing and filtering Slack notifications so only the alerts that need action get through.",
+    tags: ["slack", "automation", "notification rules"],
+    prompt: "You are a workflow automation consultant. Given these current notification sources — [LIST TOOLS/EVENTS CURRENTLY POSTING TO SLACK] — design a filtering and routing scheme so each channel only receives notifications someone needs to act on. For each source, specify: which channel it should route to, the condition that should suppress it (e.g. severity below a threshold, duplicate within X minutes), and whether it needs a digest format instead of real-time. Recommend which notifications should be removed entirely rather than rerouted."
+  },
+  {
+    id: "auto-invoice-reminder-sequence",
+    category: "Automation & Workflow",
+    title: "Automated Invoice Reminder Sequence Blueprint",
+    description: "An invoice reminder automation prompt that defines a full overdue-payment sequence, from friendly nudge to escalation.",
+    tags: ["invoicing", "automation", "accounts receivable"],
+    prompt: "You are an accounts receivable automation consultant. Design an automated invoice reminder sequence for [BUSINESS TYPE] triggered when an invoice becomes overdue. Define, for each stage (due date, 3 days overdue, 14 days overdue, 30 days overdue): the trigger condition, the tone of the message (friendly to firm), the channel (email/SMS), and whether it needs human review before escalation. Specify the point at which the process should hand off to a human instead of continuing automatically."
   }
 ];
