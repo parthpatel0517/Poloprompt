@@ -2,6 +2,11 @@
 (function () {
   "use strict";
 
+  function trackEvent(name, params) {
+    if (typeof gtag === "function") gtag("event", name, params || {});
+  }
+  window.PoloTrack = trackEvent;
+
   function initNav() {
     var toggle = document.querySelector(".nav-toggle");
     var links = document.querySelector(".nav-links");
@@ -33,6 +38,10 @@
       var done = function () {
         btn.textContent = "Copied!";
         btn.classList.add("copied");
+        trackEvent("copy_prompt", {
+          item_id: target.id || "",
+          page_path: window.location.pathname
+        });
         setTimeout(function () {
           btn.textContent = restore;
           btn.classList.remove("copied");

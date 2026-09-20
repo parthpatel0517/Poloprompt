@@ -200,10 +200,17 @@
     if (!grid) return;
 
     if (searchInput) {
+      var searchTrackTimer = null;
       searchInput.addEventListener("input", function () {
         state.query = searchInput.value.trim();
         state.page = 1;
         render();
+        clearTimeout(searchTrackTimer);
+        searchTrackTimer = setTimeout(function () {
+          if (state.query && window.PoloTrack) {
+            window.PoloTrack("search_library", { search_term: state.query });
+          }
+        }, 800);
       });
     }
 
@@ -214,6 +221,7 @@
       state.page = 1;
       highlightActiveCategory();
       render();
+      if (window.PoloTrack) window.PoloTrack("filter_category", { category: state.category });
     });
 
     if (pagination) {
@@ -237,6 +245,9 @@
       var willShow = target.hidden;
       target.hidden = !willShow;
       btn.textContent = willShow ? "Hide Prompt" : "View & Copy Prompt";
+      if (willShow && window.PoloTrack) {
+        window.PoloTrack("view_prompt", { item_id: btn.closest("[data-id]").getAttribute("data-id") });
+      }
     });
   }
 

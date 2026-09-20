@@ -137,9 +137,16 @@
     });
 
     if (searchInput) {
+      var searchTrackTimer = null;
       searchInput.addEventListener("input", function () {
         state.query = searchInput.value.trim();
         render();
+        clearTimeout(searchTrackTimer);
+        searchTrackTimer = setTimeout(function () {
+          if (state.query && window.PoloTrack) {
+            window.PoloTrack("search_image_trends", { search_term: state.query });
+          }
+        }, 800);
       });
     }
 
@@ -150,6 +157,7 @@
         state.tag = btn.getAttribute("data-tag");
         highlightActiveTag();
         render();
+        if (window.PoloTrack) window.PoloTrack("filter_image_tag", { tag: state.tag });
       });
     }
 
@@ -161,6 +169,9 @@
       var willShow = target.hidden;
       target.hidden = !willShow;
       btn.textContent = willShow ? "Hide Prompt" : "View & Copy Prompt";
+      if (willShow && window.PoloTrack) {
+        window.PoloTrack("view_image_prompt", { item_id: btn.closest("[data-id]").getAttribute("data-id") });
+      }
     });
   }
 
