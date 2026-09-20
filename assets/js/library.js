@@ -31,6 +31,15 @@
     return Object.keys(set).sort();
   }
 
+  function updateCountBadges() {
+    document.querySelectorAll('[data-lib-count="prompts"]').forEach(function (el) {
+      el.textContent = library.length;
+    });
+    document.querySelectorAll('[data-lib-count="categories"]').forEach(function (el) {
+      el.textContent = getCategories().length;
+    });
+  }
+
   function matches(item) {
     var byCategory = state.category === "All" || item.category === state.category;
     if (!byCategory) return false;
@@ -115,17 +124,20 @@
     resultsCount = document.getElementById("library-results-count");
     emptyState = document.getElementById("library-empty-state");
     pagination = document.getElementById("library-pagination");
-    if (!grid) return;
 
     readInitialFilters();
     if (searchInput) searchInput.value = state.query;
 
     loadLibrary().then(function (data) {
       library = data;
+      updateCountBadges();
+      if (!grid) return;
       buildCategoryBar();
       render();
       highlightActiveCategory();
     });
+
+    if (!grid) return;
 
     if (searchInput) {
       searchInput.addEventListener("input", function () {
