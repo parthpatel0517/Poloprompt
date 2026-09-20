@@ -72,6 +72,72 @@
       post.content_html;
   }
 
+  var STOPWORDS = {
+    "the": true, "and": true, "for": true, "that": true, "your": true, "you": true,
+    "with": true, "into": true, "from": true, "this": true, "are": true, "have": true,
+    "prompt": true, "prompts": true, "write": true, "writing": true, "ai": true,
+    "generator": true, "generators": true, "tool": true, "tools": true, "free": true,
+    "how": true, "what": true, "use": true, "using": true, "like": true, "one": true,
+    "sound": true, "sounds": true, "else": true, "everyone": true, "make": true
+  };
+
+  function tokenize(str) {
+    return ((str || "").toLowerCase().match(/[a-z0-9]+/g) || []).filter(function (t) {
+      return t.length > 3 && !STOPWORDS[t];
+    });
+  }
+
+  function loadPromptLibrary() {
+    if (!API_BASE) return Promise.resolve(typeof PROMPT_LIBRARY !== "undefined" ? PROMPT_LIBRARY : []);
+    return fetch(API_BASE + "/api/prompts")
+      .then(function (res) {
+        if (!res.ok) throw new Error("Request failed");
+        return res.json();
+      })
+      .catch(function () {
+        return typeof PROMPT_LIBRARY !== "undefined" ? PROMPT_LIBRARY : [];
+      });
+  }
+
+  function scorePrompt(post, prompt) {
+    var postTokens = tokenize(post.title + " " + post.badge + " " + post.description);
+    var promptTokens = tokenize(prompt.category + " " + prompt.title + " " + (prompt.tags || []).join(" "));
+    var set = {};
+    promptTokens.forEach(function (t) { set[t] = true; });
+    var score = 0;
+    postTokens.forEach(function (t) { if (set[t]) score++; });
+    return score;
+  }
+
+  function relatedPromptCardHtml(item) {
+    var url = "/library?category=" + encodeURIComponent(item.category) + "&q=" + encodeURIComponent(item.title);
+    return (
+      "<a class=\"card\" href=\"" + url + "\">" +
+        "<span class=\"badge\" style=\"margin-bottom:8px\">" + escapeHtml(item.category) + "</span>" +
+        "<h3>" + escapeHtml(item.title) + "</h3>" +
+        "<p>" + escapeHtml(item.description) + "</p>" +
+      "</a>"
+    );
+  }
+
+  function renderRelatedPrompts(post) {
+    loadPromptLibrary().then(function (library) {
+      var scored = library
+        .map(function (p) { return { prompt: p, score: scorePrompt(post, p) }; })
+        .filter(function (s) { return s.score >= 2; })
+        .sort(function (a, b) { return b.score - a.score; })
+        .slice(0, 3);
+
+      if (!scored.length) return;
+
+      var section = document.getElementById("related-prompts-section");
+      var grid = document.getElementById("related-prompts-grid");
+      if (!section || !grid) return;
+      grid.innerHTML = scored.map(function (s) { return relatedPromptCardHtml(s.prompt); }).join("");
+      section.hidden = false;
+    });
+  }
+
   function renderNotFound() {
     document.getElementById("post-body").innerHTML =
       "<h1>Post Not Found</h1>" +
@@ -86,6 +152,7 @@
       if (!post) { renderNotFound(); return; }
       setMeta(post, slug);
       render(post);
+      renderRelatedPrompts(post);
     });
   }
 
