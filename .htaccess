@@ -18,6 +18,7 @@ RewriteRule ^index\.html$ / [R=301,L]
 #    so search engines and links only ever see one canonical URL per page.
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html[\ ?] [NC]
 RewriteCond %{REQUEST_URI} !^/404\.html$
+RewriteCond %{REQUEST_URI} !^/google[a-z0-9]+\.html$
 RewriteRule ^ /%1 [R=301,L]
 
 # 2b) A trailing-slash request for a page that's also a folder name (e.g.
