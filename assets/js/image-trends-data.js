@@ -74,5 +74,41 @@ var IMAGE_TRENDS = [
     prompt: "Convert this photo into a classic film noir black-and-white portrait: high-contrast lighting, hard venetian-blind shadows, deep blacks and crisp whites, a smoky moody atmosphere, and a dramatic cinematic 1940s detective-movie feel. Keep the subject's face, pose, and outfit recognizable from the original photo.",
     tags: ["Black & White", "Cinematic", "Moody", "Portrait"],
     sort_order: 8
+  },
+  {
+    id: "trend-3d-pixar",
+    theme: "3D Render / Pixar-style",
+    description: "Glossy 3D-animated character look with soft studio lighting and big expressive eyes.",
+    image_url: "https://picsum.photos/seed/poloprompt-3d-pixar/640/480",
+    prompt: "Turn this photo into a glossy stylized 3D-animated character render: smooth rounded proportions, big expressive eyes, soft studio three-point lighting, subtle subsurface skin scattering, and a clean simple background. Keep the subject's hairstyle, outfit colors, and general likeness recognizable from the original photo.",
+    tags: ["3D", "Animated", "Character", "Portrait"],
+    sort_order: 9
+  },
+  {
+    id: "trend-fantasy-character",
+    theme: "Fantasy Character",
+    description: "Epic fantasy portrait with ornate armor, a magical glow, and dramatic cinematic lighting.",
+    image_url: "https://picsum.photos/seed/poloprompt-fantasy/640/480",
+    prompt: "Reimagine this photo as an epic fantasy character portrait: ornate detailed armor or robes, a subtle magical glow around the hands or eyes, dramatic rim lighting, a misty ancient-ruins or enchanted-forest background, and painterly digital-art texture. Keep the subject's face and general likeness recognizable from the original photo.",
+    tags: ["Fantasy", "Character", "Cinematic", "Portrait"],
+    sort_order: 10
+  },
+  {
+    id: "trend-paper-craft",
+    theme: "Infographic / Paper Craft",
+    description: "Flat paper-cutout illustration with layered shadows, popular for clean social media posts.",
+    image_url: "https://picsum.photos/seed/poloprompt-paper-craft/640/480",
+    prompt: "Restyle this photo as a layered paper-craft illustration: flat cut-paper shapes, soft drop shadows between layers, simple bold color blocking, clean minimal shapes instead of fine detail, and a subtle craft-paper texture. Keep the subject's pose and general silhouette recognizable from the original photo.",
+    tags: ["Paper Craft", "Infographic", "Illustration", "Portrait"],
+    sort_order: 11
+  },
+  {
+    id: "trend-festive-portrait",
+    theme: "Patriotic / Festive Portrait",
+    description: "Warm festival lighting and flag-inspired colors, popular for holiday and celebration posts.",
+    image_url: "https://picsum.photos/seed/poloprompt-festive/640/480",
+    prompt: "Restyle this photo as a warm festive celebration portrait: soft golden-hour lighting, gentle bokeh from string lights or fireworks in the background, warm patriotic color grading, and a joyful festive atmosphere. Keep the subject's face, pose, and outfit exactly as in the original photo.",
+    tags: ["Patriotic", "Festive", "Portrait", "Nature"],
+    sort_order: 12
   }
 ];
