@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M1QMX20RF6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-M1QMX20RF6");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Prompt ChatGPT's New Sketch Feature So It Actually Works | PoloPrompt</title>
+<meta name="description" content="OpenAI's Images 2.5 update added a Sketch tool that turns a rough drawing into a finished image. Here's the prompting discipline that makes it follow your layout instead of guessing.">
+<link rel="canonical" href="https://poloprompt.com/blog/chatgpt-sketch-feature-prompting-guide">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719849376462270" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Prompt ChatGPT's New Sketch Feature So It Actually Works",
+  "description": "OpenAI's Images 2.5 update added a Sketch tool that turns a rough drawing into a finished image. Here's the prompting discipline that makes it follow your layout instead of guessing.",
+  "url": "https://poloprompt.com/blog/chatgpt-sketch-feature-prompting-guide",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://poloprompt.com/blog/chatgpt-sketch-feature-prompting-guide"
+  },
+  "datePublished": "2026-09-20",
+  "dateModified": "2026-09-20",
+  "author": {
+    "@type": "Organization",
+    "name": "PoloPrompt",
+    "url": "https://poloprompt.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PoloPrompt",
+    "url": "https://poloprompt.com/"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="logo">Polo<span>Prompt</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="/">Home</a></li>
+      <li><a class="nav-link" href="/library">Prompt Library</a></li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Prompt Generators ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder<small>Meta, Google, YouTube, Reels</small></a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">E-commerce Product Description Maker<small>Amazon, Shopify, Etsy, Meesho</small></a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO &amp; Content Outline Generator<small>Blog &amp; article structure prompts</small></a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption &amp; Hook Generator<small>Reels, Shorts, TikTok, LinkedIn</small></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a class="nav-link" href="#">Workflow Tools ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder<small>By industry &amp; goal</small></a></li>
+          <li><a href="/tools/workflow-step-planner">Zapier / Make Workflow Planner<small>Trigger → action step builder</small></a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="/blog">Blog</a></li>
+      <li><a class="nav-link" href="/about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container" style="padding-top:24px">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/blog">Blog</a> / How to Prompt ChatGPT's New Sketch Feature So It Actually Works</p>
+</div>
+
+<main>
+  <section>
+    <div class="container prose">
+      <h1>How to Prompt ChatGPT's New Sketch Feature So It Actually Works</h1>
+
+      <p>On September 8, 2026, OpenAI shipped ChatGPT Images 2.5, and the feature everyone actually started using wasn't a resolution bump or a new filter — it was Sketch. Type <code>@Sketch</code> in a chat and you get a small canvas to draw on, directly inside the conversation. Draw something rough, add a text description of what it should become, and the model uses your drawing as a visual anchor for the finished image instead of generating from text alone. It's a genuinely new kind of prompt: half drawing, half instruction. Most people are going to treat it like the old text box — describe more, draw less — and wonder why their sketch gets ignored. It doesn't have to go that way, and the fix isn't drawing better. It's drawing differently.</p>
+
+      <h2>What Sketch is actually doing with your drawing</h2>
+      <p>It helps to stop thinking of Sketch as "turn my doodle into art" and start thinking of it as two separate inputs doing two separate jobs. The drawing is a layout — it tells the model where things go, how big they are relative to each other, and where the empty space is. The text is everything else: what those shapes actually represent, what style they should render in, what mood or lighting the scene needs. The model isn't tracing your lines like a coloring book. It's reading your composition as a spatial instruction and filling in the content from your description. That's why a genuinely bad drawing can still produce a great result, and a genuinely pretty one can produce a confused mess — if the pretty one doesn't clearly communicate which shape is the subject, which is the background, and where the blank space is meant to stay blank.</p>
+
+      <h2>Draw for specificity, not for skill</h2>
+      <p>Nobody is grading your linework. What the model needs from your sketch is three unambiguous decisions, and nothing else:</p>
+      <ul>
+        <li><strong>Foreground vs. background.</strong> Which shape is the subject, and which is just context behind it.</li>
+        <li><strong>Relative size.</strong> Is the product twice as tall as the hand holding it, or the same size? Proportions carry real weight in how the output gets composed.</li>
+        <li><strong>Deliberate blank space.</strong> If you're leaving room for a headline, a logo, or negative space around a product shot, draw that empty rectangle on purpose. An empty area you didn't intend to leave reads as "fill this in with something," which is usually not what you wanted.</li>
+      </ul>
+      <p>A three-box stick diagram that nails those three decisions will outperform a detailed, careful drawing that leaves them ambiguous, every time. If you find yourself adding shading or detail to a sketch, that's usually a sign you should be writing that detail in the text prompt instead — the drawing's job is layout, not description.</p>
+
+      <h2>Write the brief like a work order, not a caption</h2>
+      <p>Once the sketch establishes the layout, the accompanying text needs to do three things the drawing can't: name what each zone actually is, specify the style or reference you want, and state the one thing that must not change. Skip any of the three and the model fills the gap with its own default guess.</p>
+      <p><strong>Weak prompt:</strong> "Make this a poster for my coffee shop."</p>
+      <p><strong>Strengthened prompt:</strong> "The tall shape on the left is a ceramic coffee cup with steam rising — render it photorealistic, warm morning light from the left. The empty rectangle at the top is reserved for a headline; leave it as clean negative space, no texture or objects inside it. The small shape in the bottom-right corner is a logo placeholder — keep it small and simple, don't turn it into a full illustration. Warm, muted color palette, no neon or high-contrast lighting."</p>
+      <p>The first prompt hands the model a blank check: it decides the cup's style, the mood, and what goes in your reserved space, because you never told it those were decisions rather than blanks. The second prompt turns each shape in your sketch into a named, constrained element, which is what makes the output match what you actually drew instead of a loosely related interpretation of it.</p>
+
+      <h2>Use the mark tool for fixes — don't re-describe the whole image</h2>
+      <p>Images 2.5 also lets you mark a specific spot on a generated image and describe a change to just that area. This matters more than it sounds like, because the instinct most people have when one element is wrong is to rewrite the entire prompt from scratch — which risks changing the parts that were already right. Once you've got a result that's 80% there, mark the one region that's off ("the steam looks like smoke, make it lighter and wispier") and leave the rest of the prompt alone. You're editing a photograph, not repainting it.</p>
+
+      <h2>Multi-turn edits: point at what exists, don't restate it</h2>
+      <p>The bigger technical jump in 2.5 isn't rendering quality — it's that the model holds context across a conversation better, keeping a subject or scene consistent turn over turn instead of drifting with each edit. The way to actually benefit from that is to stop re-describing the whole scene on every follow-up. If your last message established a specific product shot, your next instruction should reference it directly — "keep the cup and lighting exactly as they are, just change the background to a warm terracotta wall" — rather than retyping the full brief with one word changed. Restating everything gives the model a fresh opportunity to reinterpret details it had already gotten right; pointing at what already exists tells it what to hold steady.</p>
+
+      <h2>When the built-in templates help, and when they get in the way</h2>
+      <p>Sketch ships with a couple of starting templates, including Poster and Merch layouts, that give you a pre-built canvas for common formats like flyers and product shots. They're genuinely useful when you're starting from nothing and want a sensible default composition to draw over. They're less useful the moment you already know your exact layout, because you'll spend more effort fighting the template's assumptions about where elements go than you would have spent just drawing three boxes yourself. Use them as a starting scaffold for a format you're unfamiliar with, and skip them the moment you have a specific composition in mind.</p>
+
+      <h2>If you're calling the API instead of using the chat app</h2>
+      <p>OpenAI shipped two models alongside the chat feature: <code>gpt-image-2.5-flare</code>, the fast default for everyday generation, and <code>gpt-image-2.5-sunburst</code>, a slower model built for precision editing that exposes a quality ladder (low, medium, high, xhigh, max, auto) for when a campaign asset needs the extra rendering pass. Both are priced roughly double the previous generation's token rates, so if you're building sketch-to-image into a workflow rather than using it in chat, budget for that before you scale up volume.</p>
+
+      <h2>Putting it together</h2>
+      <p>A full pass looks like this: draw a three-zone sketch (subject, background, reserved blank space) rather than a detailed picture. Write a brief that names each zone, sets the style and lighting, and states what must stay untouched. When the first result is close but not right, mark the one wrong spot instead of rewriting the prompt. When you want a follow-up variation, point at what's already correct and describe only the change. That's the whole discipline — none of it requires being able to draw, and all of it is about giving the model fewer blanks to guess into.</p>
+
+      <p>If you want more structures like this one for turning a rough idea into a specific instruction, the <a href="/library">Prompt Library</a> has role-and-constraint examples you can adapt, and the <a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder</a> assembles a similarly complete brief for ad copy without the manual setup.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-text">
+        <h4>Get New Prompts &amp; Automation Ideas</h4>
+        <p>Join the list for new prompts, tools, and automation ideas as they're added &mdash; no spam, unsubscribe anytime.</p>
+      </div>
+      <div class="footer-newsletter-form-wrap">
+        <form class="newsletter-form" novalidate>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" placeholder="you@example.com" required>
+          <input type="text" class="newsletter-hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="newsletter-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>PoloPrompt</h4>
+        <p>Free, client-side AI prompt generators and workflow builders for marketers, creators, and business owners.</p>
+      </div>
+      <div>
+        <h4>Prompt Generators</h4>
+        <ul>
+          <li><a href="/tools/marketing-ad-prompt-builder">Marketing &amp; Ads Prompt Builder</a></li>
+          <li><a href="/tools/ecommerce-product-description-generator">Product Description Maker</a></li>
+          <li><a href="/tools/seo-content-outline-generator">SEO Content Outline Generator</a></li>
+          <li><a href="/tools/social-caption-generator">Social Caption Generator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Workflow Tools</h4>
+        <ul>
+          <li><a href="/library">Prompt Library</a></li>
+          <li><a href="/tools/ai-automation-idea-finder">AI Automation Idea Finder</a></li>
+          <li><a href="/tools/workflow-step-planner">Workflow Step Planner</a></li>
+          <li><a href="/templates">Free Templates Hub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> PoloPrompt. All rights reserved.</span>
+      <span>Built for marketers, creators &amp; business owners.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/newsletter.js"></script>
+</body>
+</html>
