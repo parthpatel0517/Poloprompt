@@ -83,16 +83,7 @@
 
   function renderPagination(totalPages) {
     if (!pagination) return;
-    if (totalPages <= 1) {
-      pagination.innerHTML = "";
-      return;
-    }
-    var html = "<button type=\"button\" data-page=\"prev\"" + (state.page === 1 ? " disabled" : "") + " aria-label=\"Previous page\">Prev</button>";
-    for (var p = 1; p <= totalPages; p++) {
-      html += "<button type=\"button\" data-page=\"" + p + "\" class=\"" + (p === state.page ? "active" : "") + "\" aria-current=\"" + (p === state.page ? "page" : "false") + "\">" + p + "</button>";
-    }
-    html += "<button type=\"button\" data-page=\"next\"" + (state.page === totalPages ? " disabled" : "") + " aria-label=\"Next page\">Next</button>";
-    pagination.innerHTML = html;
+    pagination.innerHTML = PoloPagination.render(state.page, totalPages);
   }
 
   function buildCategoryBar() {

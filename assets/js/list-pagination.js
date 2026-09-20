@@ -23,16 +23,7 @@
       items.forEach(function (item, i) {
         item.hidden = i < (page - 1) * pageSize || i >= page * pageSize;
       });
-      renderNav();
-    }
-
-    function renderNav() {
-      var html = "<button type=\"button\" data-page=\"prev\"" + (page === 1 ? " disabled" : "") + " aria-label=\"Previous page\">Prev</button>";
-      for (var p = 1; p <= totalPages; p++) {
-        html += "<button type=\"button\" data-page=\"" + p + "\" class=\"" + (p === page ? "active" : "") + "\" aria-current=\"" + (p === page ? "page" : "false") + "\">" + p + "</button>";
-      }
-      html += "<button type=\"button\" data-page=\"next\"" + (page === totalPages ? " disabled" : "") + " aria-label=\"Next page\">Next</button>";
-      nav.innerHTML = html;
+      nav.innerHTML = PoloPagination.render(page, totalPages);
     }
 
     nav.addEventListener("click", function (e) {
