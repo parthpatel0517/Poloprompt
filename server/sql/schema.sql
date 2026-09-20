@@ -41,6 +41,17 @@ CREATE TABLE IF NOT EXISTS blog_posts (
   updated_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+-- Trending image styles showcase (homepage) — each row is one style/theme
+-- with an example image and the prompt that recreates it on the user's own photo.
+CREATE TABLE IF NOT EXISTS image_trends (
+  id            VARCHAR(64) PRIMARY KEY,
+  theme         VARCHAR(255) NOT NULL,
+  description   TEXT NOT NULL,
+  image_url     VARCHAR(512) NOT NULL,
+  prompt        TEXT NOT NULL,
+  sort_order    INT DEFAULT 0
+);
+
 -- Footer newsletter signups (site-wide form, all pages)
 CREATE TABLE IF NOT EXISTS newsletter_subscribers (
   id              INT AUTO_INCREMENT PRIMARY KEY,

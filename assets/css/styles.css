@@ -127,6 +127,12 @@ p{margin:0 0 1em}
 .card h3{font-size:1.05rem;margin-bottom:6px;color:var(--text)}
 .card p{color:var(--text-muted);font-size:.9rem;margin-bottom:0}
 
+.image-trend-card{overflow:hidden}
+.image-trend-thumb{
+  aspect-ratio:4/3;margin:-22px -22px 14px;background:var(--bg);
+}
+.image-trend-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+
 /* ---------- Sections ---------- */
 section{padding:48px 0}
 .section-head{max-width:680px;margin:0 auto 32px;text-align:center}

@@ -34,6 +34,15 @@ CREATE TABLE IF NOT EXISTS blog_posts (
   updated_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS image_trends (
+  id            VARCHAR(64) PRIMARY KEY,
+  theme         VARCHAR(255) NOT NULL,
+  description   TEXT NOT NULL,
+  image_url     VARCHAR(512) NOT NULL,
+  prompt        TEXT NOT NULL,
+  sort_order    INT DEFAULT 0
+);
+
 CREATE TABLE IF NOT EXISTS newsletter_subscribers (
   id              INT AUTO_INCREMENT PRIMARY KEY,
   email           VARCHAR(255) NOT NULL UNIQUE,

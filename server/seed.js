@@ -93,11 +93,31 @@ async function seedBlogPosts() {
   }
 }
 
+async function seedImageTrends() {
+  const { IMAGE_TRENDS } = loadGlobalsFromScript(
+    path.join(__dirname, "..", "assets", "js", "image-trends-data.js"),
+    ["IMAGE_TRENDS"]
+  );
+
+  console.log(`Seeding ${IMAGE_TRENDS.length} image trends...`);
+  for (const t of IMAGE_TRENDS) {
+    await pool.query(
+      `INSERT INTO image_trends (id, theme, description, image_url, prompt, sort_order)
+       VALUES (?, ?, ?, ?, ?, ?)
+       ON DUPLICATE KEY UPDATE
+         theme = VALUES(theme), description = VALUES(description),
+         image_url = VALUES(image_url), prompt = VALUES(prompt), sort_order = VALUES(sort_order)`,
+      [t.id, t.theme, t.description, t.image_url, t.prompt, t.sort_order]
+    );
+  }
+}
+
 async function main() {
   try {
     await seedPrompts();
     await seedAutomationIdeas();
     await seedBlogPosts();
+    await seedImageTrends();
     console.log("Seed complete.");
   } catch (err) {
     console.error("Seed failed:", err);

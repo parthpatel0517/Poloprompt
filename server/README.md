@@ -15,11 +15,12 @@ content — see "Why not everything?" below.
    XAMPP default (root user, no password, port 3306).
 3. **Install deps**: `npm install`
 4. **Seed the data**: `npm run seed` — reads directly from
-   `assets/js/prompt-library-data.js`, `assets/js/automation-ideas-data.js`, and
-   `assets/js/blog-data.js`, so the database always starts in sync with what's
-   in the repo. Re-run this any time one of those files changes (e.g. after
-   merging a PR from the trend-content routines) — merging doesn't update the
-   live database by itself.
+   `assets/js/prompt-library-data.js`, `assets/js/automation-ideas-data.js`,
+   `assets/js/blog-data.js`, and `assets/js/image-trends-data.js`, so the
+   database always starts in sync with what's in the repo. Re-run this any
+   time one of those files changes (e.g. after merging a PR from the
+   trend-content routines) — merging doesn't update the live database by
+   itself.
 5. **Run it**: `npm start` → listens on `http://localhost:3000` by default.
 
 ## Wiring the front-end to it
@@ -30,14 +31,16 @@ server is running:
 - `assets/js/library.js` — prompt library search/filter
 - `assets/js/blog.js` — blog post listing
 - `assets/js/blog-post.js` — single blog post (renders by slug from the URL)
+- `assets/js/image-trends.js` — homepage "Trending Image Styles" showcase
 - `assets/js/tools/ai-automation-idea-finder.js` — automation idea finder
 - `assets/js/newsletter.js` — footer newsletter signup (every page)
 - `assets/js/tools/contact-form.js` — Contact page form
 
-The prompt library, blog, and automation finder **fall back automatically** to
-their bundled static data files (`assets/js/prompt-library-data.js`,
-`assets/js/blog-data.js`, `assets/js/automation-ideas-data.js`) if the API is
-unreachable — so the site keeps working even if this backend isn't deployed or
+The prompt library, blog, automation finder, and image trends showcase
+**fall back automatically** to their bundled static data files
+(`assets/js/prompt-library-data.js`, `assets/js/blog-data.js`,
+`assets/js/automation-ideas-data.js`, `assets/js/image-trends-data.js`) if the
+API is unreachable — so the site keeps working even if this backend isn't deployed or
 is temporarily down. The newsletter and contact forms don't have a static
 fallback (there's nowhere for that data to go without a backend) — they show an
 honest "not connected yet" message instead of failing silently.
@@ -49,6 +52,7 @@ honest "not connected yet" message instead of failing silently.
 | GET    | `/api/prompts`             | —                                          | Full library; site filters locally |
 | GET    | `/api/blog-posts`          | —                                          | List for the /blog index page |
 | GET    | `/api/blog-posts/:slug`    | —                                          | Single post, rendered by `blog/post.html` |
+| GET    | `/api/image-trends`        | —                                          | Homepage "Trending Image Styles" showcase |
 | GET    | `/api/automation-ideas`    | `?industry=X&goal=Y`                       | Falls back to the industry's generic ideas if no exact match |
 | POST   | `/api/newsletter`          | `{ email, sourcePage? }`                   | Upserts by email |
 | POST   | `/api/contact`             | `{ name?, email, reason, message }`        | `reason` is `"help"` or `"support"` |
