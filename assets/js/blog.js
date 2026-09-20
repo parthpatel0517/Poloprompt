@@ -42,6 +42,24 @@
     );
   }
 
+  function injectItemListSchema(data) {
+    var ld = document.createElement("script");
+    ld.type = "application/ld+json";
+    ld.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": data.map(function (post, i) {
+        return {
+          "@type": "ListItem",
+          "position": i + 1,
+          "url": "https://poloprompt.com/blog/" + encodeURIComponent(post.slug),
+          "name": post.title
+        };
+      })
+    });
+    document.head.appendChild(ld);
+  }
+
   function render() {
     var totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
     if (state.page > totalPages) state.page = totalPages;
@@ -70,6 +88,7 @@
 
     loadPosts().then(function (data) {
       posts = data;
+      injectItemListSchema(data);
       render();
     });
 

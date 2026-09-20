@@ -96,6 +96,24 @@
     });
   }
 
+  function injectItemListSchema(data) {
+    var ld = document.createElement("script");
+    ld.type = "application/ld+json";
+    ld.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": data.map(function (t, i) {
+        return {
+          "@type": "ListItem",
+          "position": i + 1,
+          "url": "https://poloprompt.com/image-library",
+          "name": t.theme
+        };
+      })
+    });
+    document.head.appendChild(ld);
+  }
+
   function render() {
     var filtered = trends.filter(matches);
     grid.innerHTML = filtered.map(cardHtml).join("");
@@ -113,6 +131,7 @@
 
     loadTrends().then(function (data) {
       trends = data;
+      injectItemListSchema(data);
       buildTagBar();
       render();
     });

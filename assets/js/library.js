@@ -75,6 +75,24 @@
     );
   }
 
+  function injectItemListSchema(data) {
+    var ld = document.createElement("script");
+    ld.type = "application/ld+json";
+    ld.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": data.map(function (p, i) {
+        return {
+          "@type": "ListItem",
+          "position": i + 1,
+          "url": "https://poloprompt.com/library?category=" + encodeURIComponent(p.category),
+          "name": p.title
+        };
+      })
+    });
+    document.head.appendChild(ld);
+  }
+
   function render() {
     var filtered = library.filter(matches);
     var totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
@@ -132,6 +150,7 @@
       library = data;
       updateCountBadges();
       if (!grid) return;
+      injectItemListSchema(data);
       buildCategoryBar();
       render();
       highlightActiveCategory();
