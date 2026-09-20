@@ -101,13 +101,21 @@
     </div>
   </section>
 
-  <section>
+  <section id="image-trends">
     <div class="container">
       <div class="section-head">
         <h2>Trending Image Styles</h2>
-        <p>See the AI photo trend, then get the exact prompt to turn your own photo into the same look.</p>
+        <p>Browse the trend, then copy the exact prompt to turn your own photo into the same theme.</p>
       </div>
+      <div class="library-search">
+        <input type="text" id="image-trends-search" placeholder="Search styles… e.g. neon, retro, anime" aria-label="Search image trends">
+      </div>
+      <div id="image-trends-tag-bar"></div>
+      <p class="library-meta" id="image-trends-results-count"></p>
       <div class="grid grid-3" id="image-trends-grid"></div>
+      <div class="library-empty" id="image-trends-empty-state" hidden>
+        <p>No styles match your search. Try a different keyword or tag.</p>
+      </div>
     </div>
   </section>
 

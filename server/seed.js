@@ -102,12 +102,12 @@ async function seedImageTrends() {
   console.log(`Seeding ${IMAGE_TRENDS.length} image trends...`);
   for (const t of IMAGE_TRENDS) {
     await pool.query(
-      `INSERT INTO image_trends (id, theme, description, image_url, prompt, sort_order)
-       VALUES (?, ?, ?, ?, ?, ?)
+      `INSERT INTO image_trends (id, theme, description, image_url, prompt, tags, sort_order)
+       VALUES (?, ?, ?, ?, ?, ?, ?)
        ON DUPLICATE KEY UPDATE
-         theme = VALUES(theme), description = VALUES(description),
-         image_url = VALUES(image_url), prompt = VALUES(prompt), sort_order = VALUES(sort_order)`,
-      [t.id, t.theme, t.description, t.image_url, t.prompt, t.sort_order]
+         theme = VALUES(theme), description = VALUES(description), image_url = VALUES(image_url),
+         prompt = VALUES(prompt), tags = VALUES(tags), sort_order = VALUES(sort_order)`,
+      [t.id, t.theme, t.description, t.image_url, t.prompt, JSON.stringify(t.tags), t.sort_order]
     );
   }
 }

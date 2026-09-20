@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS image_trends (
   description   TEXT NOT NULL,
   image_url     VARCHAR(512) NOT NULL,
   prompt        TEXT NOT NULL,
+  tags          JSON NOT NULL,
   sort_order    INT DEFAULT 0
 );
 

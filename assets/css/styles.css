@@ -129,9 +129,19 @@ p{margin:0 0 1em}
 
 .image-trend-card{overflow:hidden}
 .image-trend-thumb{
-  aspect-ratio:4/3;margin:-22px -22px 14px;background:var(--bg);
+  position:relative;aspect-ratio:4/3;margin:-22px -22px 14px;background:var(--bg);
 }
 .image-trend-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.image-trend-badge{
+  position:absolute;top:10px;left:10px;background:rgba(17,17,20,.72);color:#fff;
+  font-size:.72rem;font-weight:700;padding:5px 11px;border-radius:999px;letter-spacing:.02em;
+}
+.image-trend-card p.image-trend-snippet{
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  min-height:2.6em;
+}
+.image-trend-tags{margin:10px 0}
+.image-trend-tags .badge{background:var(--brand-light);color:var(--brand-dark);margin-right:4px;margin-bottom:4px}
 
 /* ---------- Sections ---------- */
 section{padding:48px 0}
@@ -243,7 +253,7 @@ pre.output-block{
   font-size:1rem;font-family:inherit;box-shadow:var(--shadow);
 }
 .library-search input:focus{outline:2px solid var(--brand);outline-offset:1px}
-#category-bar{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:28px}
+#category-bar,#image-trends-tag-bar{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:28px}
 .category-pill{padding:8px 16px;font-size:.85rem;font-weight:600;border-radius:999px}
 .category-pill.active{background:var(--brand);color:#fff;border-color:var(--brand)}
 .library-meta{text-align:center;color:var(--text-muted);font-size:.85rem;margin-bottom:20px}
