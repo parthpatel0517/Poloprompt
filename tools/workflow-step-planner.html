@@ -17,6 +17,54 @@
 <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
 <link rel="stylesheet" href="../assets/css/styles.css?v=20260920c">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719849376462270" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between a Trigger, a Filter/Condition, and an Action?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Trigger is the event that starts the automation (a new form submission, a new row, an incoming message). A Filter/Condition checks whether the workflow should continue past a certain point (for example, only continue if the deal value is above $500). An Action is anything the workflow does as a result (send an email, create a record, post a Slack message). Every real Zapier \"Zap\" or Make \"Scenario\" is built from exactly this pattern, so planning your steps this way makes the automation straightforward to build once you open the actual tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should I plan a workflow before building it in Zapier or Make?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Automation platforms charge per task/operation and can get expensive or confusing to debug if you build them ad hoc inside the tool. Planning the full trigger-to-action sequence on paper (or here) first lets you catch missing steps, unnecessary complexity, or logic errors before you spend time wiring up the real integration — and it gives you a clean reference document if you ever hand the build off to a freelancer or teammate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this plan directly in Zapier or Make.com?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The generated plan isn't a one-click import file, but it maps directly onto how both platforms are structured: each numbered step here becomes one step in your Zap or Scenario, in the same order, using the same trigger/filter/action type. Most users paste this plan into the platform's step-by-step builder as a checklist while configuring each connection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many steps should a single workflow have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There's no hard limit, but simpler is usually more reliable — workflows with 3-6 steps are easier to debug and less likely to break when one connected app changes its data format. If your plan is growing past 8-10 steps, consider splitting it into two linked workflows instead of one long chain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this tool free, and are my workflow steps saved anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it's completely free with no account required. Your steps are held only in your browser's memory for this session using JavaScript — nothing is sent to a server or saved once you close or refresh the page, so copy your plan out before navigating away if you want to keep it."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
