@@ -76,10 +76,10 @@ var IMAGE_TRENDS = [
     sort_order: 8
   },
   {
-    id: "trend-3d-pixar",
-    theme: "3D Render / Pixar-style",
+    id: "trend-3d-animated",
+    theme: "3D Animated Character",
     description: "Glossy 3D-animated character look with soft studio lighting and big expressive eyes.",
-    image_url: "https://picsum.photos/seed/poloprompt-3d-pixar/640/480",
+    image_url: "https://picsum.photos/seed/poloprompt-3d-animated/640/480",
     prompt: "Turn this photo into a glossy stylized 3D-animated character render: smooth rounded proportions, big expressive eyes, soft studio three-point lighting, subtle subsurface skin scattering, and a clean simple background. Keep the subject's hairstyle, outfit colors, and general likeness recognizable from the original photo.",
     tags: ["3D", "Animated", "Character", "Portrait"],
     sort_order: 9
