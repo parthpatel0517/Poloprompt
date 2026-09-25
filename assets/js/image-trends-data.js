@@ -110,5 +110,14 @@ var IMAGE_TRENDS = [
     prompt: "Restyle this photo as a warm festive celebration portrait: soft golden-hour lighting, gentle bokeh from string lights or fireworks in the background, warm patriotic color grading, and a joyful festive atmosphere. Keep the subject's face, pose, and outfit exactly as in the original photo.",
     tags: ["Patriotic", "Festive", "Portrait", "Nature"],
     sort_order: 12
+  },
+  {
+    id: "trend-action-figure",
+    theme: "Boxed Action Figure Toy",
+    description: "Turns you into a miniature collectible action figure sealed in a plastic blister pack, complete with a printed backer card and tiny accessories.",
+    image_url: "https://picsum.photos/seed/poloprompt-action-figure/640/480",
+    prompt: "Turn this photo into a boxed collectible action figure display: render the person as a miniature toy figure standing on a small plastic base inside a thermoformed plastic blister pack, mounted on a printed cardboard backer card with a blank logo area at the top, a few small accessory props displayed in their own molded compartments beside the figure, realistic toy-plastic material with visible paint lines and joint seams, and clean studio product-photography lighting. Keep the person's face, hairstyle, pose, and outfit recognizable and consistent with the original photo.",
+    tags: ["Toy", "Collectible", "3D", "Portrait"],
+    sort_order: 13
   }
 ];
