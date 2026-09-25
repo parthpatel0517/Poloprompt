@@ -19,3 +19,10 @@ Each entry: date, job name, the trend/topic evaluated, decision (Promoted/Reject
 - **Decision:** Promoted
 - **Reason:** Confirmed as one of the most widely covered AI image trends of 2026 across multiple independent sources (eWeek, Vanikya, Imagera AI, TechTimes — with reported scale of 890k+ TikTok videos and Pinterest searches up 580% YoY), and not covered by any of the 12 existing entries in `assets/js/image-trends-data.js` (the closest, "3D Animated Character," is a stylized character render, not a packaged toy).
 - **PR:** https://github.com/parthpatel0517/Poloprompt/pull/3
+
+## 2026-09-25 — Blog
+
+- **Trend evaluated:** AI image generators finally getting text rendering right — Google's Nano Banana Pro (Gemini 3 Pro Image) and OpenAI's ChatGPT Images 2.5 (shipped Sept 8, 2026) both treat in-image text as symbolic content rather than pixel texture, making legible signs/posters/infographics a realistic AI-first task if prompted correctly.
+- **Decision:** Promoted
+- **Reason:** Confirmed current via multiple independent sources (OpenAI's own Sept 8, 2026 announcement plus Unite.AI/implicator.ai/MindStudio coverage of ChatGPT Images 2.5; Google's Gemini docs plus DEV Community/apiyi.com/imagine.art/sider.ai prompting guides for Nano Banana Pro's text rendering). Not covered by any existing entry in `assets/js/blog-data.js` or `assets/js/prompt-library-data.js`. Targeted long-tail phrase: "how to get ai image generators to render text correctly."
+- **PR:** https://github.com/parthpatel0517/Poloprompt/pull/4
