@@ -12,3 +12,10 @@ Each entry: date, job name, the trend/topic evaluated, decision (Promoted/Reject
 - **Decision:** Promoted
 - **Reason:** Multiple independent sources (miraflow.ai, perfectcorp.com, aialvin substack, aipromptlibrary.app, botgadgets.com, live TikTok content) confirm it as one of the dominant AI photo formats as of August–September 2026, distinct from the more saturated "AI action figure" trend, with no existing coverage in the library.
 - **PR:** https://github.com/parthpatel0517/Poloprompt/pull/2
+
+## 2026-09-25 — Image
+
+- **Trend evaluated:** "AI action figure" / toyification trend — restyling a photo as a boxed collectible action figure in a plastic blister pack on a printed backer card, with small accessories in their own molded tray.
+- **Decision:** Promoted
+- **Reason:** Confirmed as one of the most widely covered AI image trends of 2026 across multiple independent sources (eWeek, Vanikya, Imagera AI, TechTimes — with reported scale of 890k+ TikTok videos and Pinterest searches up 580% YoY), and not covered by any of the 12 existing entries in `assets/js/image-trends-data.js` (the closest, "3D Animated Character," is a stylized character render, not a packaged toy).
+- **PR:** https://github.com/parthpatel0517/Poloprompt/pull/3
