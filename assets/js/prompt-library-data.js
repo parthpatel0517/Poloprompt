@@ -559,5 +559,15 @@ var PROMPT_LIBRARY = [
     description: "An invoice reminder automation prompt that defines a full overdue-payment sequence, from friendly nudge to escalation.",
     tags: ["invoicing", "automation", "accounts receivable"],
     prompt: "You are an accounts receivable automation consultant. Design an automated invoice reminder sequence for [BUSINESS TYPE] triggered when an invoice becomes overdue. Define, for each stage (due date, 3 days overdue, 14 days overdue, 30 days overdue): the trigger condition, the tone of the message (friendly to firm), the channel (email/SMS), and whether it needs human review before escalation. Specify the point at which the process should hand off to a human instead of continuing automatically."
+  },
+
+  // ---------- AI Image & Art Trends ----------
+  {
+    id: "trend-miniature-diorama-scale-reference",
+    category: "AI Image & Art Trends",
+    title: "AI Prompt for Turning a Photo Into a Miniature Diorama With a Scale-Reference Object",
+    description: "An AI image prompt for the viral 'tiny world' trend that rebuilds any photo as a physically convincing miniature diorama, using an everyday object like a coin or matchstick to sell the tiny scale.",
+    tags: ["miniature diorama", "tiny world trend", "ai image trend", "midjourney prompt", "nano banana"],
+    prompt: "A hyper-detailed, physically accurate miniature diorama of [SUBJECT OR SCENE, e.g. 'a tiny neighborhood ramen shop' or 'my living room reading corner'], built at roughly 1:64 scale inside [DISPLAY CONTAINER, e.g. 'an open glass jar', 'a wooden shadow box', 'a matchbox']. Render every material so it behaves correctly at this scale: fabric falls in fine, tight creases, tiny glass surfaces show realistic micro-refraction, wood and metal carry miniature-model-level grain and wear, and every shadow is proportionally small and soft. Place [SCALE-REFERENCE OBJECT, e.g. 'a single US penny', 'a wooden matchstick', 'a grain of rice', 'a fingertip'] directly beside the scene so the tiny scale is unmistakable at a glance. Populate it with [ONE OR TWO TINY FIGURES OR PROPS MID-ACTIVITY, e.g. 'a miniature chef stirring a thimble-sized pot of broth']. Shoot it like real macro photography: a single warm key light, shallow depth of field with a softly blurred tabletop background, and the crisp micro-detail of a [LENS TYPE, e.g. '100mm macro lens at f/2.8']. Palette: [COLOR PALETTE, e.g. 'warm amber with muted teal accents']. The final image must read as a physically real, tack-sharp miniature model photographed up close — not a toy render, not smooth CGI, and not a photo simply shrunk down. --ar 4:5 --v 6"
   }
 ];
