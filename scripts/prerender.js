@@ -97,17 +97,48 @@ function blogCardHtml(post) {
   );
 }
 
+/* Mirrors TILE_GRADIENTS/tileGradient() in assets/js/image-trends.js — both
+   renderers must emit identical markup so hydration doesn't repaint the card. */
+const TILE_GRADIENTS = [
+  ["#4f46e5", "#7c3aed"], ["#0ea5e9", "#2563eb"], ["#0d9488", "#0f766e"],
+  ["#db2777", "#9d174d"], ["#ea580c", "#c2410c"], ["#7c3aed", "#a21caf"],
+  ["#059669", "#047857"], ["#475569", "#1e293b"], ["#b45309", "#78350f"],
+  ["#be123c", "#881337"]
+];
+
+function tileGradient(id) {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) % 100000;
+  const pair = TILE_GRADIENTS[h % TILE_GRADIENTS.length];
+  return "linear-gradient(135deg," + pair[0] + "," + pair[1] + ")";
+}
+
+function thumbHtml(item) {
+  if (item.image_url) {
+    return (
+      '<div class="image-trend-thumb">' +
+        '<span class="image-trend-badge">Image Trend</span>' +
+        '<img src="' + escapeHtml(item.image_url) + '" alt="' + escapeHtml(item.theme) +
+          ' example" loading="lazy">' +
+      "</div>"
+    );
+  }
+  return (
+    '<div class="image-trend-thumb image-trend-thumb--tile" style="background:' +
+      tileGradient(item.id) + '">' +
+      '<span class="image-trend-badge">Image Trend</span>' +
+      '<span class="image-trend-tile-label">' + escapeHtml(item.theme) + "</span>" +
+    "</div>"
+  );
+}
+
 function imageTrendCardHtml(item) {
   const tagsHtml = (item.tags || [])
     .map((t) => '<span class="badge">' + escapeHtml(t) + "</span>")
     .join("");
   return (
     '<div class="card image-trend-card" data-id="' + escapeHtml(item.id) + '">' +
-      '<div class="image-trend-thumb">' +
-        '<span class="image-trend-badge">Image Trend</span>' +
-        '<img src="' + escapeHtml(item.image_url) + '" alt="' + escapeHtml(item.theme) +
-          ' example" loading="lazy">' +
-      "</div>" +
+      thumbHtml(item) +
       "<h3>" + escapeHtml(item.theme) + "</h3>" +
       '<p class="image-trend-snippet">' + escapeHtml(item.description) + "</p>" +
       '<div class="image-trend-tags">' + tagsHtml + "</div>" +
