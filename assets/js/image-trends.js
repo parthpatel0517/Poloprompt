@@ -15,6 +15,10 @@
   var state = { query: "", tag: "All" };
   var trends = [];
   var grid, searchInput, tagBar, resultsCount, emptyState;
+  /* > 0 on the homepage, where this section is only a teaser linking to the
+     full Image Library. Keeping the prompts off the homepage means the two
+     pages aren't near-duplicates of each other. */
+  var teaserCount = 0;
 
   function loadTrends() {
     if (!API_BASE) return Promise.resolve(IMAGE_TRENDS);
@@ -145,16 +149,37 @@
     document.head.appendChild(ld);
   }
 
+  function teaserCardHtml(item) {
+    var tagsHtml = (item.tags || []).map(function (t) {
+      return "<span class=\"badge\">" + escapeHtml(t) + "</span>";
+    }).join("");
+    return (
+      "<a class=\"card image-trend-card\" href=\"/image-library\">" +
+        thumbHtml(item) +
+        "<h3>" + escapeHtml(item.theme) + "</h3>" +
+        "<p class=\"image-trend-snippet\">" + escapeHtml(item.description) + "</p>" +
+        "<div class=\"image-trend-tags\">" + tagsHtml + "</div>" +
+      "</a>"
+    );
+  }
+
   function render() {
+    if (teaserCount) {
+      grid.innerHTML = trends.slice(0, teaserCount).map(teaserCardHtml).join("");
+      return;
+    }
     var filtered = trends.filter(matches);
     grid.innerHTML = filtered.map(cardHtml).join("");
-    resultsCount.textContent = filtered.length + (filtered.length === 1 ? " style found" : " styles found");
-    emptyState.hidden = filtered.length !== 0;
+    if (resultsCount) {
+      resultsCount.textContent = filtered.length + (filtered.length === 1 ? " style found" : " styles found");
+    }
+    if (emptyState) emptyState.hidden = filtered.length !== 0;
   }
 
   function init() {
     grid = document.getElementById("image-trends-grid");
     if (!grid) return;
+    teaserCount = parseInt(grid.getAttribute("data-teaser"), 10) || 0;
     searchInput = document.getElementById("image-trends-search");
     tagBar = document.getElementById("image-trends-tag-bar");
     resultsCount = document.getElementById("image-trends-results-count");
@@ -162,10 +187,14 @@
 
     loadTrends().then(function (data) {
       trends = data;
-      injectItemListSchema(data);
-      buildTagBar();
+      if (!teaserCount) {
+        injectItemListSchema(data);
+        buildTagBar();
+      }
       render();
     });
+
+    if (teaserCount) return;
 
     if (searchInput) {
       var searchTrackTimer = null;

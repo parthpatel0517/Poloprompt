@@ -157,6 +157,22 @@ function imageTrendCardHtml(item) {
   );
 }
 
+/* The homepage shows only a teaser — tile, name, description — with no prompt
+   text, so it isn't a near-duplicate of the Image Library page. */
+function imageTrendTeaserHtml(item) {
+  const tagsHtml = (item.tags || [])
+    .map((t) => '<span class="badge">' + escapeHtml(t) + "</span>")
+    .join("");
+  return (
+    '<a class="card image-trend-card" href="/image-library">' +
+      thumbHtml(item) +
+      "<h3>" + escapeHtml(item.theme) + "</h3>" +
+      '<p class="image-trend-snippet">' + escapeHtml(item.description) + "</p>" +
+      '<div class="image-trend-tags">' + tagsHtml + "</div>" +
+    "</a>"
+  );
+}
+
 /* ---------- related-prompt matching (mirrors blog-post.js) ---------- */
 
 const STOPWORDS = {
@@ -300,6 +316,14 @@ function prerenderBlogPosts(posts, library) {
   });
 }
 
+/* Read straight from the markup so this can't drift from the data-teaser
+   attribute that the front-end JS reads at runtime. */
+function teaserCountFor(relPath) {
+  const html = fs.readFileSync(path.join(ROOT, relPath), "utf8");
+  const m = html.match(/id="image-trends-grid"[^>]*data-teaser="(\d+)"/);
+  return m ? parseInt(m[1], 10) : 0;
+}
+
 function main() {
   const dataDir = path.join(ROOT, "assets", "js");
   const { PROMPT_LIBRARY } = loadGlobalsFromScript(
@@ -328,7 +352,14 @@ function main() {
     "image-trends-grid",
     IMAGE_TRENDS.map(imageTrendCardHtml).join("")
   );
-  prerenderGrid("index.html", "image-trends-grid", IMAGE_TRENDS.map(imageTrendCardHtml).join(""));
+  const teaser = teaserCountFor("index.html");
+  prerenderGrid(
+    "index.html",
+    "image-trends-grid",
+    IMAGE_TRENDS.slice(0, teaser || IMAGE_TRENDS.length)
+      .map(teaser ? imageTrendTeaserHtml : imageTrendCardHtml)
+      .join("")
+  );
 
   prerenderBlogPosts(posts, PROMPT_LIBRARY);
 
