@@ -1,0 +1,9 @@
+{
+  "name": "poloprompt-site",
+  "version": "1.0.0",
+  "description": "PoloPrompt static site — build tooling for the front-end",
+  "private": true,
+  "scripts": {
+    "prerender": "node scripts/prerender.js"
+  }
+}

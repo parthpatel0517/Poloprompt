@@ -79,21 +79,30 @@ poloprompt.com:
 ## Why not everything is in the database
 
 The Prompt Library, Automation Idea Finder, and Blog are all database-driven —
-structured content that's rendered client-side via JavaScript, with a static
-bundled fallback for resilience if the API is down.
+structured content rendered client-side via JavaScript, with a static bundled
+fallback for resilience if the API is down.
 
-**Known SEO tradeoff on the Blog specifically:** blog posts were originally
-static HTML on purpose, because full content in the initial page source is what
-search engines index most reliably. Moving them to a JS-fetched, database-driven
-model (this migration) trades some of that reliability for a fully dynamic
-content pipeline — the page now renders empty until a script runs and fetches
-the post, and title/meta-description/canonical/JSON-LD are all set by that same
-script rather than being present at first load. This was a deliberate choice
-made explicitly accepting that tradeoff — if blog SEO performance regresses
-after this change, this is the first place to look, and server-side rendering
-(so the fetch happens before the page reaches the browser) is the fix if it's
-ever revisited.
+**The pre-render step exists because pure client-side rendering wasn't enough.**
+When the Blog first moved from static HTML files to JS-fetched database content,
+this section warned that content missing from the initial page source is a real
+SEO risk. That risk landed: AdSense rejected the site for "low value content"
+while a 1,200-word blog post was showing crawlers ~190 words of nav and footer,
+and the Prompt Library's 66 entries were an empty `<div>`.
 
-The **Templates page** and the **six tool generator pages** stay static HTML.
+The fix is `npm run prerender` (see the root `package.json` and
+`scripts/prerender.js`), which bakes the same markup the front-end JS produces
+directly into the HTML — per-post files at `blog/<slug>.html`, plus the card
+grids on `library.html`, `blog.html`, `image-library.html`, and `index.html`.
+The JS still runs and hydrates on top for search, filtering, and pagination, so
+behavior is unchanged for visitors while crawlers get the real content. Because
+Hostinger deploys the repo as-is with no build step, the generated HTML is
+committed to the repo.
+
+**This means data changes now need two commands, not one:** `npm run seed` in
+`server/` to update the live database, and `npm run prerender` from the repo
+root to regenerate the HTML. Run both after merging a trend-content PR, or the
+site and the database drift apart.
+
+The **six tool generator pages** stay static HTML.
 They're navigation/UI, not editorial content with a "source of truth" worth
 storing centrally — there's nothing meaningful to gain from moving them.

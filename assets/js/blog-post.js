@@ -138,8 +138,12 @@
     });
   }
 
+  /* On a pre-rendered page the correct content is already in the HTML, so a
+     failed lookup must leave it alone rather than replacing it with an error. */
   function renderNotFound() {
-    document.getElementById("post-body").innerHTML =
+    var body = document.getElementById("post-body");
+    if (body.hasAttribute("data-prerendered")) return;
+    body.innerHTML =
       "<h1>Post Not Found</h1>" +
       "<p>This post may have been moved or removed. Head back to the <a href=\"/blog\">blog index</a> to find something else.</p>";
   }
