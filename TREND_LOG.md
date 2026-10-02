@@ -33,3 +33,10 @@ Each entry: date, job name, the trend/topic evaluated, decision (Promoted/Reject
 - **Decision:** Promoted
 - **Reason:** Independently confirmed current and viral as of the week of Sept 8–10, 2026 across multiple outlets (Khaleej Times, Business Today, Outlook India, Free Press Journal), spreading globally from Bollywood to UAE/Western creators. Checked against all 13 existing entries in `assets/js/image-trends-data.js` (including the not-yet-merged "AI action figure" entry from PR #3) — no overlap with the existing 90s disposable-camera, Y2K digicam, Vintage Polaroid, or Vaporwave entries. Targeted long-tail phrase: "AI prompt to turn my photo into an 80s mall glamour portrait."
 - **PR:** https://github.com/parthpatel0517/Poloprompt/pull/5
+
+## 2026-10-02 — Library
+
+- **Trend evaluated:** "1980s AI yearbook portrait" trend — uploading a selfie to ChatGPT/Gemini and reconstructing it as a retro '80s studio portrait (voluminous teased hair, denim/shoulder-pad styling, mottled yearbook-style studio backdrop, real film grain) while keeping the subject recognizable.
+- **Decision:** Promoted
+- **Reason:** Independently confirmed current and viral as of mid-to-late September 2026 across multiple outlets (Khaleej Times, Telangana Today, Oman Observer, Free Press Journal, Esquire India), with Google Trends showing the India-specific query "1980s AI photo prompt ChatGPT" up ~1,000% past 500k searches. Checked the "AI Image & Art Trends" category in `assets/js/prompt-library-data.js` — its only existing entry is the unrelated miniature-diorama trend, so no duplicate there. Note: the same-day "Image" job promoted a related but distinct angle on this broader 1980s wave ("80s mall studio glamour portrait," pastel laser-gradient backdrop) into `assets/js/image-trends-data.js` — this entry targets the yearbook-portrait/studio-backdrop format specifically and lives in the separate prompt-library dataset, so the two are deliberately non-overlapping formats rather than duplicate content. Targeted long-tail phrase: "AI prompt for turning a selfie into a 1980s yearbook-style portrait."
+- **PR:** https://github.com/parthpatel0517/Poloprompt/pull/6
