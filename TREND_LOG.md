@@ -26,3 +26,10 @@ Each entry: date, job name, the trend/topic evaluated, decision (Promoted/Reject
 - **Decision:** Promoted
 - **Reason:** Confirmed current via multiple independent sources (OpenAI's own Sept 8, 2026 announcement plus Unite.AI/implicator.ai/MindStudio coverage of ChatGPT Images 2.5; Google's Gemini docs plus DEV Community/apiyi.com/imagine.art/sider.ai prompting guides for Nano Banana Pro's text rendering). Not covered by any existing entry in `assets/js/blog-data.js` or `assets/js/prompt-library-data.js`. Targeted long-tail phrase: "how to get ai image generators to render text correctly."
 - **PR:** https://github.com/parthpatel0517/Poloprompt/pull/4
+
+## 2026-10-02 — Image
+
+- **Trend evaluated:** "80s mall studio glamour portrait" AI trend — restyling a selfie with big voluminous feathered hair, soft-focus studio lighting, and a glowing pastel laser-gradient backdrop, part of the broader viral "1980s AI photo" wave.
+- **Decision:** Promoted
+- **Reason:** Independently confirmed current and viral as of the week of Sept 8–10, 2026 across multiple outlets (Khaleej Times, Business Today, Outlook India, Free Press Journal), spreading globally from Bollywood to UAE/Western creators. Checked against all 13 existing entries in `assets/js/image-trends-data.js` (including the not-yet-merged "AI action figure" entry from PR #3) — no overlap with the existing 90s disposable-camera, Y2K digicam, Vintage Polaroid, or Vaporwave entries. Targeted long-tail phrase: "AI prompt to turn my photo into an 80s mall glamour portrait."
+- **PR:** https://github.com/parthpatel0517/Poloprompt/pull/5
