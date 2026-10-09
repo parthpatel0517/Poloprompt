@@ -111,5 +111,14 @@ var IMAGE_TRENDS = [
     prompt: "Restyle this photo as a warm festive celebration portrait: soft golden-hour lighting, gentle bokeh from string lights or fireworks in the background, warm patriotic color grading, and a joyful festive atmosphere. Keep the subject's face, pose, and outfit exactly as in the original photo.",
     tags: ["Patriotic", "Festive", "Portrait", "Nature"],
     sort_order: 12
+  },
+  {
+    id: "trend-action-figure-toybox",
+    theme: "Collectible Action Figure in a Toy Box",
+    description: "Turns your photo into a glossy collectible action figure standing in its own windowed toy-box packaging, accessories and all.",
+    image_url: "https://picsum.photos/seed/poloprompt-action-figure-toybox/640/480",
+    prompt: "Reimagine this photo as a premium collectible action figure: glossy PVC-style skin and clothing texture, a slightly dynamic standing pose, posed on a round clear acrylic display base. Place the figure inside clear-windowed toy packaging with a bold header title and 2-3 small accessory props (matching the subject's hobbies or outfit) arranged in their own compartments beside it. Keep the subject's face, hairstyle, and outfit colors clearly recognizable from the original photo.",
+    tags: ["Toy Figure", "Collectible", "Packaging", "Portrait"],
+    sort_order: 13
   }
 ];
