@@ -111,5 +111,14 @@ var IMAGE_TRENDS = [
     prompt: "Restyle this photo as a warm festive celebration portrait: soft golden-hour lighting, gentle bokeh from string lights or fireworks in the background, warm patriotic color grading, and a joyful festive atmosphere. Keep the subject's face, pose, and outfit exactly as in the original photo.",
     tags: ["Patriotic", "Festive", "Portrait", "Nature"],
     sort_order: 12
+  },
+  {
+    id: "trend-magazine-cover",
+    theme: "High-Fashion Magazine Cover Portrait",
+    description: "Dramatic editorial lighting, sharpened fabric texture, and a glossy cover-ready color grade — turning a single selfie into a high-fashion magazine shoot.",
+    image_url: "",
+    prompt: "Transform this photo into a high-fashion magazine cover portrait: dramatic editorial lighting with soft contouring shadows, enhanced and sharpened clothing texture, a bold glossy color grade with deep shadows and vibrant highlights, a glowing magazine-finish complexion, and a clean blank masthead banner across the top with a few empty cover-line text boxes along the side. Keep the subject's face, pose, and outfit exactly as in the original photo.",
+    tags: ["Fashion", "Editorial", "Magazine", "Portrait"],
+    sort_order: 13
   }
 ];
