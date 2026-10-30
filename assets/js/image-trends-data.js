@@ -111,5 +111,14 @@ var IMAGE_TRENDS = [
     prompt: "Restyle this photo as a warm festive celebration portrait: soft golden-hour lighting, gentle bokeh from string lights or fireworks in the background, warm patriotic color grading, and a joyful festive atmosphere. Keep the subject's face, pose, and outfit exactly as in the original photo.",
     tags: ["Patriotic", "Festive", "Portrait", "Nature"],
     sort_order: 12
+  },
+  {
+    id: "trend-80s-mall-glamour",
+    theme: "1980s Mall Studio Glamour Shot",
+    description: "Big permed hair, dramatic blush, and a neon laser-grid backdrop — the posed shopping-mall glamour portrait everyone's parents had taken in 1985.",
+    image_url: "",
+    prompt: "Restyle this photo as a 1980s shopping-mall portrait-studio glamour shot: big voluminous permed or feathered hair, bold blush and shimmery eyeshadow, soft diffused studio key lighting, a dramatic blue-and-magenta laser-grid backdrop, and a warm hazy film-grain finish over the whole image. Keep the subject's face, identity, and outfit silhouette recognizable from the original photo.",
+    tags: ["Retro", "80s", "Studio Glamour", "Nostalgic", "Portrait"],
+    sort_order: 13
   }
 ];
