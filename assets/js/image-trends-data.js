@@ -111,5 +111,14 @@ var IMAGE_TRENDS = [
     prompt: "Restyle this photo as a warm festive celebration portrait: soft golden-hour lighting, gentle bokeh from string lights or fireworks in the background, warm patriotic color grading, and a joyful festive atmosphere. Keep the subject's face, pose, and outfit exactly as in the original photo.",
     tags: ["Patriotic", "Festive", "Portrait", "Nature"],
     sort_order: 12
+  },
+  {
+    id: "trend-amigurumi-doll",
+    theme: "Amigurumi Crochet Doll",
+    description: "Hand-stitched yarn texture, button eyes, and squishy rounded proportions, like you've been crocheted into a huggable amigurumi doll.",
+    image_url: "",
+    prompt: "Transform this photo into a handmade amigurumi crochet doll: soft rounded yarn-textured head and limbs, visible single-stitch crochet rows throughout, small embroidered or button eyes, a chunky knit outfit that echoes the original clothing colors, and a cozy plain fabric-textured backdrop. Keep the subject's hairstyle, outfit colors, and general pose recognizable from the original photo.",
+    tags: ["Amigurumi", "Crochet", "Handmade", "Portrait"],
+    sort_order: 13
   }
 ];
