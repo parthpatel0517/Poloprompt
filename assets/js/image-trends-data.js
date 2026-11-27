@@ -111,5 +111,14 @@ var IMAGE_TRENDS = [
     prompt: "Restyle this photo as a warm festive celebration portrait: soft golden-hour lighting, gentle bokeh from string lights or fireworks in the background, warm patriotic color grading, and a joyful festive atmosphere. Keep the subject's face, pose, and outfit exactly as in the original photo.",
     tags: ["Patriotic", "Festive", "Portrait", "Nature"],
     sort_order: 12
+  },
+  {
+    id: "trend-miami-sunset-poster",
+    theme: "80s Miami Sunset Action-Poster Portrait",
+    description: "Pastel sunset skies, palm trees, and a glossy chrome muscle car — the cinematic retro video-game box-art look everyone's turning their selfie into right now.",
+    image_url: "",
+    prompt: "Restyle this photo as a cinematic 1980s Miami-style action poster, like the painted cover art of a retro crime-drama video game: a glowing pastel sunset gradient from teal to orange and pink behind the subject, silhouetted palm trees, a glossy chrome muscle car angled in the background, warm rim lighting on the skin, bold saturated colors, and a subtle halftone poster-print texture. Keep the subject's face, pose, and outfit exactly as in the original photo.",
+    tags: ["Retro", "Neon", "Cinematic", "Video Game", "Portrait"],
+    sort_order: 13
   }
 ];
