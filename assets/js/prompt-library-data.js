@@ -7,7 +7,7 @@ var PROMPT_LIBRARY = [
     category: "Marketing & Ads",
     title: "Facebook Ad Copy for a Product Launch",
     description: "Three ad variations for launching a new product on Meta, each with a different hook angle.",
-    tags: ["facebook", "meta ads", "launch", "copywriting"],
+    tags: ["facebook", "meta ads", "launch", "copywriting", "instagram ads"],
     prompt: "You are a senior direct-response copywriter. Write 3 distinct Facebook/Instagram feed ad variations announcing the launch of [PRODUCT NAME], a [ONE-SENTENCE PRODUCT DESCRIPTION] for [TARGET AUDIENCE]. Each variation must use a different hook angle: (1) a bold claim, (2) a relatable pain point, (3) a curiosity gap. For each variation, provide a primary text (max 125 words), a headline (under 40 characters), and a description line (under 30 characters). Avoid generic phrases like 'game-changer' or 'unlock.' End each with a specific call-to-action, not a vague 'Learn more.'"
   },
   {
@@ -15,7 +15,7 @@ var PROMPT_LIBRARY = [
     category: "Marketing & Ads",
     title: "Google Search Ads Headline & Description Set",
     description: "A full set of keyword-relevant headlines and descriptions ready for a Google Search campaign.",
-    tags: ["google ads", "ppc", "search"],
+    tags: ["google ads", "ppc", "search", "google ads headlines", "search campaign"],
     prompt: "You are a PPC specialist. For the product/service [PRODUCT/SERVICE NAME + ONE-LINE DESCRIPTION], targeting the keyword '[TARGET KEYWORD]', write: 5 headlines (max 30 characters each, no repeats), 3 description lines (max 90 characters each), and 2 sitelink extension ideas with 25-character descriptions. Every headline must include a distinct value proposition or urgency trigger. Do not use exclamation points more than once total across all assets."
   },
   {
@@ -23,15 +23,15 @@ var PROMPT_LIBRARY = [
     category: "Marketing & Ads",
     title: "Competitor Comparison Landing Page Copy",
     description: "Persuasive but fair comparison copy positioning your product against a named competitor.",
-    tags: ["landing page", "positioning", "comparison"],
+    tags: ["landing page", "positioning", "comparison", "competitor comparison", "alternative page"],
     prompt: "You are a positioning strategist. Write landing page copy comparing [YOUR PRODUCT] to [COMPETITOR NAME] for a buyer who is already considering both. Structure: a headline naming the real decision the buyer faces (not just 'X vs Y'), a 3-column feature comparison table (list at least 6 real differentiators), an objection-handling section addressing the top reason people hesitate to switch, and a closing CTA. Keep every comparison factual and specific — no vague superiority claims like 'the best choice.'"
   },
   {
     id: "mkt-cold-email-b2b",
     category: "Marketing & Ads",
     title: "Cold B2B Outreach Email",
-    description: "A short, personalized-feeling cold email template for B2B sales outreach.",
-    tags: ["cold email", "b2b", "sales"],
+    description: "A B2B cold outreach email under 100 words with one specific value proposition and a low-pressure ask, written to get replies instead of deletes.",
+    tags: ["cold email", "b2b", "sales", "outreach email", "lead generation"],
     prompt: "You are an SDR who writes cold emails with above-average reply rates. Write a cold outreach email introducing [YOUR PRODUCT/SERVICE] to [TARGET ROLE, e.g. 'VP of Operations'] at companies dealing with [SPECIFIC PROBLEM]. Requirements: under 100 words, one clear and specific value proposition (not a feature list), no attachments/links mentioned, ends with a low-friction question (not 'let's hop on a call'). Do not use the words 'synergy,' 'revolutionize,' or 'excited to announce.'"
   },
   {
@@ -39,7 +39,7 @@ var PROMPT_LIBRARY = [
     category: "Marketing & Ads",
     title: "Retargeting Ad Copy for Website Visitors Who Didn't Convert",
     description: "Ad copy aimed at warm visitors who viewed a page but left without buying or signing up.",
-    tags: ["retargeting", "meta ads", "conversion"],
+    tags: ["retargeting", "meta ads", "conversion", "remarketing", "facebook ads"],
     prompt: "You are a direct-response copywriter specializing in retargeting campaigns. Write 2 retargeting ad variations for [PRODUCT/SERVICE] targeting people who viewed [SPECIFIC PAGE, e.g. 'the pricing page' or 'a product page'] but didn't convert. Variation 1 should address the most likely objection that stalled them ([OBJECTION, e.g. price, trust, timing]). Variation 2 should use a specific, time-bound incentive to prompt action now. Each needs a primary text (under 90 words) and a headline (under 40 characters). Do not open with 'Still thinking about...' or 'Don't miss out' — find a more specific angle referencing what they actually looked at."
   },
   {
@@ -47,7 +47,7 @@ var PROMPT_LIBRARY = [
     category: "Marketing & Ads",
     title: "UGC-Style Testimonial Video Script",
     description: "A natural-sounding script for a customer testimonial or UGC-style ad, avoiding scripted-sounding lines.",
-    tags: ["ugc", "testimonial", "video script"],
+    tags: ["ugc", "testimonial", "video script", "ugc ads", "customer testimonial"],
     prompt: "You are a UGC ad strategist. Write a 30-45 second testimonial-style video script for [PRODUCT/SERVICE], spoken from the perspective of a real customer who had [SPECIFIC PROBLEM] before finding it. Structure: an opening line that states the problem in a relatable, unscripted way (not 'I used to struggle with...'), a specific moment describing what changed, one concrete result or detail (a number, a timeframe, a comparison), and a natural closing line — not a hard sales pitch. Write it the way an actual person talks, including a small imperfection or aside, not polished marketing copy."
   },
 
@@ -57,23 +57,23 @@ var PROMPT_LIBRARY = [
     category: "E-commerce",
     title: "Amazon Listing: Title, Bullets & Backend Keywords",
     description: "A complete Amazon-ready listing structured to Amazon's title, bullet, and backend keyword conventions.",
-    tags: ["amazon", "listing", "seo"],
+    tags: ["amazon", "listing", "seo", "amazon product description", "bullet points"],
     prompt: "You are an Amazon listing optimization specialist. For the product [PRODUCT NAME + CORE MATERIAL/FEATURE], write: a keyword-rich title (Brand + Product + Key Feature + Size/Quantity, under 200 characters), exactly 5 bullet points (each starting with a benefit in capital letters), a short description paragraph, and 6 backend search terms (comma-separated, no words repeated from the title). Do not make any claim (organic, certified, patented) unless I explicitly state it applies."
   },
   {
     id: "ecom-abandoned-cart-email",
     category: "E-commerce",
     title: "Abandoned Cart Recovery Email Sequence",
-    description: "A 3-email sequence to win back customers who left items in their cart.",
-    tags: ["email", "cart recovery", "retention"],
+    description: "A timed 3-email abandoned cart sequence: a friendly reminder, an objection-handling follow-up with social proof, and a final email to win back the sale.",
+    tags: ["email", "cart recovery", "retention", "abandoned cart", "shopify email"],
     prompt: "You are an e-commerce lifecycle marketer. Write a 3-email abandoned cart recovery sequence for [STORE NAME], selling [PRODUCT CATEGORY]. Email 1 (sent 1 hour after abandonment): a friendly reminder, no discount. Email 2 (sent 24 hours later): address a likely objection (shipping cost, sizing, etc.) and include social proof. Email 3 (sent 48 hours later): a time-limited discount code as a last nudge. Each email needs a subject line, preview text, and body under 120 words. Keep the tone helpful, never guilt-tripping."
   },
   {
     id: "ecom-shopify-brand-voice",
     category: "E-commerce",
     title: "Shopify Product Page in a Custom Brand Voice",
-    description: "Product page copy written to match a specific brand personality you define.",
-    tags: ["shopify", "brand voice", "product page"],
+    description: "Shopify product page copy in a brand voice you define, with an SEO title, hero description, feature bullets and a meta description ready to paste.",
+    tags: ["shopify", "brand voice", "product page", "product description", "shopify seo"],
     prompt: "You are a brand copywriter. Write Shopify product page copy for [PRODUCT NAME + FEATURE] in a brand voice best described as [3 ADJECTIVES, e.g. 'playful, direct, a little irreverent']. Include: an SEO title under 70 characters, a 2-3 sentence hero description, 4 short feature bullets, and a meta description under 155 characters. The voice should be consistent and specific enough that a reader could recognize the brand from the writing style alone, not generic 'friendly and professional' copy."
   },
   {
@@ -81,7 +81,7 @@ var PROMPT_LIBRARY = [
     category: "E-commerce",
     title: "Response Templates for Negative Product Reviews",
     description: "Professional, de-escalating responses to a 1-2 star review, tailored to the specific complaint.",
-    tags: ["customer service", "reviews", "reputation"],
+    tags: ["customer service", "reviews", "reputation", "review reply", "negative reviews"],
     prompt: "You are a customer experience manager. A customer left this review: \"[PASTE REVIEW TEXT]\". Write a public response that: acknowledges the specific issue raised (not a generic apology), avoids sounding defensive or scripted, offers one concrete next step (refund, replacement, or contact channel), and stays under 80 words. Do not admit fault for anything not stated in the review, and do not use the phrase 'we take this very seriously.'"
   },
   {
@@ -89,7 +89,7 @@ var PROMPT_LIBRARY = [
     category: "E-commerce",
     title: "Etsy Listing Title, Tags & Description",
     description: "An Etsy-ready listing formatted for Etsy's search algorithm and handmade/vintage buyer expectations.",
-    tags: ["etsy", "listing", "handmade"],
+    tags: ["etsy", "listing", "handmade", "etsy seo", "etsy tags"],
     prompt: "You are an Etsy SEO specialist. For the item [PRODUCT NAME + MATERIALS/STYLE + WHO IT'S FOR], write: a keyword-front-loaded title (under 140 characters, most important keyword first), exactly 13 tags (multi-word phrases, no single generic words, no repeats of title words), and a description that opens with a 2-sentence hook, followed by materials/dimensions/care instructions, and a closing line about processing/shipping. Keep the tone warm and personal, matching how independent sellers actually write — not corporate retail copy."
   },
   {
@@ -97,7 +97,7 @@ var PROMPT_LIBRARY = [
     category: "E-commerce",
     title: "Product Comparison Chart for a 'Which One Should I Buy' Page",
     description: "Comparison copy helping shoppers choose between several of your own product variants, not a competitor.",
-    tags: ["product page", "comparison", "buying guide"],
+    tags: ["product page", "comparison", "buying guide", "comparison table", "product features"],
     prompt: "You are an e-commerce UX copywriter. I sell [NUMBER] variants of [PRODUCT CATEGORY]: [LIST VARIANT NAMES + KEY DIFFERENCE OF EACH]. Write copy for a 'Which one should I buy' comparison section: a one-sentence summary of who each variant is best for, a comparison table with at least 5 real differentiating attributes (not just price), and a short 'still not sure?' paragraph recommending the safest default choice for an undecided buyer. Keep every claim specific and checkable — no vague language like 'great for everyone.'"
   },
 
@@ -107,7 +107,7 @@ var PROMPT_LIBRARY = [
     category: "SEO & Content",
     title: "SEO Blog Post Outline with Search Intent Alignment",
     description: "A full heading structure and word-count plan built around a target keyword and search intent.",
-    tags: ["seo", "content strategy", "outline"],
+    tags: ["seo", "content strategy", "outline", "blog post outline", "search intent"],
     prompt: "You are an SEO content strategist. Build a complete outline for a blog post targeting the keyword '[TARGET KEYWORD]' with [INFORMATIONAL/COMMERCIAL/TRANSACTIONAL] search intent, targeting [WORD COUNT] words total. Include: an SEO title tag (under 60 characters), a meta description (under 155 characters), an H1, and a full H2/H3 structure with a one-line note under each heading describing exactly what it should cover and its approximate word count. Every H2 must promise something specific — no generic labels like 'Benefits of X.'"
   },
   {
@@ -115,7 +115,7 @@ var PROMPT_LIBRARY = [
     category: "SEO & Content",
     title: "Content Refresh Audit for an Underperforming Page",
     description: "A structured audit prompt to diagnose why an existing article isn't ranking and what to fix.",
-    tags: ["content audit", "seo", "refresh"],
+    tags: ["content audit", "seo", "refresh", "update old content", "content decay"],
     prompt: "You are an SEO auditor. I will paste the full text of an existing article below, targeting the keyword '[TARGET KEYWORD]'. Analyze it and return: (1) gaps versus what a searcher with this query intent actually wants answered, (2) sections that are outdated, redundant, or too shallow, (3) 3-5 specific rewrite recommendations with example replacement copy for the weakest section, and (4) 2-3 internal linking opportunities based on typical related topics. Article: [PASTE ARTICLE TEXT]"
   },
   {
@@ -123,7 +123,7 @@ var PROMPT_LIBRARY = [
     category: "SEO & Content",
     title: "FAQ Section Written for Featured Snippets",
     description: "5 FAQ question/answer pairs structured to compete for Google's featured snippet position.",
-    tags: ["faq", "featured snippet", "seo"],
+    tags: ["faq", "featured snippet", "seo", "faq schema", "people also ask"],
     prompt: "You are an SEO content writer specializing in featured snippets. For the topic '[TOPIC/KEYWORD]', write 5 FAQ question-and-answer pairs. Each question should match real search phrasing (start with 'What,' 'How,' 'Why,' or 'Can'). Each answer must lead with a direct, complete answer in the first sentence (40-60 words, snippet-length), then 1-2 sentences of supporting detail. Do not bury the answer after a preamble like 'Great question!' or 'This depends on several factors.'"
   },
   {
@@ -131,7 +131,7 @@ var PROMPT_LIBRARY = [
     category: "SEO & Content",
     title: "Repurpose a Blog Post into an Email Newsletter",
     description: "Converts long-form blog content into a scannable email format without losing the core value.",
-    tags: ["repurposing", "email", "newsletter"],
+    tags: ["repurposing", "email", "newsletter", "blog post", "content repurposing"],
     prompt: "You are a content repurposing specialist. I will paste a blog post below. Rewrite it as an email newsletter issue: a subject line under 50 characters, a one-sentence preview text, and a body using short paragraphs (2-3 sentences max), one clear takeaway bolded per section, and a single CTA at the end. Keep the core insights intact but cut anything that only makes sense in a long-form SEO context (keyword repetition, meta commentary). Blog post: [PASTE BLOG POST TEXT]"
   },
   {
@@ -139,7 +139,7 @@ var PROMPT_LIBRARY = [
     category: "SEO & Content",
     title: "Listicle Article Outline (e.g. '10 Best X for Y')",
     description: "A structured outline for a listicle-style article, including entry format and ranking rationale.",
-    tags: ["listicle", "outline", "seo"],
+    tags: ["listicle", "outline", "seo", "blog post outline", "list post"],
     prompt: "You are an SEO content strategist. Build an outline for a listicle titled around '[NUMBER] Best [ITEMS] for [SPECIFIC USE CASE/AUDIENCE]', targeting the keyword '[TARGET KEYWORD]'. Include: a title and meta description optimized for click-through (not just keyword-stuffed), an intro outline (2-3 sentences establishing selection criteria), and for each list entry: a one-line note on what makes it distinct, the specific criteria it should be judged on, and roughly how many words to spend on it. End with a short buyer's guide section covering how to choose, not just another summary of the list."
   },
   {
@@ -147,7 +147,7 @@ var PROMPT_LIBRARY = [
     category: "SEO & Content",
     title: "Internal Linking Plan for an Existing Article",
     description: "Suggests contextual internal links to strengthen an existing page's SEO without forcing unnatural links.",
-    tags: ["internal linking", "seo", "site structure"],
+    tags: ["internal linking", "seo", "site structure", "anchor text", "topic clusters"],
     prompt: "You are an SEO strategist focused on site architecture. I'll paste the text of an article targeting '[TARGET KEYWORD]' below, along with a list of other pages on my site: [LIST OTHER PAGE TITLES + URLS + ONE-LINE TOPIC EACH]. Identify 3-5 places in the article where a link to one of those other pages would be genuinely useful to the reader (not forced), suggest natural anchor text for each (never generic 'click here'), and flag if the article is missing an obvious topic that deserves its own linked page. Article: [PASTE ARTICLE TEXT]"
   },
 
@@ -157,7 +157,7 @@ var PROMPT_LIBRARY = [
     category: "Social Media",
     title: "5 Hook Options for a Short-Form Video",
     description: "Five distinct opening lines for a Reel/TikTok/Short, each using a different attention-grabbing angle.",
-    tags: ["reels", "tiktok", "hooks"],
+    tags: ["reels", "tiktok", "hooks", "instagram reels", "video hooks"],
     prompt: "You are a short-form video scriptwriter. For a video about [TOPIC], write 5 opening hook lines (the first thing said or shown on screen), each using a genuinely different angle: a bold claim, a relatable pain point, a curiosity gap, a specific number/stat, and a direct question to the viewer. Each hook must reference something concrete, not an abstract statement. Label each with its angle."
   },
   {
@@ -165,15 +165,15 @@ var PROMPT_LIBRARY = [
     category: "Social Media",
     title: "LinkedIn Thought Leadership Post",
     description: "A professional but conversational LinkedIn post sharing an opinion or lesson learned.",
-    tags: ["linkedin", "thought leadership", "b2b"],
+    tags: ["linkedin", "thought leadership", "b2b", "linkedin post", "personal branding"],
     prompt: "You are a LinkedIn ghostwriter for [YOUR ROLE/INDUSTRY, e.g. 'a marketing agency founder']. Write a LinkedIn post sharing a specific lesson learned from [BRIEF SITUATION/EXPERIENCE]. Structure: a one-line hook that states an opinion or surprising result, 3-4 short paragraphs or line-broken points expanding on it with a concrete example, and a closing line inviting discussion (a genuine question, not 'thoughts?'). Keep total length under 200 words. No hashtags inline — up to 3 at the very end only if relevant."
   },
   {
     id: "social-instagram-carousel",
     category: "Social Media",
     title: "Instagram Carousel Script (Slide by Slide)",
-    description: "A slide-by-slide script for an educational Instagram carousel post.",
-    tags: ["instagram", "carousel", "education"],
+    description: "A slide-by-slide script for a 7-9 slide educational Instagram carousel, with a curiosity-driven cover and one idea per slide in under 20 words of on-screen text.",
+    tags: ["instagram", "carousel", "education", "instagram post", "carousel ideas"],
     prompt: "You are a content designer who writes high-saving Instagram carousels. Create a slide-by-slide script (7-9 slides) teaching [TOPIC] to [TARGET AUDIENCE]. Slide 1 is the cover with a specific, curiosity-driven title (not generic like '5 Tips for X'). Each middle slide should cover exactly one idea in under 20 words of on-screen text, with a short speaker-note explaining what visual would support it. The final slide should have a clear CTA (save, follow, or comment a specific word)."
   },
   {
@@ -181,7 +181,7 @@ var PROMPT_LIBRARY = [
     category: "Social Media",
     title: "Social Media Brand Voice Guide",
     description: "A reusable one-page voice guide so multiple people can post consistently in your brand's tone.",
-    tags: ["brand voice", "style guide", "team"],
+    tags: ["brand voice", "style guide", "team", "tone of voice", "social media guidelines"],
     prompt: "You are a brand strategist. Create a one-page social media voice guide for [BRAND NAME], a [BRIEF BRAND DESCRIPTION] targeting [AUDIENCE]. Include: 3 tone adjectives with a one-sentence definition of what each means in practice, a 'do' and 'don't' example sentence for each adjective, a list of 5 words/phrases the brand should never use, and 3 example captions (different post types) written fully in this voice. This should be usable by a new team member with no other context."
   },
   {
@@ -189,7 +189,7 @@ var PROMPT_LIBRARY = [
     category: "Social Media",
     title: "X/Twitter Thread Breaking Down One Idea",
     description: "A multi-tweet thread structured to hook readers on tweet one and keep them reading to the end.",
-    tags: ["twitter", "x", "thread"],
+    tags: ["twitter", "x", "thread", "x thread", "twitter post"],
     prompt: "You are a writer known for X/Twitter threads that get read to the end. Write a 6-8 tweet thread explaining [TOPIC/IDEA] to [TARGET AUDIENCE]. Tweet 1 must be a hook that creates a specific curiosity gap or states a contrarian claim (no 'Here's a thread on X 🧵'). Each following tweet should cover exactly one point, under 280 characters, ending on a small cliffhanger or logical next question where possible. The final tweet should summarize the core takeaway in one line and end with a specific engagement prompt (not 'thoughts?' or 'RT if you agree')."
   },
   {
@@ -197,7 +197,7 @@ var PROMPT_LIBRARY = [
     category: "Social Media",
     title: "YouTube Shorts Script With On-Screen Text Cues",
     description: "A 30-45 second vertical video script with spoken lines and on-screen text timed to match.",
-    tags: ["youtube shorts", "video script", "vertical video"],
+    tags: ["youtube shorts", "video script", "vertical video", "shorts hook", "youtube"],
     prompt: "You are a short-form video scriptwriter. Write a 30-45 second YouTube Shorts script teaching or explaining [TOPIC] to [TARGET AUDIENCE]. Format as two columns per line: SPOKEN (what's said aloud) and ON-SCREEN TEXT (short punchy text overlay, under 6 words, that reinforces but doesn't just repeat the spoken line). Open with a hook in the first 2 seconds that a viewer would stop scrolling for. End with a one-line CTA that fits the platform (comment a word, follow for part 2, etc.), not a generic 'like and subscribe.'"
   },
 
@@ -206,16 +206,16 @@ var PROMPT_LIBRARY = [
     id: "email-welcome-sequence",
     category: "Email Marketing",
     title: "3-Email Welcome Sequence for New Subscribers",
-    description: "An onboarding email sequence that builds trust before making any sales pitch.",
-    tags: ["welcome sequence", "onboarding", "email"],
+    description: "A 3-email welcome sequence that delivers what new subscribers signed up for, gives real value next, and builds trust before making any sales pitch.",
+    tags: ["welcome sequence", "onboarding", "email", "welcome email", "new subscribers"],
     prompt: "You are an email marketing strategist. Write a 3-email welcome sequence for new subscribers of [BRAND/PRODUCT], a [ONE-LINE DESCRIPTION]. Email 1 (immediate): deliver on whatever was promised to get the signup, and set expectations for what's next. Email 2 (day 2): share the single most useful piece of value you can give for free, no pitch. Email 3 (day 4): introduce the paid offer, framed around the problem established in the previous emails. Each email needs a subject line and body under 150 words."
   },
   {
     id: "email-re-engagement",
     category: "Email Marketing",
     title: "Win-Back Email for Inactive Subscribers",
-    description: "A re-engagement email for a list segment that hasn't opened emails in a while.",
-    tags: ["re-engagement", "win-back", "email"],
+    description: "A win-back email for subscribers who stopped opening, reminding them of the specific value they signed up for without guilt-tripping or a generic 'we miss you'.",
+    tags: ["re-engagement", "win-back", "email", "inactive subscribers", "reactivation"],
     prompt: "You are a retention email specialist. Write a win-back email for subscribers of [BRAND/PRODUCT] who haven't opened an email in [TIMEFRAME, e.g. '90 days']. The email should: acknowledge the gap without guilt-tripping, remind them specifically what value they signed up for (not a generic 'we miss you'), give one clear reason to re-engage now, and include a one-click way to opt out gracefully if they're no longer interested. Subject line under 50 characters, body under 100 words."
   },
   {
@@ -223,7 +223,7 @@ var PROMPT_LIBRARY = [
     category: "Email Marketing",
     title: "Product Update Announcement Email",
     description: "An email announcing a new feature or product update, framed around customer benefit not feature list.",
-    tags: ["product update", "announcement", "email"],
+    tags: ["product update", "announcement", "email", "feature announcement", "release notes"],
     prompt: "You are a product marketing writer. Write an email announcing [NEW FEATURE/UPDATE] for [PRODUCT NAME]. Lead with the specific problem or friction this solves for the customer, not a feature description. Include: a subject line focused on the benefit, a 2-sentence opening explaining what changed, a short section on how to start using it, and a CTA. Avoid 'we're excited to announce' — open with the customer's problem instead."
   },
   {
@@ -231,15 +231,15 @@ var PROMPT_LIBRARY = [
     category: "Email Marketing",
     title: "Follow-Up Email After No Response to a Cold Email",
     description: "A short, non-needy follow-up for a prospect who didn't reply to the first outreach email.",
-    tags: ["follow-up", "cold email", "b2b"],
+    tags: ["follow-up", "cold email", "b2b", "follow-up email", "sales email"],
     prompt: "You are an SDR writing a follow-up to a cold email that got no response. Write a short follow-up email (under 60 words) to [TARGET ROLE] regarding [ORIGINAL OFFER/PRODUCT], sent [TIMEFRAME, e.g. '4 days'] after the first email. It should not restate the full original pitch, should not open with 'Just following up' or 'Circling back,' should add one small new piece of information or angle not in the first email, and should end with an easy yes/no question rather than asking for a call."
   },
   {
     id: "email-loyalty-program-launch",
     category: "Email Marketing",
     title: "VIP/Loyalty Program Launch Announcement Email",
-    description: "An email introducing a new loyalty or rewards program to existing customers.",
-    tags: ["loyalty program", "announcement", "retention"],
+    description: "A launch email for a new loyalty or VIP rewards program, with a benefit-led subject line and a clear explanation of how earning points or tiers works.",
+    tags: ["loyalty program", "announcement", "retention", "rewards program", "vip program"],
     prompt: "You are an e-commerce lifecycle marketer. Write a launch email announcing a new loyalty/VIP program called [PROGRAM NAME] for [BRAND NAME]'s existing customers. Include: a subject line that leads with the specific benefit (not 'Introducing our new rewards program'), a 2-sentence explanation of how earning points/tiers works, 3 concrete examples of rewards members can redeem, and a note that past purchases already count toward their first reward (if true) to create instant momentum. Keep it under 130 words and avoid the phrase 'we're excited to launch.'"
   },
 
@@ -249,7 +249,7 @@ var PROMPT_LIBRARY = [
     category: "Business & Productivity",
     title: "Turn Rough Meeting Notes into a Clean Summary",
     description: "Converts messy notes or a transcript into a structured summary with clear action items.",
-    tags: ["meeting notes", "summary", "productivity"],
+    tags: ["meeting notes", "summary", "productivity", "meeting minutes", "action items"],
     prompt: "You are an executive assistant skilled at distilling meetings into action. I will paste rough notes or a transcript below. Produce: a 2-3 sentence summary of the meeting's purpose and outcome, a bulleted list of key decisions made, and a table of action items with owner and due date (mark 'TBD' if not stated — do not invent names or dates). Keep it under half a page. Notes: [PASTE NOTES/TRANSCRIPT]"
   },
   {
@@ -257,7 +257,7 @@ var PROMPT_LIBRARY = [
     category: "Business & Productivity",
     title: "SWOT Analysis for a Business Decision",
     description: "A structured SWOT analysis to support a specific business decision you're weighing.",
-    tags: ["swot", "strategy", "decision-making"],
+    tags: ["swot", "strategy", "decision-making", "swot analysis", "competitive analysis"],
     prompt: "You are a business strategy consultant. I'm considering [SPECIFIC DECISION, e.g. 'expanding into a new product category']. Context: [RELEVANT BACKGROUND — company size, market, current situation]. Produce a SWOT analysis with 3-4 specific, non-generic points per quadrant (Strengths, Weaknesses, Opportunities, Threats), each grounded in the context I gave rather than generic business truisms. End with a one-paragraph recommendation stating the single biggest factor that should decide this."
   },
   {
@@ -265,7 +265,7 @@ var PROMPT_LIBRARY = [
     category: "Business & Productivity",
     title: "Job Description That Attracts the Right Candidates",
     description: "A job posting written to filter for fit, not just list generic responsibilities.",
-    tags: ["hiring", "job description", "recruiting"],
+    tags: ["hiring", "job description", "recruiting", "job posting", "hr"],
     prompt: "You are a recruiting specialist. Write a job description for a [ROLE TITLE] at [COMPANY TYPE/SIZE], reporting to [MANAGER ROLE]. Include: a 2-sentence role summary focused on the outcome this person owns (not a title restatement), 5-6 specific responsibilities (avoid vague ones like 'other duties as assigned'), a 'you'll be a good fit if' section with 4 concrete traits/experiences, and what's explicitly NOT required (to reduce candidate self-selection out). Keep the tone direct, not corporate-generic."
   },
   {
@@ -273,7 +273,7 @@ var PROMPT_LIBRARY = [
     category: "Business & Productivity",
     title: "Client Proposal Outline for a Service Business",
     description: "A structured proposal outline to send a prospective client after a discovery call.",
-    tags: ["proposal", "sales", "freelance"],
+    tags: ["proposal", "sales", "freelance", "business proposal", "project proposal"],
     prompt: "You are a consultant who writes proposals with a high close rate. Build a proposal outline for [SERVICE OFFERED] for a client whose stated problem is [CLIENT'S PROBLEM FROM DISCOVERY CALL]. Structure: a 'Understanding Your Situation' section that restates their problem specifically (proving you listened), a 'Proposed Approach' section broken into 3 phases with a one-line outcome per phase, a timeline, and pricing presented as an investment tied to the outcome, not a line-item list of hours. Do not include filler sections like generic 'About Us' boilerplate."
   },
   {
@@ -281,7 +281,7 @@ var PROMPT_LIBRARY = [
     category: "Business & Productivity",
     title: "Quarterly OKR Draft for a Team or Department",
     description: "A structured Objectives and Key Results draft based on a stated goal and current constraints.",
-    tags: ["okr", "goal-setting", "planning"],
+    tags: ["okr", "goal-setting", "planning", "okrs", "quarterly goals"],
     prompt: "You are an operations strategist experienced in OKR planning. For the [TEAM/DEPARTMENT NAME], whose top priority this quarter is [PRIORITY/GOAL], draft 2-3 Objectives, each with 2-3 measurable Key Results. Every Key Result must be a number or a clearly verifiable binary outcome (not 'improve X' or 'increase awareness'). Ground every objective in the stated priority and current context: [RELEVANT CONSTRAINTS, e.g. team size, budget, timeline]. Flag any objective that seems unrealistic given the constraints instead of writing an aspirational one anyway."
   },
   {
@@ -289,7 +289,7 @@ var PROMPT_LIBRARY = [
     category: "Business & Productivity",
     title: "Performance Review Draft From Manager Notes",
     description: "Turns rough manager notes about an employee into a structured, specific performance review draft.",
-    tags: ["performance review", "management", "hr"],
+    tags: ["performance review", "management", "hr", "employee feedback", "self-review"],
     prompt: "You are an experienced manager writing a fair, specific performance review. I'll paste rough notes about [EMPLOYEE ROLE]'s performance this review period below. Write a review draft with sections for: key accomplishments (tied to specific outcomes, not general praise), one or two genuine areas for growth (framed constructively, not vague), and 2-3 concrete goals for next period. Do not invent accomplishments or issues not present in my notes, and avoid corporate-review clichés like 'team player' or 'exceeds expectations' without specifics attached. Notes: [PASTE MANAGER NOTES]"
   },
 
@@ -299,15 +299,15 @@ var PROMPT_LIBRARY = [
     category: "Customer Support",
     title: "Refund Request Response Templates",
     description: "Response templates for approving and for declining a refund request, both keeping the customer relationship intact.",
-    tags: ["support", "refund", "templates"],
+    tags: ["support", "refund", "templates", "refund email", "customer service"],
     prompt: "You are a customer support lead. Write two response templates to a refund request for [PRODUCT/SERVICE]: one for when the refund is APPROVED, and one for when the policy means it must be DECLINED. Both should: acknowledge the specific reason given, avoid sounding like a form letter, and end with a genuine next step. The decline version should offer one alternative (partial credit, extension, etc.) if one exists, and must not sound punitive."
   },
   {
     id: "support-knowledge-base-article",
     category: "Customer Support",
     title: "Knowledge Base Article from a Support Ticket Pattern",
-    description: "Turns a recurring support question into a clear, scannable help center article.",
-    tags: ["knowledge base", "help center", "documentation"],
+    description: "Turns a recurring support question into a scannable help center article with a searchable title, a one-sentence answer and a numbered step-by-step fix.",
+    tags: ["knowledge base", "help center", "documentation", "help article", "faq"],
     prompt: "You are a technical writer for a support knowledge base. Customers keep asking: '[COMMON QUESTION OR PROBLEM]'. Write a help center article that: has a title matching how a customer would actually search for this, opens with a one-sentence direct answer, then a numbered step-by-step solution (only as many steps as truly needed), and a short 'If this doesn't work' section for the most likely edge case. Avoid marketing language entirely — this should read like clear instructions, not copy."
   },
   {
@@ -315,7 +315,7 @@ var PROMPT_LIBRARY = [
     category: "Customer Support",
     title: "De-escalation Response for an Angry Customer",
     description: "A calm, non-defensive response template for a customer who is frustrated or upset.",
-    tags: ["de-escalation", "support", "tone"],
+    tags: ["de-escalation", "support", "tone", "angry customer", "customer service"],
     prompt: "You are a customer support specialist trained in de-escalation. A customer wrote: '[PASTE CUSTOMER MESSAGE]'. Write a response that: opens by naming their specific frustration (not a generic 'I'm sorry you feel that way'), takes ownership of what's actually the company's responsibility without over-apologizing, states one concrete next action with a timeframe, and closes without sounding scripted. Do not use corporate phrases like 'we value your feedback' or 'your satisfaction is our priority.'"
   },
   {
@@ -323,7 +323,7 @@ var PROMPT_LIBRARY = [
     category: "Customer Support",
     title: "Live Chat Macro Set for Common Support Scenarios",
     description: "A set of ready-to-use live chat response macros for the most frequent support scenarios.",
-    tags: ["live chat", "macros", "support"],
+    tags: ["live chat", "macros", "support", "chat templates", "canned responses"],
     prompt: "You are a support team lead building a live chat macro library. For [PRODUCT/SERVICE], write 5 short macro responses (under 40 words each) for these scenarios: (1) order/service delay apology with next step, (2) how to reset a password or access account, (3) requesting more information before troubleshooting, (4) escalating to a human/specialist, (5) closing a resolved conversation. Each macro should sound like a real person typed it in the moment, with room to insert specific details in [BRACKETS], not like a canned form response."
   },
   {
@@ -331,7 +331,7 @@ var PROMPT_LIBRARY = [
     category: "Customer Support",
     title: "Cancellation Save Offer Response",
     description: "A response for when a customer requests to cancel, offering a genuine alternative before processing it.",
-    tags: ["churn", "retention", "cancellation"],
+    tags: ["churn", "retention", "cancellation", "cancellation flow", "customer retention"],
     prompt: "You are a customer retention specialist. A customer has requested to cancel [PRODUCT/SERVICE], citing [STATED REASON, e.g. 'too expensive' or 'not using it enough']. Write a response that: acknowledges their specific reason without being pushy, offers exactly one relevant alternative (downgrade, pause, discount, or added support) matched to that reason, and makes clear the cancellation will be processed immediately and without friction if they'd still rather proceed. Do not guilt-trip, and do not offer more than one save attempt in this message."
   },
 
@@ -341,7 +341,7 @@ var PROMPT_LIBRARY = [
     category: "Automation & Workflow",
     title: "Lead Routing Automation Blueprint",
     description: "A step-by-step automation plan for routing new leads to the right person automatically.",
-    tags: ["zapier", "make.com", "lead routing"],
+    tags: ["zapier", "make.com", "lead routing", "zapier automation", "crm"],
     prompt: "You are a marketing operations consultant. Design a lead-routing automation for a team where new leads come from [LEAD SOURCE, e.g. 'a Typeform on the pricing page'] and need to reach the right salesperson based on [ROUTING LOGIC, e.g. 'company size or territory']. Output: a numbered trigger-to-action sequence naming specific tools (Zapier, Make.com, CRM, Slack), the exact condition/filter logic needed at each branching point, and one failure-mode to watch for (e.g. duplicate leads, missing fields) with a suggested safeguard."
   },
   {
@@ -349,7 +349,7 @@ var PROMPT_LIBRARY = [
     category: "Automation & Workflow",
     title: "Automated Client Onboarding Checklist Builder",
     description: "A blueprint for automating the repetitive parts of onboarding a new client or employee.",
-    tags: ["onboarding", "automation", "checklist"],
+    tags: ["onboarding", "automation", "checklist", "client onboarding", "employee onboarding"],
     prompt: "You are an operations consultant. Design an automation that triggers when [TRIGGER EVENT, e.g. 'a new client signs a contract in HelloSign'] and handles the repetitive onboarding tasks for [CONTEXT: new client / new employee / new user]. List each task that should be automated (e.g. create folder, send welcome email, create project in tool X), the tool that would perform it, and the order of operations. Flag any step that genuinely still needs a human touch and shouldn't be automated."
   },
   {
@@ -357,7 +357,7 @@ var PROMPT_LIBRARY = [
     category: "Automation & Workflow",
     title: "Automated Weekly Reporting Digest",
     description: "A blueprint for auto-compiling scattered metrics into one weekly report, no manual copy-paste.",
-    tags: ["reporting", "automation", "dashboards"],
+    tags: ["reporting", "automation", "dashboards", "weekly report", "kpi summary"],
     prompt: "You are a data operations specialist. Design an automation that compiles a weekly report by pulling [METRICS, e.g. 'ad spend, new leads, website traffic'] from [DATA SOURCES, e.g. 'Google Sheets, Shopify, Google Analytics'] and delivers it to [DESTINATION, e.g. 'a Slack channel every Monday at 9am']. Specify: the tool that connects each source, the format the final digest should take (table, chart, plain summary), and one sanity-check the automation should perform before sending (e.g. flag if a number is null or wildly off from last week)."
   },
   {
@@ -365,7 +365,7 @@ var PROMPT_LIBRARY = [
     category: "Automation & Workflow",
     title: "CRM Data Hygiene Automation Blueprint",
     description: "A blueprint for automatically catching and fixing common CRM data quality issues.",
-    tags: ["crm", "data hygiene", "automation"],
+    tags: ["crm", "data hygiene", "automation", "duplicate contacts", "hubspot"],
     prompt: "You are a revenue operations consultant. Design an automation that runs on [CRM NAME, e.g. 'HubSpot'] to catch common data hygiene issues: duplicate contacts, missing required fields on deals past a certain stage, and stale deals with no activity in [TIMEFRAME]. For each issue type, specify: the tool/method used to detect it (native CRM workflow, Zapier, or a scheduled script), the action taken (merge, flag, notify owner), and who gets notified. Note one risk of over-automating this (e.g. auto-merging real duplicates incorrectly) and how to guard against it."
   },
   {
@@ -373,7 +373,7 @@ var PROMPT_LIBRARY = [
     category: "Automation & Workflow",
     title: "Content Repurposing Pipeline Automation",
     description: "A blueprint for automatically turning one piece of long-form content into multiple derivative posts.",
-    tags: ["content repurposing", "automation", "social media"],
+    tags: ["content repurposing", "automation", "social media", "zapier", "content workflow"],
     prompt: "You are a content operations consultant. Design an automation that triggers when a new long-form piece (e.g. a blog post or podcast episode) is published in [SOURCE, e.g. 'a CMS or Google Doc'], and produces derivative assets: a short social caption, 2-3 pull-quotes formatted for graphics, and an email newsletter blurb. Specify which steps can be fully automated (e.g. via an AI API call triggered by Zapier/Make.com) versus which step still needs human review before publishing, and where in the pipeline that review checkpoint should sit."
   },
   {
@@ -381,7 +381,7 @@ var PROMPT_LIBRARY = [
     category: "Marketing & Ads",
     title: "Customer Interview Questions for Message Research",
     description: "A focused interview guide for finding the exact words customers use to describe a problem and a result.",
-    tags: ["customer research", "messaging", "interviews"],
+    tags: ["customer research", "messaging", "interviews", "interview questions", "voice of customer"],
     prompt: "You are a customer-research lead. Create a 30-minute interview guide for speaking with people who [CUSTOMER TYPE] about how they handle [JOB OR PROBLEM] today. Write 12 open-ended questions in a logical order: current process, friction, failed alternatives, decision criteria, desired outcome, and exact language they use. Include 3 follow-up probes that help uncover specifics without leading the participant. Do not ask hypothetical questions and do not write questions that invite a yes/no answer."
   },
   {
@@ -389,7 +389,7 @@ var PROMPT_LIBRARY = [
     category: "E-commerce",
     title: "Product Review Theme Analysis",
     description: "Turn a set of customer reviews into product, listing, and support improvements without inventing findings.",
-    tags: ["reviews", "product research", "e-commerce"],
+    tags: ["reviews", "product research", "e-commerce", "customer feedback analysis", "product improvements"],
     prompt: "You are an e-commerce insights analyst. Analyze the customer reviews pasted below for [PRODUCT]. Group repeated comments into themes and, for each theme, show sentiment, number of reviews supporting it, one short representative quote, and the product/listing/support action it suggests. Then identify the 3 strongest selling points that are safe to use in product copy and the 3 issues that should not be hidden. Do not infer a theme from one review and do not fabricate quotes. REVIEWS: [PASTE REVIEWS]"
   },
   {
@@ -397,7 +397,7 @@ var PROMPT_LIBRARY = [
     category: "SEO & Content",
     title: "Evidence-Led SEO Content Brief",
     description: "A content brief that uses your research notes to define reader intent, structure, evidence, and gaps to fill.",
-    tags: ["seo", "content brief", "research"],
+    tags: ["seo", "content brief", "research", "content outline", "keyword research"],
     prompt: "You are an SEO editor. Turn the research notes below into a content brief for the keyword [TARGET KEYWORD]. Return: likely reader intent, the specific audience, a recommended angle, H1, H2/H3 outline, questions each section must answer, sources or first-party evidence needed, internal-link opportunities, and claims that require fact-checking. Include a 'what not to write' section identifying generic sections or unsupported claims to avoid. Do not copy competitor wording from the notes. RESEARCH NOTES: [PASTE NOTES]"
   },
   {
@@ -405,7 +405,7 @@ var PROMPT_LIBRARY = [
     category: "Email Marketing",
     title: "Value-First Welcome Email Sequence",
     description: "Plan a short welcome sequence that sets expectations, offers immediate value, and earns the next open.",
-    tags: ["email", "welcome sequence", "retention"],
+    tags: ["email", "welcome sequence", "retention", "welcome email", "onboarding"],
     prompt: "You are a lifecycle marketer. Write a 4-email welcome sequence for [BRAND] after someone signs up for [OFFER OR LEAD MAGNET]. Email 1 delivers the promised value and sets expectations. Email 2 helps the reader get one quick result. Email 3 addresses a common barrier or question. Email 4 introduces the most relevant next step or product. For each email provide a subject line, preview text, timing, and body under 180 words. Use only the brand facts provided: [FACTS]. Do not use false urgency or claim results that cannot be supported."
   },
   {
@@ -413,7 +413,7 @@ var PROMPT_LIBRARY = [
     category: "Automation & Workflow",
     title: "Automation Readiness Audit",
     description: "Identify which recurring processes are safe to automate first, including data, ownership, and failure checks.",
-    tags: ["automation", "operations", "process audit"],
+    tags: ["automation", "operations", "process audit", "workflow automation", "zapier"],
     prompt: "You are an automation consultant. Assess these recurring business processes: [LIST PROCESSES]. For each process, score its automation readiness from 1 to 5 based on volume, repeatability, data quality, exception rate, and impact if it fails. Recommend the best first automation, define its trigger, actions, owner, human approval point, error alert, and success metric. Explain which processes should stay manual for now and why. Favor a small, testable workflow over a large fragile one."
   },
 
@@ -423,7 +423,7 @@ var PROMPT_LIBRARY = [
     category: "Marketing & Ads",
     title: "TikTok Ad Script With a Native, Non-Ad Feel",
     description: "A TikTok ad script generator prompt that keeps the pacing and tone native to the platform instead of sounding like a commercial.",
-    tags: ["tiktok ads", "ad script", "short-form video"],
+    tags: ["tiktok ads", "ad script", "short-form video", "tiktok", "ugc ads"],
     prompt: "You are a TikTok ads creative strategist. Write a 20-30 second ad script for [PRODUCT/SERVICE] aimed at [TARGET AUDIENCE], styled to feel like organic TikTok content, not a commercial. Structure: a scroll-stopping first line (under 3 seconds when spoken), a quick demonstration or proof beat, one specific detail that builds trust (a number, a before/after, a real use case), and a low-pressure CTA. Write it as spoken dialogue with on-screen text cues in brackets. Do not use words like 'amazing,' 'game-changer,' or a hard sales close."
   },
   {
@@ -431,7 +431,7 @@ var PROMPT_LIBRARY = [
     category: "Marketing & Ads",
     title: "One-Sentence Value Proposition Generator",
     description: "An AI prompt that distills what you do into a single, specific value proposition sentence for headlines and ad copy.",
-    tags: ["value proposition", "positioning", "headline"],
+    tags: ["value proposition", "positioning", "headline", "tagline", "messaging"],
     prompt: "You are a positioning consultant. Based on this input — product: [WHAT IT DOES], audience: [WHO IT'S FOR], main outcome: [RESULT THEY GET], and the alternative they'd otherwise use: [CURRENT ALTERNATIVE] — write 5 candidate one-sentence value propositions, each under 20 words. Each must name the specific outcome and audience, not a generic benefit like 'save time' or 'grow your business.' Rank them by clarity and flag any that could apply to a competitor unchanged."
   },
 
@@ -441,7 +441,7 @@ var PROMPT_LIBRARY = [
     category: "E-commerce",
     title: "SEO Description for a Product Category Page",
     description: "An AI product description generator prompt built specifically for category/collection pages, not single products.",
-    tags: ["seo", "category page", "product description"],
+    tags: ["seo", "category page", "product description", "collection page", "shopify seo"],
     prompt: "You are an e-commerce SEO copywriter. Write an SEO-optimized description for the category page [CATEGORY NAME], selling [PRODUCT TYPES IN THIS CATEGORY], targeting the search term [TARGET KEYWORD]. Include: a 150-200 word intro paragraph placed above the fold that naturally uses the target keyword and 2-3 related terms, a short buyer's-guide subsection answering one common pre-purchase question, and a meta description under 155 characters. Do not keyword-stuff — every sentence must still read naturally to a shopper."
   },
   {
@@ -449,7 +449,7 @@ var PROMPT_LIBRARY = [
     category: "E-commerce",
     title: "Micro-Influencer Outreach Email for Product Seeding",
     description: "A template for reaching out to micro-influencers to seed free product in exchange for authentic content.",
-    tags: ["influencer outreach", "product seeding", "email template"],
+    tags: ["influencer outreach", "product seeding", "email template", "influencer marketing", "outreach"],
     prompt: "You are an influencer marketing manager. Write a short outreach email inviting a micro-influencer in the [NICHE] space to receive a free [PRODUCT] in exchange for honest content (no payment, no script required). Requirements: under 120 words, name one specific reason you chose them (reference their content style or audience, using [PLACEHOLDER FOR SPECIFIC DETAIL]), clearly state there's no obligation to post, and include one easy next step. Avoid generic flattery like 'I love your content' without a specific reason attached."
   },
 
@@ -459,7 +459,7 @@ var PROMPT_LIBRARY = [
     category: "SEO & Content",
     title: "Batch Meta Titles & Descriptions for a Page List",
     description: "An AI meta description generator prompt that produces unique, click-worthy tags for a whole list of pages at once.",
-    tags: ["meta description", "meta title", "on-page seo"],
+    tags: ["meta description", "meta title", "on-page seo", "title tags", "click-through rate"],
     prompt: "You are an on-page SEO specialist. For each page in this list — [PAGE URL/TOPIC, TARGET KEYWORD pairs, one per line] — write a unique meta title (50-60 characters, keyword near the front) and meta description (140-155 characters, includes the keyword plus one specific benefit or detail). No two titles or descriptions may share the same opening words. Flag any page where the target keyword is too similar to another page's, which would cause keyword cannibalization."
   },
   {
@@ -467,7 +467,7 @@ var PROMPT_LIBRARY = [
     category: "SEO & Content",
     title: "Keyword Clustering Into Content Topics",
     description: "Group a raw keyword list into topic clusters so you know how many articles to write instead of one per keyword.",
-    tags: ["keyword research", "content strategy", "topic clusters"],
+    tags: ["keyword research", "content strategy", "topic clusters", "keyword grouping", "seo strategy"],
     prompt: "You are an SEO content strategist. Group this raw keyword list — [PASTE KEYWORD LIST] — into topic clusters based on shared search intent, not just shared words. For each cluster, provide: a cluster name, the keywords belonging to it, the dominant search intent (informational, commercial, transactional, navigational), and a recommended single article title that could realistically target the whole cluster. Flag any keyword that doesn't fit an existing cluster and may need its own page."
   },
 
@@ -477,7 +477,7 @@ var PROMPT_LIBRARY = [
     category: "Social Media",
     title: "Pinterest Pin Titles & SEO Descriptions",
     description: "Pinterest-optimized pin titles and keyword-rich descriptions built around how Pinterest search actually works.",
-    tags: ["pinterest", "pin description", "seo"],
+    tags: ["pinterest", "pin description", "seo", "pinterest marketing", "pin title"],
     prompt: "You are a Pinterest marketing specialist. For a pin promoting [CONTENT/PRODUCT, ONE-LINE DESCRIPTION] targeting the search term [TARGET KEYWORD], write: a pin title (under 100 characters, keyword near the start), a pin description (under 500 characters, naturally including the keyword and 2 related terms, written as if helping someone who searched that term), and 3 relevant board name suggestions. Avoid clickbait phrasing that doesn't match what the pin links to."
   },
   {
@@ -485,7 +485,7 @@ var PROMPT_LIBRARY = [
     category: "Social Media",
     title: "One-Month Social Content Calendar From a Single Theme",
     description: "An AI social media calendar generator prompt that turns one monthly theme into a full posting plan.",
-    tags: ["content calendar", "social media planning", "monthly theme"],
+    tags: ["content calendar", "social media planning", "monthly theme", "post ideas", "instagram content plan"],
     prompt: "You are a social media strategist. Build a 4-week content calendar for [BRAND/PLATFORM] built around the monthly theme [THEME]. For each week, provide 3 post ideas with a one-line hook, the format (reel, carousel, static, thread), and the intended goal (awareness, engagement, or conversion) — no two posts in the month should repeat the same hook angle. End with 2 ideas held in reserve in case a planned post falls through."
   },
 
@@ -495,7 +495,7 @@ var PROMPT_LIBRARY = [
     category: "Email Marketing",
     title: "Re-Permission Email for List Cleanup",
     description: "An email that asks inactive subscribers to confirm they still want to hear from you, before you clean the list.",
-    tags: ["email list cleanup", "re-permission", "deliverability"],
+    tags: ["email list cleanup", "re-permission", "deliverability", "inactive subscribers", "sunset policy"],
     prompt: "You are an email deliverability specialist. Write a re-permission email to subscribers of [BRAND] who haven't opened an email in [TIME PERIOD]. The email must: acknowledge it's been a while without guilt-tripping, offer one genuine reason to stay (not a generic 'we miss you'), give a single clear action to stay subscribed, and state plainly what happens if they don't act (removal from the list). Subject line and preview text included. Keep the body under 100 words."
   },
   {
@@ -503,7 +503,7 @@ var PROMPT_LIBRARY = [
     category: "Email Marketing",
     title: "Subject Line A/B Test Variant Generator",
     description: "An AI email subject line generator prompt that produces genuinely different angles to A/B test, not minor rewordings.",
-    tags: ["subject line", "a/b testing", "email marketing"],
+    tags: ["subject line", "a/b testing", "email marketing", "open rate", "email copywriting"],
     prompt: "You are an email marketer running subject line tests. For an email about [EMAIL TOPIC/OFFER] going to [AUDIENCE], write 5 subject lines that each use a distinct angle: (1) curiosity, (2) direct benefit, (3) urgency/scarcity, (4) a question, (5) personalization-style. Each under 50 characters. For every subject line, also provide matching preview text under 90 characters. Flag any that could trigger spam filters (e.g. excessive punctuation, all caps, 'free')."
   },
 
@@ -513,7 +513,7 @@ var PROMPT_LIBRARY = [
     category: "Business & Productivity",
     title: "One-Page Business Plan Draft",
     description: "An AI business plan generator prompt that condenses a business idea into a single actionable page, not a 20-page document.",
-    tags: ["business plan", "startup", "strategy"],
+    tags: ["business plan", "startup", "strategy", "small business", "lean canvas"],
     prompt: "You are a startup advisor. Using this input — idea: [WHAT THE BUSINESS DOES], target customer: [WHO], problem it solves: [PROBLEM], and how it makes money: [REVENUE MODEL] — write a one-page business plan covering: problem, solution, target customer, revenue model, top 3 risks, and the single next milestone that would validate the idea. Keep every section to 2-3 sentences. Call out any part of the input that's too vague to plan around instead of inventing details."
   },
   {
@@ -521,7 +521,7 @@ var PROMPT_LIBRARY = [
     category: "Business & Productivity",
     title: "Pricing Page Structure & Objection Handling",
     description: "A pricing page copy generator prompt that structures tiers and pre-answers the objections that stall a purchase decision.",
-    tags: ["pricing page", "objection handling", "conversion"],
+    tags: ["pricing page", "objection handling", "conversion", "saas pricing", "pricing tiers"],
     prompt: "You are a SaaS pricing strategist. For [PRODUCT] with these tiers — [LIST TIERS AND WHAT'S INCLUDED IN EACH] — write pricing page copy including: a one-line value statement per tier (not just a feature list), a recommended-tier callout with the reason it's recommended, a 3-question FAQ addressing the top objections for this kind of purchase (e.g. contract length, refunds, what happens if they outgrow a tier), and a single guarantee statement only if [GUARANTEE DETAILS] are provided — otherwise omit it rather than inventing one."
   },
 
@@ -531,7 +531,7 @@ var PROMPT_LIBRARY = [
     category: "Customer Support",
     title: "FAQ Page Generated From Recurring Support Tickets",
     description: "An AI FAQ generator prompt that turns a batch of real support tickets into a structured FAQ page.",
-    tags: ["faq", "support tickets", "self-service"],
+    tags: ["faq", "support tickets", "self-service", "help center", "customer questions"],
     prompt: "You are a customer support content specialist. Review these support ticket summaries — [PASTE TICKET SUMMARIES] — and group them into recurring question themes. For each theme, write: the question phrased the way a customer would actually type it, a clear answer under 80 words, and a note on which team/article it should link to for more detail. Merge near-duplicate questions instead of listing them separately, and flag any ticket that reveals a product bug rather than a genuine FAQ."
   },
   {
@@ -539,7 +539,7 @@ var PROMPT_LIBRARY = [
     category: "Customer Support",
     title: "Follow-Up Message After a Low CSAT Score",
     description: "A customer satisfaction follow-up email template for reaching out after a customer leaves a low support rating.",
-    tags: ["csat", "follow-up", "customer satisfaction"],
+    tags: ["csat", "follow-up", "customer satisfaction", "customer feedback", "survey"],
     prompt: "You are a customer experience manager. Write a follow-up message to a customer who gave a low satisfaction score ([SCORE]/5) after a support interaction about [ISSUE TYPE]. The message must: acknowledge the low score directly without being defensive, ask one specific open question about what went wrong (not a generic 'how can we improve'), offer a concrete next step, and avoid corporate-sounding apology language ('we sincerely apologize for any inconvenience'). Keep it under 90 words."
   },
 
@@ -549,7 +549,7 @@ var PROMPT_LIBRARY = [
     category: "Automation & Workflow",
     title: "Slack Notification Rules Blueprint to Cut Noise",
     description: "An automation blueprint for routing and filtering Slack notifications so only the alerts that need action get through.",
-    tags: ["slack", "automation", "notification rules"],
+    tags: ["slack", "automation", "notification rules", "alerts", "team communication"],
     prompt: "You are a workflow automation consultant. Given these current notification sources — [LIST TOOLS/EVENTS CURRENTLY POSTING TO SLACK] — design a filtering and routing scheme so each channel only receives notifications someone needs to act on. For each source, specify: which channel it should route to, the condition that should suppress it (e.g. severity below a threshold, duplicate within X minutes), and whether it needs a digest format instead of real-time. Recommend which notifications should be removed entirely rather than rerouted."
   },
   {
@@ -557,7 +557,7 @@ var PROMPT_LIBRARY = [
     category: "Automation & Workflow",
     title: "Automated Invoice Reminder Sequence Blueprint",
     description: "An invoice reminder automation prompt that defines a full overdue-payment sequence, from friendly nudge to escalation.",
-    tags: ["invoicing", "automation", "accounts receivable"],
+    tags: ["invoicing", "automation", "accounts receivable", "payment reminder", "late invoices"],
     prompt: "You are an accounts receivable automation consultant. Design an automated invoice reminder sequence for [BUSINESS TYPE] triggered when an invoice becomes overdue. Define, for each stage (due date, 3 days overdue, 14 days overdue, 30 days overdue): the trigger condition, the tone of the message (friendly to firm), the channel (email/SMS), and whether it needs human review before escalation. Specify the point at which the process should hand off to a human instead of continuing automatically."
   },
 
@@ -569,5 +569,179 @@ var PROMPT_LIBRARY = [
     description: "An AI image prompt for the viral 'tiny world' trend that rebuilds any photo as a physically convincing miniature diorama, using an everyday object like a coin or matchstick to sell the tiny scale.",
     tags: ["miniature diorama", "tiny world trend", "ai image trend", "midjourney prompt", "nano banana"],
     prompt: "A hyper-detailed, physically accurate miniature diorama of [SUBJECT OR SCENE, e.g. 'a tiny neighborhood ramen shop' or 'my living room reading corner'], built at roughly 1:64 scale inside [DISPLAY CONTAINER, e.g. 'an open glass jar', 'a wooden shadow box', 'a matchbox']. Render every material so it behaves correctly at this scale: fabric falls in fine, tight creases, tiny glass surfaces show realistic micro-refraction, wood and metal carry miniature-model-level grain and wear, and every shadow is proportionally small and soft. Place [SCALE-REFERENCE OBJECT, e.g. 'a single US penny', 'a wooden matchstick', 'a grain of rice', 'a fingertip'] directly beside the scene so the tiny scale is unmistakable at a glance. Populate it with [ONE OR TWO TINY FIGURES OR PROPS MID-ACTIVITY, e.g. 'a miniature chef stirring a thimble-sized pot of broth']. Shoot it like real macro photography: a single warm key light, shallow depth of field with a softly blurred tabletop background, and the crisp micro-detail of a [LENS TYPE, e.g. '100mm macro lens at f/2.8']. Palette: [COLOR PALETTE, e.g. 'warm amber with muted teal accents']. The final image must read as a physically real, tack-sharp miniature model photographed up close — not a toy render, not smooth CGI, and not a photo simply shrunk down. --ar 4:5 --v 6"
+  },
+  {
+    id: "trend-action-figure-blister-pack",
+    category: "AI Image & Art Trends",
+    title: "AI Prompt to Turn Yourself Into an Action Figure in Retail Packaging",
+    description: "Recreates the viral boxed action figure trend: your photo becomes a collectible toy sealed in a blister pack, with a custom name, tagline and accessories that match your job or hobbies.",
+    tags: ["action figure trend", "toy packaging", "ai image trend", "chatgpt image prompt", "personalized gift"],
+    prompt: "Using the attached photo as the reference for the face, hairstyle and build, create a photorealistic product shot of a collectible action figure of this person, sealed in retail blister packaging. The figure stands in the left two-thirds of a clear molded plastic bubble on a printed cardboard backing card. Card design: [COLOR SCHEME, e.g. 'bold navy and orange'] with the name '[FIGURE NAME, e.g. THE PRODUCT MANAGER]' in large toy-brand lettering across the top and the tagline '[SHORT TAGLINE, e.g. Ships features. Survives standups.]' underneath. In molded slots on the right, include exactly these accessories, each sized to the figure's scale: [3-4 ACCESSORIES TIED TO YOUR JOB OR HOBBIES, e.g. 'a laptop, an oversized coffee mug, running shoes']. The figure wears [OUTFIT, e.g. 'the same outfit as in the photo']. Keep the face clearly recognizable as the person in the photo but rendered as painted vinyl with a slight satin sheen and visible joints at the shoulders and knees. Lighting: bright, even studio light with a soft reflection across the plastic bubble. Background: plain light-grey seamless backdrop. Spell every word on the packaging exactly as written and add no other text. Aspect ratio 4:5."
+  },
+  {
+    id: "trend-claymation-character",
+    category: "AI Image & Art Trends",
+    title: "AI Prompt for a Claymation-Style Character From Your Photo",
+    description: "Turns a portrait into a stop-motion clay character with visible fingerprints, handmade textures and a miniature set, so it looks like a real animation still rather than smooth 3D.",
+    tags: ["claymation", "stop motion", "ai image trend", "3d character", "portrait prompt"],
+    prompt: "Transform the person in the attached photo into a handmade claymation character photographed on a miniature stop-motion set. Sculpt them from matte plasticine with visible fingerprints, subtle tool marks and slightly uneven seams where clay pieces join. Exaggerate proportions gently (slightly larger head and hands) while preserving their recognizable features: [KEY FEATURES TO KEEP, e.g. 'curly black hair, round glasses, freckles']. Outfit: [OUTFIT]. Pose: [POSE OR ACTION, e.g. 'waving while holding a tiny clay coffee cup']. Build the set from real craft materials at the same scale: [SETTING, e.g. 'a cozy kitchen with felt curtains and a cardboard window showing a painted sky']. Lighting: warm practical lamps plus a soft key light, like a real tabletop animation shoot, with tiny contact shadows under every object. Camera: 50mm equivalent at eye level with moderate depth of field so the set falls slightly soft. Avoid glossy CGI surfaces and perfectly smooth skin; it must look like physical clay photographed in a studio. Aspect ratio 3:2."
+  },
+  {
+    id: "trend-chibi-sticker-sheet",
+    category: "AI Image & Art Trends",
+    title: "AI Prompt for a Chibi Sticker Sheet of You or Your Pet",
+    description: "Generates a printable sheet of cute chibi-style stickers from one photo, with several expressions and poses and white die-cut borders, ready for messaging apps or print-on-demand.",
+    tags: ["chibi", "sticker sheet", "ai image trend", "kawaii", "print on demand"],
+    prompt: "Create a sticker sheet of [SUBJECT, e.g. 'the person' or 'the dog'] from the attached photo, drawn in a cute chibi style: an oversized head about one-third of total height, a small rounded body, large expressive eyes, and simplified but recognizable features: [DISTINCTIVE FEATURES TO KEEP, e.g. 'red hoodie, short ponytail, gap-toothed smile']. Draw [NUMBER, e.g. 6] separate stickers in a neat grid with even spacing, each showing a different expression or pose: [EXPRESSIONS OR POSES, e.g. 'waving hello, laughing, sleepy under a blanket, thumbs up, shocked, heart hands']. Give every sticker a thick white die-cut border and a very subtle drop shadow so it reads as a physical vinyl sticker. Style: clean bold outlines, flat cel shading with one soft highlight, palette of [PALETTE, e.g. 'pastel pink, mint and butter yellow']. [OPTIONAL: add a short caption under each sticker, e.g. 'Hi!', 'LOL', 'Nap time', and spell each exactly as written.] Plain white background, no other text, square 1:1 canvas."
+  },
+  {
+    id: "trend-pixel-art-avatar",
+    category: "AI Image & Art Trends",
+    title: "AI Prompt for a 16-Bit Pixel Art Avatar From a Photo",
+    description: "Converts a headshot into a retro 16-bit video game portrait with a limited color palette and crisp square pixels, ideal for gaming profiles, Discord and Twitch.",
+    tags: ["pixel art", "16-bit", "gaming avatar", "ai image trend", "retro game"],
+    prompt: "Convert the person in the attached photo into a 16-bit pixel art character portrait in the style of a classic 1990s role-playing game. Use a strict pixel grid: every pixel square and visible, no anti-aliasing, no blur and no smooth gradients. Limit the palette to about [NUMBER, e.g. 24] colors and use clean 1-pixel dark outlines. Frame: head and shoulders in three-quarter view, facing [LEFT OR RIGHT]. Keep recognizable features: [FEATURES, e.g. 'shoulder-length wavy hair, beard, silver earring']. Add a game-character twist: [CLASS OR THEME, e.g. 'a wizard's hooded cloak with a glowing rune' or 'a sci-fi pilot jacket']. Background: a simple dithered [BACKGROUND, e.g. 'twilight forest'] scene inside a decorative pixel UI frame with an empty name plate. Render at a low base resolution such as 128x128 and upscale with nearest-neighbor so the pixels stay perfectly sharp. Square 1:1."
+  },
+  {
+    id: "trend-professional-headshot",
+    category: "AI Image & Art Trends",
+    title: "AI Prompt to Turn a Casual Selfie Into a Professional Headshot",
+    description: "Produces a LinkedIn-ready studio headshot from an everyday selfie while keeping your real face, skin texture and features, without the plastic airbrushed look.",
+    tags: ["ai headshot", "linkedin photo", "professional headshot", "selfie to headshot", "ai image prompt"],
+    prompt: "Using the attached selfie, create a professional headshot of the same person. Identity is the top priority: keep their exact facial structure, eye shape and color, nose, skin tone, natural skin texture, hairline and distinctive features such as [FEATURES TO KEEP, e.g. 'freckles, a small scar above the eyebrow, glasses']. Do not slim the face, smooth the skin, whiten the teeth or change their apparent age. Change only these things: clothing to [OUTFIT, e.g. 'a navy blazer over a plain white crew-neck tee'], hair tidied but kept in the same style, and the setting to [BACKGROUND, e.g. 'a softly blurred modern office' or 'a seamless mid-grey studio backdrop']. Framing: head and upper shoulders, centered, eyes about one-third from the top, shoulders angled slightly with the face toward camera, [EXPRESSION, e.g. 'relaxed natural smile' or 'calm, confident expression']. Lighting: soft key light from front-left, gentle fill, subtle hair light, shot as if on an 85mm portrait lens at f/2.8. The result should look like a real photograph from a professional shoot. Aspect ratio 4:5."
+  },
+  {
+    id: "trend-pet-royal-portrait",
+    category: "AI Image & Art Trends",
+    title: "AI Prompt for a Royal Oil-Painting Portrait of Your Pet",
+    description: "Turns a pet photo into a dignified Renaissance-style royal portrait with velvet robes, an ornate frame and dramatic lighting, a popular gift and print-on-demand design.",
+    tags: ["pet portrait", "renaissance pet", "oil painting", "ai image trend", "pet gift"],
+    prompt: "Paint the [ANIMAL, e.g. 'golden retriever'] from the attached photo as a regal 17th-century oil portrait. Preserve the pet's exact markings, fur color, eye color and face shape so the owner instantly recognizes them: [DISTINCT MARKINGS, e.g. 'white blaze on the chest, one floppy ear']. Dress them as [ROLE, e.g. 'a duke', 'a queen', 'a naval admiral'] in [ATTIRE, e.g. 'a crimson velvet cape with ermine trim and a gold chain of office'], seated upright on a carved chair with [PROP, e.g. 'a small crown on a tasselled cushion'] beside them. Technique: visible layered oil brushwork, fine craquelure in the varnish, rich chiaroscuro lighting from a single window on the left, and deep [BACKGROUND COLOR, e.g. 'emerald'] drapery behind. Present it inside an ornate gilded frame hanging on a dark museum wall. [OPTIONAL: a small brass plaque on the frame reading '[PET NAME]', spelled exactly.] The animal must stay an animal with no human body or hands, simply dressed and posed with dignity. Aspect ratio 4:5."
+  },
+  {
+    id: "trend-product-photo-studio",
+    category: "AI Image & Art Trends",
+    title: "AI Prompt to Turn a Phone Snap Into a Studio Product Photo",
+    description: "Reshoots an everyday phone photo of your product as a clean e-commerce or lifestyle image while keeping the real label, shape and colors accurate for marketplace listings.",
+    tags: ["product photography", "ai product photo", "ecommerce images", "amazon main image", "ai image prompt"],
+    prompt: "Using the attached phone photo as the exact reference for the product, create a professional studio photograph of [PRODUCT, e.g. 'a 250ml amber glass candle jar with a cream label']. Accuracy rules: keep the product's real shape, proportions, colors, materials and label design exactly as photographed; reproduce label text only where it is clearly legible in the reference, and never invent new text, logos or claims. Version: [CHOOSE ONE: 'marketplace main image: product centered on a pure white background, filling about 85% of the frame, soft natural shadow underneath, no props' OR 'lifestyle image: product on [SURFACE, e.g. a light oak table] with [2-3 PROPS, e.g. a linen napkin and dried eucalyptus], styled for [AUDIENCE]']. Lighting: large soft key light from the upper left, white bounce fill on the right, a gentle rim light to separate the product from the background, and controlled reflections on glossy surfaces. Camera: 100mm lens, slightly above eye level, the whole product in sharp focus. Aspect ratio [1:1 for marketplaces or 4:5 for social]."
+  },
+
+  // ---------- Marketing & Ads ----------
+  {
+    id: "mkt-linkedin-ad-copy",
+    category: "Marketing & Ads",
+    title: "LinkedIn Sponsored Content Ad Copy for B2B Offers",
+    description: "Three LinkedIn ad variations aimed at a specific job title, each with intro text, a headline and a CTA written for busy professionals rather than consumers.",
+    tags: ["linkedin ads", "b2b advertising", "sponsored content", "lead generation", "ad copy"],
+    prompt: "You are a B2B paid social specialist. Write 3 LinkedIn Sponsored Content ad variations promoting [OFFER, e.g. 'a free 30-minute workflow audit' or 'our annual benchmark report'] from [COMPANY], which helps [TARGET JOB TITLE] at [COMPANY TYPE AND SIZE] solve [SPECIFIC PROBLEM]. Use a different angle for each: (1) a surprising stat or benchmark the reader can compare against their own team, (2) the specific cost of the status quo in time or money, (3) peer proof naming the type of company that already uses it. For each, provide: intro text whose first 150 characters land the hook before the 'see more' cut, up to 2 short follow-up lines, a headline under 70 characters, and a CTA button chosen from LinkedIn's standard options. Use plain professional language with no hype words, no emojis and no 'In today's fast-paced world'. Flag any claim I need to back up with real data."
+  },
+  {
+    id: "mkt-landing-page-hero",
+    category: "Marketing & Ads",
+    title: "Landing Page Hero Section: Headline, Subhead and CTA Options",
+    description: "Generates 5 headline and subheadline pairs plus CTA button text for the top of a landing page, each built on a different angle you can A/B test.",
+    tags: ["landing page", "headline", "conversion copy", "cta", "a/b testing"],
+    prompt: "You are a conversion copywriter. Write the above-the-fold hero section for a landing page selling [PRODUCT OR SERVICE] to [TARGET AUDIENCE], whose biggest frustration is [MAIN PAIN POINT] and who most wants [DESIRED OUTCOME]. Give 5 options, each using a different angle: outcome-first, pain-first, specific number, objection-killer, and a 'for X who Y' audience callout. For each option provide: a headline under 10 words; a subheadline under 25 words that explains how it works or who it's for; primary CTA button text that says what happens after the click (not 'Submit' or 'Learn more'); and one line of microcopy under the button that removes a risk, such as 'No credit card needed'. Then recommend which option to test first and why, based on how aware this audience already is of the problem."
+  },
+
+  // ---------- Social Media ----------
+  {
+    id: "social-instagram-caption-batch",
+    category: "Social Media",
+    title: "Instagram Caption Prompt: 10 Captions in Your Brand Voice",
+    description: "Writes a batch of ready-to-post Instagram captions from your post ideas, with scroll-stopping first lines, varied CTAs and a short, relevant hashtag set for each.",
+    tags: ["instagram captions", "caption ideas", "chatgpt instagram prompt", "brand voice", "hashtags"],
+    prompt: "You are a social media copywriter for [BRAND], a [ONE-LINE DESCRIPTION] whose audience is [AUDIENCE]. Brand voice: [3 ADJECTIVES, e.g. 'warm, witty, plain-spoken']. Words and phrases we never use: [BANNED WORDS, e.g. 'elevate, unleash, game-changer, who else']. Write one Instagram caption for each of these post ideas: [UP TO 10 POST IDEAS, e.g. '1. behind the scenes of packing orders; 2. customer photo repost; 3. new flavor launch']. For each caption: a first line under 125 characters that works on its own in the feed preview and creates curiosity or names a feeling; 2-4 short lines of body text with line breaks; one CTA that fits the post (save, share, comment with a specific prompt, or tap the link in bio, varied across captions); and 3-5 hashtags mixing one broad, two niche and one branded tag. Use no more than 2 emojis per caption, and don't start any two captions the same way."
+  },
+  {
+    id: "social-linkedin-profile-optimizer",
+    category: "Social Media",
+    title: "LinkedIn Headline and About Section Rewrite",
+    description: "Rewrites your LinkedIn headline and About section so recruiters and clients find you in search and understand in seconds what you do and who you help.",
+    tags: ["linkedin profile", "linkedin headline", "about section", "personal branding", "job search"],
+    prompt: "You are a LinkedIn profile strategist. My current headline: [CURRENT HEADLINE]. My current About section: [CURRENT ABOUT]. The role or service I want to be found for: [TARGET ROLE OR SERVICE]. Who I want to attract: [e.g. 'recruiters hiring senior data analysts' or 'founders who need bookkeeping']. My strongest proof points: [2-4 SPECIFIC RESULTS, WITH NUMBERS WHERE POSSIBLE]. Write: (1) 3 headline options under 220 characters that put the searchable role keyword first, then who I help and a concrete result, without 'passionate', 'guru' or 'ninja'; (2) a rewritten About section of 180-260 words in first person, opening with two lines that state what I do and for whom (they show before 'see more'), followed by a short proof paragraph using my numbers, a line on how I work, and a specific call to action telling people how to contact me; (3) 10 skills or keywords to add to my Skills section for the target role. Use only my real experience and don't invent achievements."
+  },
+  {
+    id: "social-youtube-video-script",
+    category: "Social Media",
+    title: "YouTube Video Script Outline With Retention Hooks",
+    description: "Plans a long-form YouTube video from title to end screen: a hook for the first 30 seconds, chaptered sections with re-hooks, and a natural CTA placement.",
+    tags: ["youtube script", "video outline", "audience retention", "youtube seo", "content creator"],
+    prompt: "You are a YouTube scriptwriter focused on audience retention. Create a script outline for a [LENGTH, e.g. '10-12 minute'] video about [TOPIC] for [AUDIENCE], in a [STYLE, e.g. 'talking head with screen recordings'] format. Include: 5 title options under 60 characters that make a specific promise the video actually delivers; the first 30 seconds written word for word, opening with the payoff or a surprising moment and stating what the viewer will get, with no 'Hey guys, welcome back'; 4-6 chapters with timestamps, each listing key talking points, a visual or B-roll idea, and a one-line re-hook at the end that teases the next section; one mid-video CTA placed right after the first big value moment; and an ending that delivers the final payoff before pointing to one specific next video. Finish with a 150-word description that uses the main keyword naturally in its first sentence, followed by chapter timestamps."
+  },
+
+  // ---------- Business & Productivity ----------
+  {
+    id: "biz-resume-bullet-rewrite",
+    category: "Business & Productivity",
+    title: "Resume Bullet Point Rewriter for a Specific Job Posting",
+    description: "Turns vague job duties into achievement-focused resume bullets with measurable results, tailored to the keywords in the job posting you're applying for.",
+    tags: ["resume", "job application", "ats keywords", "career", "chatgpt resume prompt"],
+    prompt: "You are a professional resume writer who understands how applicant tracking systems and hiring managers read resumes. The job posting I'm applying for: [PASTE JOB POSTING]. My current bullet points for my role as [JOB TITLE] at [COMPANY]: [PASTE BULLETS]. Rewrite each bullet as a strong past-tense action verb, plus what I did, plus a measurable result or scope (people, money, time, volume or percentage). Where I haven't given a number, don't invent one: write the bullet with a placeholder such as [X%] and ask me one specific question to fill it in. Mirror the posting's exact keywords wherever they truthfully apply to my experience. Keep each bullet to one line (under 25 words), cut filler like 'responsible for' and 'helped with', and order the bullets by relevance to this posting. Finish with 3 keywords from the posting that none of my bullets cover yet."
+  },
+  {
+    id: "biz-cover-letter",
+    category: "Business & Productivity",
+    title: "Tailored Cover Letter That Doesn't Sound Like a Template",
+    description: "Writes a short, specific cover letter that connects your real experience to what the company needs, without the generic openers recruiters skip past.",
+    tags: ["cover letter", "job application", "career", "hiring", "chatgpt job prompt"],
+    prompt: "You are a career coach who has read thousands of cover letters. Write a cover letter for the role of [JOB TITLE] at [COMPANY]. Job posting: [PASTE POSTING]. My background: [3-5 SENTENCES OR RESUME HIGHLIGHTS]. Why I actually want this job: [YOUR REAL REASON, e.g. 'I use their product every day' or 'their expansion into X']. Requirements: 250-320 words in 3-4 short paragraphs. Open with a specific sentence about the company or the problem this role solves, never 'I am writing to apply for' or 'I am excited to'. In the middle, pick the 2 requirements from the posting that matter most and prove each with one concrete example from my background, including a result. Close with a confident, specific next step. Use plain, direct language with no clichés like 'team player', 'passionate' or 'hit the ground running', and include nothing about me that I haven't told you."
+  },
+  {
+    id: "biz-interview-prep",
+    category: "Business & Productivity",
+    title: "Job Interview Prep: Likely Questions and STAR Answers",
+    description: "Predicts the interview questions for a specific role and helps you build structured STAR answers from your own experience, plus smart questions to ask the interviewer.",
+    tags: ["interview prep", "star method", "job interview", "behavioral questions", "career"],
+    prompt: "Act as the hiring manager for the role of [JOB TITLE] at [COMPANY OR COMPANY TYPE]. Job posting: [PASTE POSTING]. My background: [SUMMARY OR RESUME]. Then: (1) list the 10 questions I'm most likely to be asked: 4 behavioral, 3 role-specific or technical, 2 about motivation and fit, and 1 tough question based on any gap or weakness visible in my background; (2) for the 4 behavioral questions, draft a STAR outline (Situation, Task, Action, Result) using only examples from my background, each under 120 words when spoken and ending with a measurable result where possible, marking anywhere I need to add detail; (3) give me 5 thoughtful questions to ask the interviewer that show I understand the role's real challenges, avoiding salary and anything their website already answers; (4) name the single biggest concern this employer might have about me and how to address it before they ask."
+  },
+  {
+    id: "biz-sales-objection-handling",
+    category: "Business & Productivity",
+    title: "Sales Objection Handling Script for Your Top 5 Objections",
+    description: "Builds calm, non-pushy responses to the objections you hear most, such as price, timing and 'let me think about it', with a question that keeps each conversation moving.",
+    tags: ["sales script", "objection handling", "sales calls", "closing", "b2b sales"],
+    prompt: "You are a sales coach who teaches consultative, non-pushy selling. I sell [PRODUCT OR SERVICE] at [PRICE POINT] to [BUYER ROLE OR TYPE]. The objections I hear most: [UP TO 5, e.g. 'too expensive', 'not the right time', 'we already use X', 'I need to talk to my partner', 'just send me some info']. For each objection, write: what the buyer usually really means (the concern underneath); a 2-3 sentence spoken response that acknowledges it without arguing, reframes it with one specific fact or example, and doesn't jump to a discount; one open question that moves the conversation forward; and the warning sign that this lead genuinely isn't a fit and should be let go politely. Keep the language natural enough to say out loud on a call, without scripted lines like 'I hear you' or 'feel, felt, found'."
+  },
+
+  // ---------- Email Marketing ----------
+  {
+    id: "email-holiday-sale-sequence",
+    category: "Email Marketing",
+    title: "Holiday Sale Email Sequence: Early Access to Last Chance",
+    description: "A 4-email holiday promotion sequence covering early access, launch, a gift-focused reminder and final hours, with subject lines that create real urgency without sounding desperate.",
+    tags: ["holiday email", "black friday email", "promotional email", "sale announcement", "email sequence"],
+    prompt: "You are an e-commerce email marketer. Write a 4-email holiday sale sequence for [BRAND], which sells [PRODUCTS] to [AUDIENCE]. Offer: [OFFER, e.g. '25% off sitewide' or 'a free gift on orders over $50'], running from [START DATE] to [END DATE]. Last order date for holiday delivery: [DATE]. Emails: (1) an early-access teaser sent to subscribers the day before launch, (2) the sale is live, (3) a mid-sale reminder featuring [2-3 BESTSELLERS OR GIFT IDEAS] with one reason each makes a good gift, (4) final hours or shipping cutoff. For each email give 2 subject line options under 45 characters, a preview text line, and body copy under 120 words with one clear CTA button. Make urgency real and specific, using the actual dates and cutoff, and never fake countdowns. Vary the angle so the four emails don't repeat each other, in a [TONE, e.g. 'warm and cheerful, not pushy'] tone."
+  },
+
+  // ---------- E-commerce ----------
+  {
+    id: "ecom-gift-guide",
+    category: "E-commerce",
+    title: "Holiday Gift Guide Page Copy for Your Store",
+    description: "Organizes your products into a shoppable gift guide by recipient and budget, with short, specific blurbs that explain why each item makes a good gift.",
+    tags: ["gift guide", "holiday shopping", "collection page", "product copy", "seasonal marketing"],
+    prompt: "You are an e-commerce merchandiser and copywriter. Build a holiday gift guide page for [STORE NAME] using these products: [LIST PRODUCTS WITH PRICE AND ONE KEY DETAIL EACH]. Group them into 4-6 sections by recipient, budget or occasion (for example 'For the home cook', 'Under $25', 'Stocking stuffers'), choosing groups that fit my actual catalog. For each product write a 20-35 word blurb saying who it's ideal for and one concrete reason it makes a good gift, not just a feature list. Also write: a page title and an intro under 50 words; an SEO title under 60 characters and a meta description under 155 characters targeting '[KEYWORD, e.g. gift ideas for coffee lovers]'; and a short note on shipping deadlines and gift wrapping using these details: [SHIPPING AND GIFT WRAP DETAILS]. Use the phrase 'perfect gift' no more than once on the whole page."
+  },
+
+  // ---------- SEO & Content ----------
+  {
+    id: "seo-ai-search-optimization",
+    category: "SEO & Content",
+    title: "Optimize an Article to Be Cited in AI Search Answers",
+    description: "Audits an article for how easily AI assistants and AI-generated search answers can extract and cite it, then rewrites the weakest sections to be clearer and more quotable.",
+    tags: ["ai search", "ai overviews", "generative engine optimization", "content optimization", "chatgpt search"],
+    prompt: "You are an SEO editor who specializes in making content easy for AI search tools and AI-generated answers to understand, extract and cite. Here is my article targeting the question '[MAIN QUESTION OR KEYWORD]': [PASTE ARTICLE]. Audit it against these points: a direct 1-2 sentence answer to the main question near the top; headings phrased the way people actually ask; paragraphs that still make sense if quoted on their own (no 'as mentioned above'); specific facts, numbers, dates and named sources instead of vague claims; clear definitions of key terms; steps and comparisons formatted as lists or tables; signs of first-hand experience; and a visible author and date. Output: (1) a checklist scoring each point as strong, weak or missing, (2) a rewritten intro, (3) rewritten versions of the 3 weakest sections, (4) a short FAQ block of 4 related questions with concise answers. Don't invent statistics; mark every spot where I need to add a real source."
+  },
+
+  // ---------- Customer Support ----------
+  {
+    id: "support-shipping-delay",
+    category: "Customer Support",
+    title: "Shipping Delay Email to Customers During Peak Season",
+    description: "A proactive, honest delay notice that explains what happened, gives a realistic new date and offers a fair option, so customers don't flood your inbox asking.",
+    tags: ["shipping delay", "order update", "customer communication", "holiday season", "support email"],
+    prompt: "You are a customer experience lead writing a proactive update to customers whose orders are delayed. Situation: [WHAT HAPPENED, e.g. 'carrier backlog' or 'a restock arrived late'], affecting orders placed [DATE RANGE]. New expected delivery: [REALISTIC DATE OR RANGE]. What we're offering: [OPTION, e.g. 'a free upgrade to express shipping', 'a 15% refund', or 'a full refund if they'd rather cancel']. Write: a subject line that says plainly what the email is about (not 'An update on your order!'); an email under 150 words that leads with the new delivery date, explains the cause in one honest sentence without excuses or blaming anyone, apologizes once rather than repeatedly, states exactly what the customer can do and how ([LINK OR ACTION]), and tells them they don't need to reply if they're happy to wait; a 2-sentence SMS version; and a short macro for agents answering 'Where is my order?' about these delayed orders."
   }
 ];

@@ -19,6 +19,7 @@ const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
 const SITE_URL = "https://poloprompt.com";
+const OG_IMAGE = SITE_URL + "/assets/img/og-image.png";
 
 function loadGlobalsFromScript(filePath, globalNames) {
   const code = fs.readFileSync(filePath, "utf8");
@@ -119,7 +120,7 @@ function thumbHtml(item) {
       '<div class="image-trend-thumb">' +
         '<span class="image-trend-badge">Image Trend</span>' +
         '<img src="' + escapeHtml(item.image_url) + '" alt="' + escapeHtml(item.theme) +
-          ' example" loading="lazy">' +
+          ' style illustration" width="800" height="600" loading="lazy">' +
       "</div>"
     );
   }
@@ -255,11 +256,39 @@ function articleSchema(post) {
     description: post.description,
     url: url,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    image: OG_IMAGE,
     datePublished: post.published_at,
     dateModified: post.published_at,
     author: { "@type": "Organization", name: "PoloPrompt", url: SITE_URL + "/" },
     publisher: { "@type": "Organization", name: "PoloPrompt", url: SITE_URL + "/" }
   });
+}
+
+function breadcrumbSchema(post) {
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL + "/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: SITE_URL + "/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: SITE_URL + "/blog/" + post.slug }
+    ]
+  });
+}
+
+/* Open Graph / Twitter tags in the template carry placeholder values; swap in
+   this post's title, description, and URL so shared links preview correctly. */
+function fillSocialMeta(html, post, url) {
+  const set = (attr, name, value) => html.replace(
+    new RegExp('<meta ' + attr + '="' + name + '" content="[^"]*">'),
+    '<meta ' + attr + '="' + name + '" content="' + escapeHtml(value) + '">'
+  );
+  html = set("property", "og:title", post.title);
+  html = set("property", "og:description", post.description);
+  html = set("property", "og:url", url);
+  html = set("name", "twitter:title", post.title);
+  html = set("name", "twitter:description", post.description);
+  return html;
 }
 
 function prerenderBlogPosts(posts, library) {
@@ -282,13 +311,15 @@ function prerenderBlogPosts(posts, library) {
       /<link rel="canonical" id="post-canonical"[^>]*>/,
       '<link rel="canonical" id="post-canonical" href="' + url + '">'
     );
+    html = fillSocialMeta(html, post, url);
     html = html.replace(
       /<span id="post-breadcrumb-title">[\s\S]*?<\/span>/,
       '<span id="post-breadcrumb-title">' + escapeHtml(post.title) + "</span>"
     );
     html = html.replace(
       /<\/head>/,
-      '<script type="application/ld+json">\n' + articleSchema(post) + "\n</script>\n</head>"
+      '<script type="application/ld+json">\n' + articleSchema(post) + "\n</script>\n" +
+        '<script type="application/ld+json">\n' + breadcrumbSchema(post) + "\n</script>\n</head>"
     );
     html = html.replace(
       /<div class="container prose" id="post-body">[\s\S]*?<\/div>\s*<\/section>/,
