@@ -31,6 +31,13 @@ app.use((req, res) => {
 
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
+  // Malformed JSON or an oversized body is the client's mistake, not a server fault.
+  if (err.type === "entity.parse.failed") {
+    return res.status(400).json({ error: "Request body must be valid JSON." });
+  }
+  if (err.type === "entity.too.large") {
+    return res.status(413).json({ error: "Request body is too large." });
+  }
   console.error(err);
   res.status(500).json({ error: "Something went wrong." });
 });

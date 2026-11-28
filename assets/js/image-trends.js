@@ -48,7 +48,10 @@
         counts[tag] = (counts[tag] || 0) + 1;
       });
     });
+    // A tag every style shares (e.g. "Portrait") can't narrow the list, so
+    // it's left off the filter bar rather than shown as a no-op button.
     return Object.keys(counts)
+      .filter(function (tag) { return counts[tag] < trends.length; })
       .sort(function (a, b) { return counts[b] - counts[a]; })
       .slice(0, MAX_TAGS_SHOWN);
   }
@@ -83,7 +86,7 @@
       return (
         "<div class=\"image-trend-thumb\">" +
           "<span class=\"image-trend-badge\">Image Trend</span>" +
-          "<img src=\"" + escapeHtml(item.image_url) + "\" alt=\"" + escapeHtml(item.theme) + " example\" loading=\"lazy\">" +
+          "<img src=\"" + escapeHtml(item.image_url) + "\" alt=\"" + escapeHtml(item.theme) + " style illustration\" width=\"800\" height=\"600\" loading=\"lazy\">" +
         "</div>"
       );
     }
