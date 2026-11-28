@@ -28,11 +28,29 @@
         return res.json();
       })
       .then(function (data) {
-        return data && data.length ? data : IMAGE_TRENDS;
+        return data && data.length ? withBundledImages(data) : IMAGE_TRENDS;
       })
       .catch(function () {
         return IMAGE_TRENDS;
       });
+  }
+
+  /* The API's rows can lag behind the bundled data file (e.g. the database
+     wasn't re-seeded after preview images were added). Fill any missing
+     image_url from the bundled entry with the same id, so a stale database
+     degrades to the shipped artwork rather than blank colour tiles. */
+  function withBundledImages(data) {
+    var bundled = {};
+    (typeof IMAGE_TRENDS !== "undefined" ? IMAGE_TRENDS : []).forEach(function (t) {
+      bundled[t.id] = t;
+    });
+    return data.map(function (row) {
+      if (row.image_url || !bundled[row.id] || !bundled[row.id].image_url) return row;
+      var copy = {};
+      for (var k in row) if (Object.prototype.hasOwnProperty.call(row, k)) copy[k] = row[k];
+      copy.image_url = bundled[row.id].image_url;
+      return copy;
+    });
   }
 
   function escapeHtml(str) {
